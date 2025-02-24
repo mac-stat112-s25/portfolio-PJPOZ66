@@ -3,3 +3,24 @@ title: "Quadvariate Viz"
 ---
 
 Use this file to generate a professional looking **quadvariate** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+```{r}
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+library(tidyverse)
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(education, aes(x = salary, y = verbal, color = cut(expend, 3), size = ratio)) + 
+  geom_point(alpha = 0.7) + 
+  geom_smooth(se = FALSE, method = "lm") +
+  labs(title = "SAT Verbal Scores vs Teacher Salary",
+       x = "Teacher Salary ($1000s)",
+       y = "SAT Verbal Score",
+       color = "Expenditure Level",
+       size = "Student-Teacher Ratio") +
+  theme_minimal()
+
+```
+

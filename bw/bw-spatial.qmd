@@ -3,3 +3,37 @@ title: "Spatial Viz"
 ---
 
 Use this file to generate a professional looking **spatial** visualization.  The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.
+
+```{r}
+# Import starbucks location data
+starbucks <- read.csv("https://mac-stat.github.io/data/starbucks.csv")
+
+```
+
+```{r}
+library(rnaturalearth)
+
+# Get info about country boundaries across the world
+# in a "sf" or simple feature format
+world_boundaries <- ne_countries(returnclass = "sf")
+```
+
+
+```{r}
+# Load package needed to change map theme
+library(mosaic)
+library(tidyverse)
+
+# Add a point for each Starbucks
+# NOTE: The Starbucks info is in our starbucks data, not world_boundaries
+# How does this change how we use geom_point?!
+ggplot(world_boundaries) + 
+  geom_sf() + 
+  geom_point(
+    data = starbucks,
+    aes(x = Longitude, y = Latitude),
+    alpha = 0.3, size = 0.2, color = "darkgreen"
+  ) +
+  theme_map()
+```
+
