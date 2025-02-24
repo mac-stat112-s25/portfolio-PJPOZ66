@@ -12,9 +12,9 @@
   {
     "objectID": "bw/bw-uni.html",
     "href": "bw/bw-uni.html",
-    "title": "1  Univariate Viz",
+    "title": "\n1  Univariate Viz\n",
     "section": "",
-    "text": "Use this file to generate a professional looking univariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "Use this file to generate a professional looking univariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.\n\n# Import data\nhikes &lt;- read.csv(\"https://mac-stat.github.io/data/high_peaks.csv\")\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nggplot(hikes, aes(x = elevation)) +\n  geom_histogram(color = \"white\", binwidth = 200) +\n  labs(x = \"Elevation (feet)\", y = \"Number of hikes\")",
     "crumbs": [
       "Best Work",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Univariate Viz</span>"
@@ -23,9 +23,9 @@
   {
     "objectID": "bw/bw-bi.html",
     "href": "bw/bw-bi.html",
-    "title": "2  Bivariate Viz",
+    "title": "\n2  Bivariate Viz\n",
     "section": "",
-    "text": "Use this file to generate a professional looking bivariate visualization. The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "Use this file to generate a professional looking bivariate visualization. The visualization will not perfect the first time but you are expected to improve it throughout the semester especially after covering advanced topics such as effective viz.\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Load data\nelections &lt;- read.csv(\"https://mac-stat.github.io/data/election_2020_county.csv\")\n\n\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'",
     "crumbs": [
       "Best Work",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Bivariate Viz</span>"
@@ -34,9 +34,9 @@
   {
     "objectID": "bw/bw-tri.html",
     "href": "bw/bw-tri.html",
-    "title": "3  Trivariate Viz",
+    "title": "\n3  Trivariate Viz\n",
     "section": "",
-    "text": "Use this file to generate a professional looking trivariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "Use this file to generate a professional looking trivariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.\n\n# Import and check out data\neducation &lt;- read.csv(\"https://mac-stat.github.io/data/sat.csv\")\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nggplot(education, aes(y = sat, x = salary, color = cut(expend, 3))) + \n  geom_point() + \n  geom_smooth(se = FALSE, method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'",
     "crumbs": [
       "Best Work",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Trivariate Viz</span>"
@@ -45,9 +45,9 @@
   {
     "objectID": "bw/bw-quad.html",
     "href": "bw/bw-quad.html",
-    "title": "4  Quadvariate Viz",
+    "title": "\n4  Quadvariate Viz\n",
     "section": "",
-    "text": "Use this file to generate a professional looking quadvariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "Use this file to generate a professional looking quadvariate visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.\n\neducation &lt;- read.csv(\"https://mac-stat.github.io/data/sat.csv\")\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n\n\nlibrary(ggplot2)\n\nggplot(education, aes(x = salary, y = verbal, color = cut(expend, 3), size = ratio)) + \n  geom_point(alpha = 0.7) + \n  geom_smooth(se = FALSE, method = \"lm\") +\n  labs(title = \"SAT Verbal Scores vs Teacher Salary\",\n       x = \"Teacher Salary ($1000s)\",\n       y = \"SAT Verbal Score\",\n       color = \"Expenditure Level\",\n       size = \"Student-Teacher Ratio\") +\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: The following aesthetics were dropped during statistical transformation: size.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?",
     "crumbs": [
       "Best Work",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Quadvariate Viz</span>"
@@ -56,56 +56,12 @@
   {
     "objectID": "bw/bw-spatial.html",
     "href": "bw/bw-spatial.html",
-    "title": "5  Spatial Viz",
+    "title": "\n5  Spatial Viz\n",
     "section": "",
-    "text": "Use this file to generate a professional looking spatial visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.",
+    "text": "Use this file to generate a professional looking spatial visualization. The visualization will not perfect the first time but you are expected to improve on it throughout the semester especially after covering advanced topics such as effective viz.\n\n# Import starbucks location data\nstarbucks &lt;- read.csv(\"https://mac-stat.github.io/data/starbucks.csv\")\n\n\nlibrary(rnaturalearth)\n\nWarning: package 'rnaturalearth' was built under R version 4.4.2\n\n# Get info about country boundaries across the world\n# in a \"sf\" or simple feature format\nworld_boundaries &lt;- ne_countries(returnclass = \"sf\")\n\n\n# Load package needed to change map theme\nlibrary(mosaic)\n\nWarning: package 'mosaic' was built under R version 4.4.2\n\n\nRegistered S3 method overwritten by 'mosaic':\n  method                           from   \n  fortify.SpatialPolygonsDataFrame ggplot2\n\n\n\nThe 'mosaic' package masks several functions from core packages in order to add \nadditional features.  The original behavior of these functions should not be affected by this.\n\n\n\nAttaching package: 'mosaic'\n\n\nThe following objects are masked from 'package:dplyr':\n\n    count, do, tally\n\n\nThe following object is masked from 'package:Matrix':\n\n    mean\n\n\nThe following object is masked from 'package:ggplot2':\n\n    stat\n\n\nThe following objects are masked from 'package:stats':\n\n    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,\n    quantile, sd, t.test, var\n\n\nThe following objects are masked from 'package:base':\n\n    max, mean, min, prod, range, sample, sum\n\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ lubridate 1.9.3     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n✔ readr     2.1.5     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ mosaic::count() masks dplyr::count()\n✖ purrr::cross()  masks mosaic::cross()\n✖ mosaic::do()    masks dplyr::do()\n✖ tidyr::expand() masks Matrix::expand()\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\n✖ tidyr::pack()   masks Matrix::pack()\n✖ mosaic::stat()  masks ggplot2::stat()\n✖ mosaic::tally() masks dplyr::tally()\n✖ tidyr::unpack() masks Matrix::unpack()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n# Add a point for each Starbucks\n# NOTE: The Starbucks info is in our starbucks data, not world_boundaries\n# How does this change how we use geom_point?!\nggplot(world_boundaries) + \n  geom_sf() + \n  geom_point(\n    data = starbucks,\n    aes(x = Longitude, y = Latitude),\n    alpha = 0.3, size = 0.2, color = \"darkgreen\"\n  ) +\n  theme_map()\n\nWarning: Removed 1 row containing missing values or values outside the scale range\n(`geom_point()`).",
     "crumbs": [
       "Best Work",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz</span>"
-    ]
-  },
-  {
-    "objectID": "ica/ica-uni.html",
-    "href": "ica/ica-uni.html",
-    "title": "6  Univariate Viz",
-    "section": "",
-    "text": "Use this file for practice with the univariate viz in-class activity. Refer to the class website for details.",
-    "crumbs": [
-      "In-class Activities",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Univariate Viz</span>"
-    ]
-  },
-  {
-    "objectID": "ica/ica-bi.html",
-    "href": "ica/ica-bi.html",
-    "title": "7  Bivariate Viz",
-    "section": "",
-    "text": "Use this file for practice with the bivariate viz in-class activity. Refer to the class website for details.",
-    "crumbs": [
-      "In-class Activities",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Bivariate Viz</span>"
-    ]
-  },
-  {
-    "objectID": "ica/ica-multi.html",
-    "href": "ica/ica-multi.html",
-    "title": "8  Mulivariate Viz",
-    "section": "",
-    "text": "Use this file for practice with the mulivariate viz in-class activity. Refer to the class website for details.",
-    "crumbs": [
-      "In-class Activities",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Mulivariate Viz</span>"
-    ]
-  },
-  {
-    "objectID": "ica/ica-spatial.html",
-    "href": "ica/ica-spatial.html",
-    "title": "9  Spatial Viz",
-    "section": "",
-    "text": "Use this file for practice with the spatial viz in-class activity. Refer to the class website for details.",
-    "crumbs": [
-      "In-class Activities",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Spatial Viz</span>"
     ]
   }
 ]
