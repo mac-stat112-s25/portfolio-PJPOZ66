@@ -63,5 +63,357 @@
       "Best Work",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Spatial Viz</span>"
     ]
+  },
+  {
+    "objectID": "ica/ica-bi.html",
+    "href": "ica/ica-bi.html",
+    "title": "\n6  Bivariate Viz\n",
+    "section": "",
+    "text": "6.1 Exercise 2\n# Set up the plotting frame\n# A histogram only maps one variable on the x-axis while a scatterplot shows two quantitative variables\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16))\n# Add a layer of points for each county\n# Take note of the geom: geom_point\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_point()\n# Change the shape of the points\n# The shape of the points change\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_point(shape = 4)\n# YOU TRY: Modify the code to make the points \"orange\"\n# NOTE: Try to anticipate if \"color\" or \"fill\" will be useful here. Then try both.\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_point(color = \"orange\")\n# Add a layer that represents each county by the state it's in\n# Take note of the geom and the info it needs to run!\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_text(aes(label = state_abbr))",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-bi.html#exercise-3",
+    "href": "ica/ica-bi.html#exercise-3",
+    "title": "\n6  Bivariate Viz\n",
+    "section": "\n6.2 Exercise 3",
+    "text": "6.2 Exercise 3\nThere is a strong positive correlation between Republican support in 2016 and 2020—counties with higher Republican support in 2016 tended to have higher support in 2020. Notably, some counties in Texas and Utah saw a disproportionately larger increase in Republican support in 2020 compared to 2016.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-bi.html#exercise-4",
+    "href": "ica/ica-bi.html#exercise-4",
+    "title": "\n6  Bivariate Viz\n",
+    "section": "\n6.3 Exercise 4",
+    "text": "6.3 Exercise 4\n\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_point() +\n  geom_smooth()\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\n\n\n\n\n\n\nPart A\n\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_smooth()\n\n`geom_smooth()` using method = 'gam' and formula = 'y ~ s(x, bs = \"cs\")'\n\n\n\n\n\n\n\n\nPart B\n\nggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +\n  geom_point() +\n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-bi.html#exercise-5",
+    "href": "ica/ica-bi.html#exercise-5",
+    "title": "\n6  Bivariate Viz\n",
+    "section": "\n6.4 Exercise 5",
+    "text": "6.4 Exercise 5\nThere is a moderate positive relationship between Republican support and median age—counties with older populations generally show higher Republican support. In contrast, there is a stronger negative relationship between Republican support and median rent, with higher rent (an indicator of cost of living) correlating with lower Republican support.\n\n# Scatterplot of repub_pct_20 vs median_rent\nggplot(elections, aes(y = repub_pct_20, x = median_rent)) +\n  geom_point() \n\n\n\n\n\n\n\n\n# Scatterplot of repub_pct_20 vs median_age\nggplot(elections, aes(y = repub_pct_20, x = median_age)) +\n  geom_point()",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-bi.html#exercise-6",
+    "href": "ica/ica-bi.html#exercise-6",
+    "title": "\n6  Bivariate Viz\n",
+    "section": "\n6.5 Exercise 6",
+    "text": "6.5 Exercise 6\n\nggplot(elections, aes(y = repub_pct_20, x = historical)) +\n  geom_point()\n\n\n\n\n\n\n\nA scatterplot is not ideal for visualizing the relationship between a county’s 2020 Republican support and historical political trends because it compares two quantitative variables, while historical trends are categorical. This makes it difficult to see clear differences between historically Republican, Democratic, or swing states. A boxplot or violin plot would better illustrate how Republican support varies across these categories.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-bi.html#exercise-7",
+    "href": "ica/ica-bi.html#exercise-7",
+    "title": "\n6  Bivariate Viz\n",
+    "section": "\n6.6 Exercise 7",
+    "text": "6.6 Exercise 7",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-multi.html",
+    "href": "ica/ica-multi.html",
+    "title": "\n7  Mulivariate Viz\n",
+    "section": "",
+    "text": "7.1 Exercise 1\nPart A\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nggplot(education, aes(x = sat)) +\n  geom_histogram(binwidth = 20, fill = \"blue\", color = \"black\", alpha = 0.7) +\n  labs(title = \"Distribution of SAT Scores by State\",\n       x = \"SAT Score\",\n       y = \"Frequency\") +\n  theme_minimal()\nPart B The SAT score distribution is not normal; it appears bimodal or right-skewed, with scores ranging roughly from 850 to 1200. Most states cluster between 900 and 1100, but some have notably lower averages. This pattern is likely due to differences in SAT participation rates—states with low participation often have higher average scores since only strong students take the test. Additionally, state testing policies and education funding may contribute to these variations.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mulivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-multi.html#exercise-2",
+    "href": "ica/ica-multi.html#exercise-2",
+    "title": "\n7  Mulivariate Viz\n",
+    "section": "\n7.2 Exercise 2",
+    "text": "7.2 Exercise 2\n\nggplot(education, aes(x = expend, y = sat)) +\n  geom_point(color = \"blue\", alpha = 0.7) +\n  geom_smooth(method = \"lm\", color = \"red\", se = FALSE) +\n  labs(title = \"SAT Scores vs Per Pupil Spending\",\n       x = \"Per Pupil Spending ($1000s)\",\n       y = \"SAT Score\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nggplot(education, aes(x = salary, y = sat)) +\n  geom_point(color = \"green\", alpha = 0.7) +\n  geom_smooth(method = \"lm\", color = \"red\", se = FALSE) +\n  labs(title = \"SAT Scores vs Teacher Salary\",\n       x = \"Teacher Salary ($1000s)\",\n       y = \"SAT Score\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\nPart B The plots show little to no positive correlation between SAT scores and both spending and teacher salary, which is surprising. This is likely due to SAT participation rates—states with higher spending often have more students taking the test, including lower-performing ones, which lowers the average score.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mulivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-multi.html#exercise-3",
+    "href": "ica/ica-multi.html#exercise-3",
+    "title": "\n7  Mulivariate Viz\n",
+    "section": "\n7.3 Exercise 3",
+    "text": "7.3 Exercise 3\n\nggplot(education, aes(y = sat, x = salary, color = expend)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\nWarning: The following aesthetics were dropped during statistical transformation:\ncolour.\nℹ This can happen when ggplot fails to infer the correct grouping structure in\n  the data.\nℹ Did you forget to specify a `group` aesthetic or to convert a numerical\n  variable into a factor?",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mulivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-multi.html#exercise-4",
+    "href": "ica/ica-multi.html#exercise-4",
+    "title": "\n7  Mulivariate Viz\n",
+    "section": "\n7.4 Exercise 4",
+    "text": "7.4 Exercise 4\n\nggplot(education, aes(y = sat, x = salary, color = cut(expend, 3))) + \n  geom_point() + \n  geom_smooth(se = FALSE, method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\nIf you change the 2 to a 3 it divides per pupil spending into three levels instead of just 2.\nThe plot shows that SAT scores are more strongly influenced by per pupil spending than teacher salaries. States with lower spending tend to have higher SAT scores, likely due to fewer test-takers, while higher spending states often have lower SAT scores because more students take the test. Teacher salary seems to have less impact on SAT scores in comparison.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mulivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-multi.html#exercise-5",
+    "href": "ica/ica-multi.html#exercise-5",
+    "title": "\n7  Mulivariate Viz\n",
+    "section": "\n7.5 Exercise 5",
+    "text": "7.5 Exercise 5\nPart A\n\nggplot(education, aes(x = fracCat)) + \n  geom_bar()\n\n\n\n\n\n\n\nPart B the more students in a state that take the SAT, the lower the average scores tend to be. This is probaly related to self-selction\n\nggplot(education, aes(x = sat, fill = fracCat)) + \n  geom_density(alpha = 0.5)\n\n\n\n\n\n\n\nPart C When we control for the fraction of students that take the SAT, SAT scores increase with expenditure.\n\nggplot(education, aes(y = sat, x = expend, color = fracCat)) + \n  geom_point() + \n  geom_smooth(method = \"lm\")\n\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\nPart D Student participation tends to be lower among states with lower expenditures (which are likely also the states with higher ed institutions that haven’t historically required the SAT). Those same states tend to have higher SAT scores because of the self-selection of who participates.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Mulivariate Viz</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-data.html",
+    "href": "ica/ica-data.html",
+    "title": "\n8  ica-data\n",
+    "section": "",
+    "text": "8.1 Exercise 1\n# Create a dataset with just Adelie and Chinstrap using %in%\n# Pipe this into `count(species)` to confirm that you only have these 2 species\npenguins |&gt;\n  filter(species %in% c(\"Adelie\", \"Chinstrap\")) |&gt;\n  count(species)\n\n# A tibble: 2 × 2\n  species       n\n  &lt;chr&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\n# Create a dataset with just Adelie and Chinstrap using !=\n# Pipe this into `count(species)` to confirm that you only have these 2 species\npenguins |&gt;\n  filter(species != \"Gentoo\") |&gt;\n  count(species)\n\n# A tibble: 2 × 2\n  species       n\n  &lt;chr&gt;     &lt;int&gt;\n1 Adelie      152\n2 Chinstrap    68\nhead(penguins)\n\n# A tibble: 6 × 8\n  species island    bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;chr&gt;   &lt;chr&gt;              &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;\n1 Adelie  Torgersen           39.1          18.7               181        3750\n2 Adelie  Torgersen           39.5          17.4               186        3800\n3 Adelie  Torgersen           40.3          18                 195        3250\n4 Adelie  Torgersen           NA            NA                  NA          NA\n5 Adelie  Torgersen           36.7          19.3               193        3450\n6 Adelie  Torgersen           39.3          20.6               190        3650\n# ℹ 2 more variables: sex &lt;chr&gt;, year &lt;dbl&gt;\nIt might get rid of data points even if they have complete information on the variables we need, just because they’re missing infor on variable we don’t need.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ica-data</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-data.html#exercise-2",
+    "href": "ica/ica-data.html#exercise-2",
+    "title": "\n8  ica-data\n",
+    "section": "\n8.2 Exercise 2",
+    "text": "8.2 Exercise 2\n\n# First: recall the variable names\nnames(penguins)\n\n[1] \"species\"           \"island\"            \"bill_length_mm\"   \n[4] \"bill_depth_mm\"     \"flipper_length_mm\" \"body_mass_g\"      \n[7] \"sex\"               \"year\"             \n\n\n\n# Use a shortcut to keep everything but the year and island variables\npenguins |&gt; \n  select(-year, -island)\n\n# A tibble: 344 × 6\n   species bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex   \n   &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt; \n 1 Adelie            39.1          18.7               181        3750 male  \n 2 Adelie            39.5          17.4               186        3800 female\n 3 Adelie            40.3          18                 195        3250 female\n 4 Adelie            NA            NA                  NA          NA &lt;NA&gt;  \n 5 Adelie            36.7          19.3               193        3450 female\n 6 Adelie            39.3          20.6               190        3650 male  \n 7 Adelie            38.9          17.8               181        3625 female\n 8 Adelie            39.2          19.6               195        4675 male  \n 9 Adelie            34.1          18.1               193        3475 &lt;NA&gt;  \n10 Adelie            42            20.2               190        4250 &lt;NA&gt;  \n# ℹ 334 more rows\n\n\n\n# Use a shortcut to keep only species and the penguin characteristics measured in mm\npenguins |&gt; \n  select(species, ends_with(\"mm\"))\n\n# A tibble: 344 × 4\n   species bill_length_mm bill_depth_mm flipper_length_mm\n   &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;\n 1 Adelie            39.1          18.7               181\n 2 Adelie            39.5          17.4               186\n 3 Adelie            40.3          18                 195\n 4 Adelie            NA            NA                  NA\n 5 Adelie            36.7          19.3               193\n 6 Adelie            39.3          20.6               190\n 7 Adelie            38.9          17.8               181\n 8 Adelie            39.2          19.6               195\n 9 Adelie            34.1          18.1               193\n10 Adelie            42            20.2               190\n# ℹ 334 more rows\n\n\n\n# Use a shortcut to keep only species and bill-related measurements\npenguins |&gt; \n  select(species, starts_with(\"bill\"))\n\n# A tibble: 344 × 3\n   species bill_length_mm bill_depth_mm\n   &lt;chr&gt;            &lt;dbl&gt;         &lt;dbl&gt;\n 1 Adelie            39.1          18.7\n 2 Adelie            39.5          17.4\n 3 Adelie            40.3          18  \n 4 Adelie            NA            NA  \n 5 Adelie            36.7          19.3\n 6 Adelie            39.3          20.6\n 7 Adelie            38.9          17.8\n 8 Adelie            39.2          19.6\n 9 Adelie            34.1          18.1\n10 Adelie            42            20.2\n# ℹ 334 more rows\n\n\n\n# Use a shortcut to keep only species and the length-related characteristics\npenguins |&gt; \n  select(species, contains(\"length\"))\n\n# A tibble: 344 × 3\n   species bill_length_mm flipper_length_mm\n   &lt;chr&gt;            &lt;dbl&gt;             &lt;dbl&gt;\n 1 Adelie            39.1               181\n 2 Adelie            39.5               186\n 3 Adelie            40.3               195\n 4 Adelie            NA                  NA\n 5 Adelie            36.7               193\n 6 Adelie            39.3               190\n 7 Adelie            38.9               181\n 8 Adelie            39.2               195\n 9 Adelie            34.1               193\n10 Adelie            42                 190\n# ℹ 334 more rows",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ica-data</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-data.html#exercise-3",
+    "href": "ica/ica-data.html#exercise-3",
+    "title": "\n8  ica-data\n",
+    "section": "\n8.3 Exercise 3",
+    "text": "8.3 Exercise 3\n\n# Change this code to sort the penguins by species, and then island name\n# NOTE: The first row should be an Adelie penguin living on Biscoe island\npenguins |&gt; \n  arrange(species, island) |&gt; \n  head()\n\n# A tibble: 6 × 8\n  species island bill_length_mm bill_depth_mm flipper_length_mm body_mass_g\n  &lt;chr&gt;   &lt;chr&gt;           &lt;dbl&gt;         &lt;dbl&gt;             &lt;dbl&gt;       &lt;dbl&gt;\n1 Adelie  Biscoe           37.8          18.3               174        3400\n2 Adelie  Biscoe           37.7          18.7               180        3600\n3 Adelie  Biscoe           35.9          19.2               189        3800\n4 Adelie  Biscoe           38.2          18.1               185        3950\n5 Adelie  Biscoe           38.8          17.2               180        3800\n6 Adelie  Biscoe           35.3          18.9               187        3800\n# ℹ 2 more variables: sex &lt;chr&gt;, year &lt;dbl&gt;\n\n\n\n# Change this code to count the number of male/female penguins observed for each species\npenguins |&gt; \n  count(species, sex)\n\n# A tibble: 8 × 3\n  species   sex        n\n  &lt;chr&gt;     &lt;chr&gt;  &lt;int&gt;\n1 Adelie    female    73\n2 Adelie    male      73\n3 Adelie    &lt;NA&gt;       6\n4 Chinstrap female    34\n5 Chinstrap male      34\n6 Gentoo    female    58\n7 Gentoo    male      61\n8 Gentoo    &lt;NA&gt;       5\n\n\n\n# Change this code to calculate the average body mass by species and sex\npenguins |&gt; \n  group_by(species, sex) |&gt; \n  summarize(mean = mean(body_mass_g, na.rm = TRUE))\n\n`summarise()` has grouped output by 'species'. You can override using the\n`.groups` argument.\n\n\n# A tibble: 8 × 3\n# Groups:   species [3]\n  species   sex     mean\n  &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt;\n1 Adelie    female 3369.\n2 Adelie    male   4043.\n3 Adelie    &lt;NA&gt;   3540 \n4 Chinstrap female 3527.\n5 Chinstrap male   3939.\n6 Gentoo    female 4680.\n7 Gentoo    male   5485.\n8 Gentoo    &lt;NA&gt;   4588.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ica-data</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-data.html#exercise-4",
+    "href": "ica/ica-data.html#exercise-4",
+    "title": "\n8  ica-data\n",
+    "section": "\n8.4 Exercise 4",
+    "text": "8.4 Exercise 4\n\n# Get today's date\nas.Date(today())\n\n[1] \"2025-03-10\"\n\n\n\n# Let's store this as \"today\" so we can work with it below\ntoday &lt;- as.Date(today())\n\n# Check out the class of this object\nclass(today)\n\n[1] \"Date\"\n\n\n\n# Records just the 4-digit year\nyear(today)\n\n[1] 2025\n\n\n\n# Today's month, as a number or label\nmonth(today)\n\n[1] 3\n\n\n\nmonth(today, label = TRUE)\n\n[1] Mar\n12 Levels: Jan &lt; Feb &lt; Mar &lt; Apr &lt; May &lt; Jun &lt; Jul &lt; Aug &lt; Sep &lt; ... &lt; Dec\n\n\n\n# This is the week of the year (1-52)\nweek(today)\n\n[1] 10\n\n\n\n# Day of the month (1-31) and day of the year (1-366)\nmday(today)\n\n[1] 10\n\n\n\nyday(today)  # This is often called the \"Julian day\"\n\n[1] 69\n\n\n\n# Day of the week as a number or label\nwday(today)\n\n[1] 2\n\n\n\nwday(today, label = TRUE)\n\n[1] Mon\nLevels: Sun &lt; Mon &lt; Tue &lt; Wed &lt; Thu &lt; Fri &lt; Sat\n\n\n\n# today is on or after Feb 14, 2024\ntoday &gt;= ymd(\"2024-02-14\")\n\n[1] TRUE\n\n\n\n# today is not before Feb 14, 2024\ntoday &lt; ymd(\"2024-02-14\")\n\n[1] FALSE\n\n\n\nlibrary(mosaic)\n\nWarning: package 'mosaic' was built under R version 4.4.2\n\n\nRegistered S3 method overwritten by 'mosaic':\n  method                           from   \n  fortify.SpatialPolygonsDataFrame ggplot2\n\n\n\nThe 'mosaic' package masks several functions from core packages in order to add \nadditional features.  The original behavior of these functions should not be affected by this.\n\n\n\nAttaching package: 'mosaic'\n\n\nThe following object is masked from 'package:Matrix':\n\n    mean\n\n\nThe following objects are masked from 'package:dplyr':\n\n    count, do, tally\n\n\nThe following object is masked from 'package:purrr':\n\n    cross\n\n\nThe following object is masked from 'package:ggplot2':\n\n    stat\n\n\nThe following objects are masked from 'package:stats':\n\n    binom.test, cor, cor.test, cov, fivenum, IQR, median, prop.test,\n    quantile, sd, t.test, var\n\n\nThe following objects are masked from 'package:base':\n\n    max, mean, min, prod, range, sample, sum\n\ndata(\"Birthdays\")\nhead(Birthdays)\n\n  state year month day       date wday births\n1    AK 1969     1   1 1969-01-01  Wed     14\n2    AL 1969     1   1 1969-01-01  Wed    174\n3    AR 1969     1   1 1969-01-01  Wed     78\n4    AZ 1969     1   1 1969-01-01  Wed     84\n5    CA 1969     1   1 1969-01-01  Wed    824\n6    CO 1969     1   1 1969-01-01  Wed    100",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ica-data</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-data.html#exercise-5",
+    "href": "ica/ica-data.html#exercise-5",
+    "title": "\n8  ica-data\n",
+    "section": "\n8.5 Exercise 5",
+    "text": "8.5 Exercise 5\n\n# How many days of data do we have for each state?\n# 1 day\n\n# How many total births were there in this time period?\n# 1200\n\n# How many total births were there per state in this time period, sorted from low to high?",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>ica-data</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html",
+    "href": "ica/ica-wrangling.html",
+    "title": "\n9  ica-wrangling\n",
+    "section": "",
+    "text": "9.1 Exercise 1\n# Load tidyverse & data\nlibrary(tidyverse)\n\nWarning: package 'tidyverse' was built under R version 4.4.2\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nelections &lt;- read.csv(\"https://mac-stat.github.io/data/election_2020_county.csv\")\n# Define elections_small\nelections_small &lt;- elections |&gt;\n  select(state_name, county_name, total_votes_20, repub_pct_20, dem_pct_20, total_votes_16, dem_pct_16)\n\n# Check out the first 6 rows to confirm your code did what you think it did!\nhead(elections_small)\n\n  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20\n1    Alabama Autauga County          27770        71.44      27.02\n2    Alabama Baldwin County         109679        76.17      22.41\n3    Alabama Barbour County          10518        53.45      45.79\n4    Alabama    Bibb County           9595        78.43      20.70\n5    Alabama  Blount County          27588        89.57       9.57\n6    Alabama Bullock County           4613        24.84      74.70\n  total_votes_16 dem_pct_16\n1          24661      23.96\n2          94090      19.57\n3          10390      46.66\n4           8748      21.42\n5          25384       8.47\n6           4701      75.09",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-2",
+    "href": "ica/ica-wrangling.html#exercise-2",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.2 Exercise 2",
+    "text": "9.2 Exercise 2\n\n# Keep only data on counties in Hawaii\nelections_small |&gt;\n filter(state_name == \"Hawaii\")\n\n  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20\n1     Hawaii   Hawaii County          87814        30.63      66.88\n2     Hawaii Honolulu County         382114        35.66      62.51\n3     Hawaii    Kauai County          33497        34.58      63.36\n4     Hawaii     Maui County          71044        31.14      66.59\n  total_votes_16 dem_pct_16\n1          64865      63.61\n2         285683      61.48\n3          26335      62.49\n4          51942      64.45\n\n\n\n# Keep counties in Hawaii AND Delaware\nelections_small |&gt; \n  filter(state_name %in% c(\"Hawaii\", \"Delaware\"))\n\n  state_name       county_name total_votes_20 repub_pct_20 dem_pct_20\n1   Delaware       Kent County          87025        47.12      51.19\n2   Delaware New Castle County         287633        30.72      67.81\n3   Delaware     Sussex County         129352        55.07      43.82\n4     Hawaii     Hawaii County          87814        30.63      66.88\n5     Hawaii   Honolulu County         382114        35.66      62.51\n6     Hawaii      Kauai County          33497        34.58      63.36\n7     Hawaii       Maui County          71044        31.14      66.59\n  total_votes_16 dem_pct_16\n1          74253      44.91\n2         261468      62.30\n3         105814      37.17\n4          64865      63.61\n5         285683      61.48\n6          26335      62.49\n7          51942      64.45\n\n\n\n# Keep only data on counties where the Republican got MORE THAN 93.97% of the vote in 2020\nelections_small |&gt; \n  filter(repub_pct_20 &gt; 93.97)\n\n  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20\n1      Texas  Borden County            416        95.43       3.85\n2      Texas    King County            159        94.97       5.03\n3      Texas Roberts County            550        96.18       3.09\n  total_votes_16 dem_pct_16\n1            365       8.49\n2            159       3.14\n3            550       3.64\n\n\n\n# Keep only data on counties where the Republican got AT LEAST 93.97% of the vote in 2020\n# This should have 1 more row than your answer above\nelections_small |&gt; \n  filter(repub_pct_20 &gt;= 93.97)\n\n  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20\n1    Montana Garfield County            813        93.97       5.04\n2      Texas   Borden County            416        95.43       3.85\n3      Texas     King County            159        94.97       5.03\n4      Texas  Roberts County            550        96.18       3.09\n  total_votes_16 dem_pct_16\n1            715       4.76\n2            365       8.49\n3            159       3.14\n4            550       3.64\n\n\n\n# Keep only data on counties in Texas where the Democrat got more than 65% of the vote in 2020\n# Do this 2 ways.\n# Method 1: 2 filters with 1 condition each\nelections_small |&gt;\n filter(state_name == \"Texas\") |&gt;\n filter(dem_pct_20 &gt; 65)\n\n  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20\n1      Texas  El Paso County         267215        31.56      66.66\n2      Texas Presidio County           2217        32.52      65.99\n3      Texas   Travis County         610349        26.43      71.41\n4      Texas   Zavala County           4379        34.03      65.40\n  total_votes_16 dem_pct_16\n1         210458      69.14\n2           2203      66.18\n3         462511      66.26\n4           3390      77.67\n\n\n\n# Method 2: 1 filter with 2 conditions\nelections_small |&gt;\n filter(state_name == \"Texas\", dem_pct_20 &gt; 65)\n\n  state_name     county_name total_votes_20 repub_pct_20 dem_pct_20\n1      Texas  El Paso County         267215        31.56      66.66\n2      Texas Presidio County           2217        32.52      65.99\n3      Texas   Travis County         610349        26.43      71.41\n4      Texas   Zavala County           4379        34.03      65.40\n  total_votes_16 dem_pct_16\n1         210458      69.14\n2           2203      66.18\n3         462511      66.26\n4           3390      77.67",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-3",
+    "href": "ica/ica-wrangling.html#exercise-3",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.3 Exercise 3",
+    "text": "9.3 Exercise 3\n\n# Arrange the counties in elections_small from lowest to highest percentage of 2020 Republican support\n# Print out just the first 6 rows\nelections_small |&gt;\n  arrange(repub_pct_20) |&gt;\n  head()\n\n            state_name            county_name total_votes_20 repub_pct_20\n1 District of Columbia   District of Columbia         344356         5.40\n2             Maryland Prince George's County         424855         8.73\n3             Maryland         Baltimore city         237461        10.69\n4             Virginia        Petersburg city          14118        11.22\n5             New York        New York County         694904        12.26\n6           California   San Francisco County         443458        12.72\n  dem_pct_20 total_votes_16 dem_pct_16\n1      92.15         280272      92.85\n2      89.26         351091      89.33\n3      87.28         208980      85.44\n4      87.75          13717      87.52\n5      86.78         591368      87.17\n6      85.27         365295      85.53\n\n\n\n# Arrange the counties in elections_small from highest to lowest percentage of 2020 Republican support\n# Print out just the first 6 rows\nelections_small |&gt;\n  arrange(desc(repub_pct_20)) |&gt;\n  head()\n\n  state_name      county_name total_votes_20 repub_pct_20 dem_pct_20\n1      Texas   Roberts County            550        96.18       3.09\n2      Texas    Borden County            416        95.43       3.85\n3      Texas      King County            159        94.97       5.03\n4    Montana  Garfield County            813        93.97       5.04\n5      Texas Glasscock County            653        93.57       5.97\n6   Nebraska     Grant County            402        93.28       4.98\n  total_votes_16 dem_pct_16\n1            550       3.64\n2            365       8.49\n3            159       3.14\n4            715       4.76\n5            602       5.65\n6            394       5.08",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-4",
+    "href": "ica/ica-wrangling.html#exercise-4",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.4 Exercise 4",
+    "text": "9.4 Exercise 4\n\n# Define diff_20, the difference btwn the Repub and Dem percent in 2020\nelections_small |&gt; \n  mutate(diff_20 = repub_pct_20 - dem_pct_20) |&gt; \n  head()\n\n  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20\n1    Alabama Autauga County          27770        71.44      27.02\n2    Alabama Baldwin County         109679        76.17      22.41\n3    Alabama Barbour County          10518        53.45      45.79\n4    Alabama    Bibb County           9595        78.43      20.70\n5    Alabama  Blount County          27588        89.57       9.57\n6    Alabama Bullock County           4613        24.84      74.70\n  total_votes_16 dem_pct_16 diff_20\n1          24661      23.96   44.42\n2          94090      19.57   53.76\n3          10390      46.66    7.66\n4           8748      21.42   57.73\n5          25384       8.47   80.00\n6           4701      75.09  -49.86\n\n\n\n# Define repub_votes_20, the number (not percent) of Repub votes in 2020\nelections_small |&gt; \n  mutate(repub_votes_20 = round(total_votes_20 * repub_pct_20/100)) |&gt; \n  head()\n\n  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20\n1    Alabama Autauga County          27770        71.44      27.02\n2    Alabama Baldwin County         109679        76.17      22.41\n3    Alabama Barbour County          10518        53.45      45.79\n4    Alabama    Bibb County           9595        78.43      20.70\n5    Alabama  Blount County          27588        89.57       9.57\n6    Alabama Bullock County           4613        24.84      74.70\n  total_votes_16 dem_pct_16 repub_votes_20\n1          24661      23.96          19839\n2          94090      19.57          83542\n3          10390      46.66           5622\n4           8748      21.42           7525\n5          25384       8.47          24711\n6           4701      75.09           1146\n\n\n\n# Define repub_win_20, whether the Repub won in 2020 (TRUE or FALSE!)\nelections_small |&gt; \n  mutate(repub_win_20 = repub_pct_20 &gt; dem_pct_20) |&gt; \n  head()\n\n  state_name    county_name total_votes_20 repub_pct_20 dem_pct_20\n1    Alabama Autauga County          27770        71.44      27.02\n2    Alabama Baldwin County         109679        76.17      22.41\n3    Alabama Barbour County          10518        53.45      45.79\n4    Alabama    Bibb County           9595        78.43      20.70\n5    Alabama  Blount County          27588        89.57       9.57\n6    Alabama Bullock County           4613        24.84      74.70\n  total_votes_16 dem_pct_16 repub_win_20\n1          24661      23.96         TRUE\n2          94090      19.57         TRUE\n3          10390      46.66         TRUE\n4           8748      21.42         TRUE\n5          25384       8.47         TRUE\n6           4701      75.09        FALSE",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-5",
+    "href": "ica/ica-wrangling.html#exercise-5",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.5 Exercise 5",
+    "text": "9.5 Exercise 5\n\n elections_small |&gt; \n   filter(state_name == \"Wisconsin\",\n          repub_pct_20 &lt; dem_pct_20) |&gt; \n   arrange(desc(total_votes_20)) |&gt; \n   head()\n\n  state_name       county_name total_votes_20 repub_pct_20 dem_pct_20\n1  Wisconsin  Milwaukee County         458971        29.27      69.13\n2  Wisconsin       Dane County         344791        22.85      75.46\n3  Wisconsin       Rock County          85360        43.51      54.66\n4  Wisconsin  La Crosse County          67884        42.25      55.75\n5  Wisconsin Eau Claire County          58275        43.49      54.26\n6  Wisconsin    Portage County          40603        47.53      50.31\n  total_votes_16 dem_pct_16\n1         434970      66.44\n2         304729      71.38\n3          75043      52.42\n4          62785      51.61\n5          54080      50.43\n6          38123      48.59\n\n\n\n elections_small |&gt; \n   filter(state_name == \"Wisconsin\",\n          repub_pct_20 &lt; dem_pct_20) |&gt; \n   arrange(desc(total_votes_20)) |&gt; \n   head()\n\n  state_name       county_name total_votes_20 repub_pct_20 dem_pct_20\n1  Wisconsin  Milwaukee County         458971        29.27      69.13\n2  Wisconsin       Dane County         344791        22.85      75.46\n3  Wisconsin       Rock County          85360        43.51      54.66\n4  Wisconsin  La Crosse County          67884        42.25      55.75\n5  Wisconsin Eau Claire County          58275        43.49      54.26\n6  Wisconsin    Portage County          40603        47.53      50.31\n  total_votes_16 dem_pct_16\n1         434970      66.44\n2         304729      71.38\n3          75043      52.42\n4          62785      51.61\n5          54080      50.43\n6          38123      48.59\n\n\n\n elections_small |&gt; \n   filter(state_name == \"Delaware\") |&gt; \n   mutate(repub_win_20 = repub_pct_20 &gt; dem_pct_20) |&gt; \n   select(county_name, repub_pct_20, dem_pct_20, repub_win_20)\n\n        county_name repub_pct_20 dem_pct_20 repub_win_20\n1       Kent County        47.12      51.19        FALSE\n2 New Castle County        30.72      67.81        FALSE\n3     Sussex County        55.07      43.82         TRUE\n\n\n\n# Now try it. Change the order of mutate and select below.\n elections_small |&gt; \n   filter(state_name == \"Delaware\") |&gt; \n   mutate(repub_win_20 = repub_pct_20 &gt; dem_pct_20) |&gt; \n   select(county_name, repub_pct_20, dem_pct_20, repub_win_20)\n\n        county_name repub_pct_20 dem_pct_20 repub_win_20\n1       Kent County        47.12      51.19        FALSE\n2 New Castle County        30.72      67.81        FALSE\n3     Sussex County        55.07      43.82         TRUE",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-6",
+    "href": "ica/ica-wrangling.html#exercise-6",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.6 Exercise 6",
+    "text": "9.6 Exercise 6\n\n# Remember to try this 1 line at a time\nelections_small |&gt; \n  filter(state_name == \"Minnesota\") |&gt; \n  select(county_name, dem_pct_20) |&gt; \n  arrange(desc(dem_pct_20))\n\n                county_name dem_pct_20\n1             Ramsey County      71.50\n2           Hennepin County      70.46\n3               Cook County      65.58\n4          St. Louis County      56.64\n5             Dakota County      55.73\n6            Olmsted County      54.16\n7         Washington County      53.46\n8         Blue Earth County      50.84\n9               Clay County      50.74\n10              Lake County      50.64\n11          Nicollet County      50.31\n12           Carlton County      49.58\n13            Winona County      49.07\n14              Rice County      48.76\n15          Mahnomen County      48.26\n16             Anoka County      47.79\n17          Beltrami County      47.24\n18            Carver County      46.37\n19             Mower County      46.00\n20             Scott County      45.52\n21           Houston County      42.42\n22           Goodhue County      41.23\n23          Freeborn County      40.96\n24            Norman County      40.80\n25            Itasca County      40.61\n26       Koochiching County      38.41\n27          Watonwan County      38.20\n28           Kittson County      38.12\n29           Stevens County      37.80\n30           Stearns County      37.58\n31          Fillmore County      37.48\n32            Steele County      37.47\n33         Kandiyohi County      36.12\n34            Aitkin County      35.98\n35              Lyon County      35.94\n36     Lac qui Parle County      35.79\n37           Wabasha County      35.78\n38             Grant County      35.58\n39          Traverse County      35.46\n40         Big Stone County      35.41\n41        Pennington County      35.29\n42              Pope County      35.27\n43              Polk County      34.88\n44              Cass County      34.68\n45            Wright County      34.49\n46           Hubbard County      34.42\n47             Swift County      34.35\n48         Crow Wing County      34.17\n49           Chisago County      34.15\n50            Becker County      33.96\n51              Pine County      33.87\n52          Le Sueur County      33.73\n53          Chippewa County      33.67\n54            Nobles County      33.65\n55            Waseca County      33.65\n56             Dodge County      33.47\n57        Otter Tail County      32.85\n58            Benton County      32.70\n59           Douglas County      32.56\n60             Brown County      32.48\n61         Sherburne County      32.48\n62         Faribault County      31.98\n63          Red Lake County      31.47\n64          Renville County      30.71\n65            McLeod County      30.64\n66   Yellow Medicine County      30.54\n67           Lincoln County      30.08\n68        Cottonwood County      30.03\n69           Kanabec County      30.02\n70            Martin County      30.02\n71           Jackson County      29.99\n72        Mille Lacs County      29.98\n73            Wilkin County      29.91\n74              Rock County      29.69\n75            Murray County      29.60\n76            Isanti County      29.45\n77            Sibley County      28.60\n78            Meeker County      28.58\n79           Redwood County      28.43\n80 Lake of the Woods County      27.87\n81        Clearwater County      26.76\n82         Pipestone County      26.44\n83            Wadena County      26.35\n84            Roseau County      25.98\n85          Marshall County      25.33\n86              Todd County      24.79\n87          Morrison County      22.33\n\n\n\n# Remember to try this 1 line at a time before storing!\nmn_wi &lt;- elections_small |&gt; \n  filter(state_name %in% c(\"Minnesota\", \"Wisconsin\")) |&gt; \n  select(state_name, county_name, dem_pct_20, dem_pct_16) |&gt;\n  mutate(dem_change = dem_pct_20 - dem_pct_16) |&gt; \n  arrange(dem_change)\n  \n# Check it out\nhead(mn_wi)\n\n  state_name        county_name dem_pct_20 dem_pct_16 dem_change\n1  Minnesota     Stevens County      37.80      39.55      -1.75\n2  Wisconsin      Forest County      34.06      35.12      -1.06\n3  Wisconsin    Kewaunee County      32.87      33.73      -0.86\n4  Wisconsin       Clark County      30.37      31.19      -0.82\n5  Wisconsin       Adams County      36.63      37.40      -0.77\n6  Wisconsin Trempealeau County      40.86      41.57      -0.71\n\n\n\nggplot(mn_wi, aes(x = dem_change, fill = state_name)) + \n  geom_density(alpha = 0.5)\n\n\n\n\n\n\n\n\nggplot(mn_wi, aes(y = dem_change, x = state_name)) + \n  geom_boxplot()\n\n\n\n\n\n\n\n##Exercise 7\n\n# Calculate the median Repub vote percentage in 2020 across all counties\nelections_small |&gt; \n  summarize(median(repub_pct_20))\n\n  median(repub_pct_20)\n1                68.29\n\n\n\n# Calculate the median Repub vote percentage in 2020 across all counties\n# AND name it \"median_repub\"\nelections_small |&gt; \n  summarize(median_repub = median(repub_pct_20))\n\n  median_repub\n1        68.29\n\n\n\n# Calculate the median Repub vote percentage in 2020 across all counties\n# AND the total number of votes across all counties\n# AND name the results\nelections_small |&gt; \n  summarize(median_repub = median(repub_pct_20), total_votes = sum(total_votes_20))\n\n  median_repub total_votes\n1        68.29   157949293",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-8",
+    "href": "ica/ica-wrangling.html#exercise-8",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.7 Exercise 8",
+    "text": "9.7 Exercise 8\n\n# Calculate the median 2020 Repub percent and total votes BY STATE\nelections_small |&gt; \n  group_by(state_name) |&gt; \n  summarize(median_repub = median(repub_pct_20), total_votes = sum(total_votes_20)) \n\n# A tibble: 50 × 3\n   state_name           median_repub total_votes\n   &lt;chr&gt;                       &lt;dbl&gt;       &lt;int&gt;\n 1 Alabama                      70.6     2323304\n 2 Arizona                      57.9     3387326\n 3 Arkansas                     72.1     1219069\n 4 California                   44.8    17495906\n 5 Colorado                     56.2     3256953\n 6 Connecticut                  41.0     1824280\n 7 Delaware                     47.1      504010\n 8 District of Columbia          5.4      344356\n 9 Florida                      64.6    11067456\n10 Georgia                      68       4997716\n# ℹ 40 more rows",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-9",
+    "href": "ica/ica-wrangling.html#exercise-9",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.8 Exercise 9",
+    "text": "9.8 Exercise 9\n\n# Sort the states from the most to least total votes in 2020\nelections_small |&gt; \n  group_by(state_name) |&gt; \n  summarize(total = sum(total_votes_20)) |&gt; \n  arrange(desc(total))\n\n# A tibble: 50 × 2\n   state_name        total\n   &lt;chr&gt;             &lt;int&gt;\n 1 California     17495906\n 2 Texas          11317911\n 3 Florida        11067456\n 4 New York        8616205\n 5 Pennsylvania    6925255\n 6 Illinois        6038850\n 7 Ohio            5922202\n 8 Michigan        5539302\n 9 North Carolina  5524801\n10 Georgia         4997716\n# ℹ 40 more rows\n\n\n\n# In 2020, what were the total number of votes for the Democratic candidate and the total number of votes for the Republican candidate in each *state*?\nelections_small |&gt; \n  mutate(dem_votes_20 = round(total_votes_20 * dem_pct_20 / 100), \n         repub_votes_20 = round(total_votes_20 * repub_pct_20 / 100)) |&gt; \n  group_by(state_name) |&gt; \n  summarize(dem_total = sum(dem_votes_20),\n            repub_total = sum(repub_votes_20))\n\n# A tibble: 50 × 3\n   state_name           dem_total repub_total\n   &lt;chr&gt;                    &lt;dbl&gt;       &lt;dbl&gt;\n 1 Alabama                 849664     1441155\n 2 Arizona                1672127     1661671\n 3 Arkansas                423919      760641\n 4 California            11109642     6006031\n 5 Colorado               1804393     1364627\n 6 Connecticut            1080677      715315\n 7 Delaware                296274      200601\n 8 District of Columbia    317324       18595\n 9 Florida                5297131     5668600\n10 Georgia                2473661     2461869\n# ℹ 40 more rows\n\n\n\n# What states did the Democratic candidate win in 2020?\nelections_small |&gt; \n  mutate(dem_votes_20 = round(total_votes_20 * dem_pct_20 / 100), \n         repub_votes_20 = round(total_votes_20 * repub_pct_20 / 100)) |&gt; \n  group_by(state_name) |&gt; \n  summarize(dem_total = sum(dem_votes_20),\n            repub_total = sum(repub_votes_20)) |&gt; \n  filter(dem_total &gt; repub_total)\n\n# A tibble: 26 × 3\n   state_name           dem_total repub_total\n   &lt;chr&gt;                    &lt;dbl&gt;       &lt;dbl&gt;\n 1 Arizona                1672127     1661671\n 2 California            11109642     6006031\n 3 Colorado               1804393     1364627\n 4 Connecticut            1080677      715315\n 5 Delaware                296274      200601\n 6 District of Columbia    317324       18595\n 7 Georgia                2473661     2461869\n 8 Hawaii                  366121      196865\n 9 Illinois               3471916     2446931\n10 Maine                   430466      359897\n# ℹ 16 more rows",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-wrangling.html#exercise-10",
+    "href": "ica/ica-wrangling.html#exercise-10",
+    "title": "\n9  ica-wrangling\n",
+    "section": "\n9.9 Exercise 10",
+    "text": "9.9 Exercise 10\n\nworld_cup &lt;- read.csv(\"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-11-29/worldcups.csv\")\n\n\n# In what years did Brazil win the World Cup?\nworld_cup |&gt; \n  filter(winner == \"Brazil\")\n\n  year               host winner         second        third       fourth\n1 1958             Sweden Brazil         Sweden       France West Germany\n2 1962              Chile Brazil Czechoslovakia        Chile   Yugoslavia\n3 1970             Mexico Brazil          Italy West Germany      Uruguay\n4 1994                USA Brazil          Italy       Sweden     Bulgaria\n5 2002 Japan, South Korea Brazil        Germany       Turkey  South Korea\n  goals_scored teams games attendance\n1          126    16    35     868000\n2           89    16    32     776000\n3           95    16    32    1673975\n4          141    24    52    3568567\n5          161    32    64    2724604\n\n\n\n# What were the 6 World Cups with the highest attendance?\nworld_cup |&gt; \n  arrange(desc(attendance)) |&gt; \n  head()\n\n  year               host  winner    second       third      fourth\n1 1994                USA  Brazil     Italy      Sweden    Bulgaria\n2 2014             Brazil Germany Argentina Netherlands      Brazil\n3 2006            Germany   Italy    France     Germany    Portugal\n4 2018             Russia  France   Croatia     Belgium     England\n5 1998             France  France    Brazil     Croatia Netherlands\n6 2002 Japan, South Korea  Brazil   Germany      Turkey South Korea\n  goals_scored teams games attendance\n1          141    24    52    3568567\n2          171    32    64    3441450\n3          147    32    64    3367000\n4          169    32    64    3031768\n5          171    32    64    2859234\n6          161    32    64    2724604\n\n\n\n# Construct a univariate plot of goals_scored (no wrangling necessary)\n# This provides a visual summary of how the number of goals_scored varies from World Cup to World Cup\nggplot(world_cup, aes(x = goals_scored)) + \n  geom_histogram(color = \"white\")\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n# Let's follow up the plot with some more precise numerical summaries\n# Calculate the min, median, and max number of goals_scored across all World Cups\n# NOTE: Visually compare these numerical summaries to what you observed in the plot\nworld_cup |&gt; \n  summarize(min(goals_scored), median(goals_scored), max(goals_scored))\n\n  min(goals_scored) median(goals_scored) max(goals_scored)\n1                70                  126               171\n\n\n\n# Construct a bivariate plot of how the number of goals_scored in the World Cup has changed over the years\n# No wrangling necessary\nggplot(world_cup, aes(x = year, y = goals_scored)) + \n  geom_point() + \n  geom_line()\n\n\n\n\n\n\n\n\n# Our above summaries might be a bit misleading.\n# The number of games played at the World Cup varies.\n# Construct a bivariate plot of how the typical number of goals per game has changed over the years\nper_game_data &lt;- world_cup |&gt; \n  mutate(goals_per_game = goals_scored / games)\n\nggplot(per_game_data, aes(x = year, y = goals_per_game)) + \n  geom_point() + \n  geom_line()",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>ica-wrangling</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-reshaping.html",
+    "href": "ica/ica-reshaping.html",
+    "title": "\n10  ica-reshaping\n",
+    "section": "",
+    "text": "10.1 Exercise 1\nsleep_wide &lt;- read.csv(\"https://mac-stat.github.io/data/sleep_wide.csv\")\n\nhead(sleep_wide)\n\n  Subject  day_0  day_1  day_2  day_3  day_4  day_5  day_6  day_7  day_8  day_9\n1     308 249.56 258.70 250.80 321.44 356.85 414.69 382.20 290.15 430.59 466.35\n2     309 222.73 205.27 202.98 204.71 207.72 215.96 213.63 217.73 224.30 237.31\n3     310 199.05 194.33 234.32 232.84 229.31 220.46 235.42 255.75 261.01 247.52\n4     330 321.54 300.40 283.86 285.13 285.80 297.59 280.24 318.26 305.35 354.05\n5     331 287.61 285.00 301.82 320.12 316.28 293.32 290.08 334.82 293.75 371.58\n6     332 234.86 242.81 272.96 309.77 317.46 310.00 454.16 346.83 330.30 253.86\nsubjects/people\nPivot_longer\n##Exercise 2\n# For cols, try 2 appproaches: using - and starts_with\nsleep_wide |&gt;\n  pivot_longer(cols = -Subject, names_to = \"day\", values_to = \"reaction_time\")\n\n# A tibble: 180 × 3\n   Subject day   reaction_time\n     &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;\n 1     308 day_0          250.\n 2     308 day_1          259.\n 3     308 day_2          251.\n 4     308 day_3          321.\n 5     308 day_4          357.\n 6     308 day_5          415.\n 7     308 day_6          382.\n 8     308 day_7          290.\n 9     308 day_8          431.\n10     308 day_9          466.\n# ℹ 170 more rows\nsleep_wide |&gt;\n  pivot_longer(cols = starts_with(\"day\"), names_to = \"day\", values_to = \"reaction_time\")\n\n# A tibble: 180 × 3\n   Subject day   reaction_time\n     &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;\n 1     308 day_0          250.\n 2     308 day_1          259.\n 3     308 day_2          251.\n 4     308 day_3          321.\n 5     308 day_4          357.\n 6     308 day_5          415.\n 7     308 day_6          382.\n 8     308 day_7          290.\n 9     308 day_8          431.\n10     308 day_9          466.\n# ℹ 170 more rows\nsleep_long &lt;- sleep_wide |&gt;\n  pivot_longer(cols = -Subject,\n               names_to = \"day\",\n               names_prefix = \"day_\",\n               values_to = \"reaction_time\")\nggplot(sleep_long, aes(y = reaction_time, x = day, color = Subject)) + \n  geom_line()",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ica-reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-reshaping.html#exercise-3",
+    "href": "ica/ica-reshaping.html#exercise-3",
+    "title": "\n10  ica-reshaping\n",
+    "section": "\n10.2 Exercise 3",
+    "text": "10.2 Exercise 3\n\nsleep_long &lt;- sleep_wide |&gt;\n  pivot_longer(cols = -Subject,\n               names_to = \"day\",\n               names_prefix = \"day_\",\n               values_to = \"reaction_time\") |&gt; \n  mutate(Subject = as.factor(Subject), day = as.numeric(day))\n\n\n# Make a line plot of reaction time by day for each subject\n# Put these all on the same frame\nggplot(sleep_long, aes(y = reaction_time, x = day, color = Subject)) + \n  geom_line()\n\n\n\n\n\n\n\n\n# Make a line plot of reaction time by day for each subject\n# Put these all on separate frames (one per subject)\nggplot(sleep_long, aes(y = reaction_time, x = day, color = Subject)) + \n  geom_line() + \n  facet_wrap(~ Subject)\n\n\n\n\n\n\n\nReaction time worsens with a lack of sleep. Some subjects seem to be more impacted than others by lack of sleep, and some tend to have faster/slower reaction times in general",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ica-reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-reshaping.html#exercise-4",
+    "href": "ica/ica-reshaping.html#exercise-4",
+    "title": "\n10  ica-reshaping\n",
+    "section": "\n10.3 Exercise 4",
+    "text": "10.3 Exercise 4\n\nsleep_long |&gt;\n  pivot_wider(names_from = day, values_from = reaction_time) |&gt;\n  head()\n\n# A tibble: 6 × 11\n  Subject   `0`   `1`   `2`   `3`   `4`   `5`   `6`   `7`   `8`   `9`\n  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 308      250.  259.  251.  321.  357.  415.  382.  290.  431.  466.\n2 309      223.  205.  203.  205.  208.  216.  214.  218.  224.  237.\n3 310      199.  194.  234.  233.  229.  220.  235.  256.  261.  248.\n4 330      322.  300.  284.  285.  286.  298.  280.  318.  305.  354.\n5 331      288.  285   302.  320.  316.  293.  290.  335.  294.  372.\n6 332      235.  243.  273.  310.  317.  310   454.  347.  330.  254.\n\n\n\nsleep_long |&gt;\n  pivot_wider(names_from = day, values_from = reaction_time, names_prefix = \"day_\") |&gt;\n  head()\n\n# A tibble: 6 × 11\n  Subject day_0 day_1 day_2 day_3 day_4 day_5 day_6 day_7 day_8 day_9\n  &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 308      250.  259.  251.  321.  357.  415.  382.  290.  431.  466.\n2 309      223.  205.  203.  205.  208.  216.  214.  218.  224.  237.\n3 310      199.  194.  234.  233.  229.  220.  235.  256.  261.  248.\n4 330      322.  300.  284.  285.  286.  298.  280.  318.  305.  354.\n5 331      288.  285   302.  320.  316.  293.  290.  335.  294.  372.\n6 332      235.  243.  273.  310.  317.  310   454.  347.  330.  254.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ica-reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-reshaping.html#exercise-5",
+    "href": "ica/ica-reshaping.html#exercise-5",
+    "title": "\n10  ica-reshaping\n",
+    "section": "\n10.4 Exercise 5",
+    "text": "10.4 Exercise 5\n\nggplot(billboard, aes(y = wk2, x = wk1)) + \n  geom_point() +\n  geom_abline(intercept = 0, slope = 1)\n\nWarning: Removed 5 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\n\nbillboard |&gt; \n  filter(wk2 &gt; wk1)\n\n# A tibble: 7 × 79\n  artist      track date.entered   wk1   wk2   wk3   wk4   wk5   wk6   wk7   wk8\n  &lt;chr&gt;       &lt;chr&gt; &lt;date&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1 Carey, Mar… Cryb… 2000-06-24      28    34    48    62    77    90    95    NA\n2 Clark, Ter… A Li… 2000-12-16      75    82    88    96    99    99    NA    NA\n3 Diffie, Joe The … 2000-01-01      98   100   100    90    93    94    NA    NA\n4 Hart, Beth  L.A.… 1999-11-27      99   100    98    99    99    99    98    90\n5 Jay-Z       Hey … 2000-08-12      98   100    98    94    83    83    80    78\n6 Lil' Zane   Call… 2000-07-29      83    89    57    40    34    21    33    46\n7 Pearl Jam   Noth… 2000-05-13      49    70    84    89    93    91    NA    NA\n# ℹ 68 more variables: wk9 &lt;dbl&gt;, wk10 &lt;dbl&gt;, wk11 &lt;dbl&gt;, wk12 &lt;dbl&gt;,\n#   wk13 &lt;dbl&gt;, wk14 &lt;dbl&gt;, wk15 &lt;dbl&gt;, wk16 &lt;dbl&gt;, wk17 &lt;dbl&gt;, wk18 &lt;dbl&gt;,\n#   wk19 &lt;dbl&gt;, wk20 &lt;dbl&gt;, wk21 &lt;dbl&gt;, wk22 &lt;dbl&gt;, wk23 &lt;dbl&gt;, wk24 &lt;dbl&gt;,\n#   wk25 &lt;dbl&gt;, wk26 &lt;dbl&gt;, wk27 &lt;dbl&gt;, wk28 &lt;dbl&gt;, wk29 &lt;dbl&gt;, wk30 &lt;dbl&gt;,\n#   wk31 &lt;dbl&gt;, wk32 &lt;dbl&gt;, wk33 &lt;dbl&gt;, wk34 &lt;dbl&gt;, wk35 &lt;dbl&gt;, wk36 &lt;dbl&gt;,\n#   wk37 &lt;dbl&gt;, wk38 &lt;dbl&gt;, wk39 &lt;dbl&gt;, wk40 &lt;dbl&gt;, wk41 &lt;dbl&gt;, wk42 &lt;dbl&gt;,\n#   wk43 &lt;dbl&gt;, wk44 &lt;dbl&gt;, wk45 &lt;dbl&gt;, wk46 &lt;dbl&gt;, wk47 &lt;dbl&gt;, wk48 &lt;dbl&gt;, …\n\n\n\n# Define nov_1999\nnov_1999 &lt;- billboard |&gt; \n  filter(date.entered == \"1999-11-06\") |&gt; \n  select(-track, -date.entered)\n\n# Or\nnov_1999 &lt;- billboard |&gt; \n  filter(date.entered == \"1999-11-06\") |&gt; \n  select(artist, starts_with(\"wk\"))\n\n\n# Confirm that nov_1999 has 2 rows (songs) and 77 columns\ndim(nov_1999)\n\n[1]  2 77\n\n\n\nnov_1999 |&gt; \n  pivot_longer(cols = -artist, names_to = \"week\", names_prefix = \"wk\", values_to = \"ranking\") |&gt; \n  mutate(week = as.numeric(week)) |&gt; \n  ggplot(aes(y = ranking, x = week, color = artist)) + \n    geom_line()\n\nWarning: Removed 79 rows containing missing values or values outside the scale range\n(`geom_line()`).",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ica-reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-reshaping.html#exercise-6",
+    "href": "ica/ica-reshaping.html#exercise-6",
+    "title": "\n10  ica-reshaping\n",
+    "section": "\n10.5 Exercise 6",
+    "text": "10.5 Exercise 6\n\nlibrary(fivethirtyeight)\n\nSome larger datasets need to be installed separately, like senators and\nhouse_district_forecast. To install these, we recommend you install the\nfivethirtyeightdata package by running:\ninstall.packages('fivethirtyeightdata', repos =\n'https://fivethirtyeightdata.github.io/drat/', type = 'source')\n\ndata(\"daily_show_guests\")\ndaily &lt;- daily_show_guests\n\n\ndaily |&gt; \n  count(raw_guest_list) |&gt; \n  arrange(desc(n)) |&gt; \n  head(15)\n\n# A tibble: 15 × 2\n   raw_guest_list        n\n   &lt;chr&gt;             &lt;int&gt;\n 1 Fareed Zakaria       19\n 2 Denis Leary          17\n 3 Brian Williams       16\n 4 Paul Rudd            13\n 5 Ricky Gervais        13\n 6 Tom Brokaw           12\n 7 Bill O'Reilly        10\n 8 Reza Aslan           10\n 9 Richard Lewis        10\n10 Will Ferrell         10\n11 Sarah Vowell          9\n12 Adam Sandler          8\n13 Ben Affleck           8\n14 Louis C.K.            8\n15 Maggie Gyllenhaal     8\n\n\n\ndaily |&gt; \n  count(year, raw_guest_list) |&gt; \n  group_by(raw_guest_list) |&gt; \n  mutate(total = sum(n)) |&gt;\n  pivot_wider(names_from = year, \n              values_from = n,\n              values_fill = 0) |&gt; \n  arrange(desc(total)) |&gt; \n  head(15)\n\n# A tibble: 15 × 19\n# Groups:   raw_guest_list [15]\n   raw_guest_list  total `1999` `2000` `2001` `2002` `2003` `2004` `2005` `2006`\n   &lt;chr&gt;           &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;  &lt;int&gt;\n 1 Fareed Zakaria     19      0      0      1      0      1      2      2      2\n 2 Denis Leary        17      1      0      1      2      1      0      0      1\n 3 Brian Williams     16      0      0      0      0      1      1      2      1\n 4 Paul Rudd          13      1      0      1      1      1      1      1      0\n 5 Ricky Gervais      13      0      0      0      0      0      0      1      2\n 6 Tom Brokaw         12      0      0      0      1      0      2      1      0\n 7 Richard Lewis      10      1      0      2      2      1      1      0      0\n 8 Will Ferrell       10      0      1      1      0      1      1      1      1\n 9 Bill O'Reilly      10      0      0      1      1      0      1      1      0\n10 Reza Aslan         10      0      0      0      0      0      0      1      2\n11 Sarah Vowell        9      0      0      0      1      0      1      1      1\n12 Adam Sandler        8      1      2      0      1      0      0      0      1\n13 Ben Affleck         8      0      0      0      0      2      0      0      1\n14 Maggie Gyllenh…     8      0      0      0      0      1      0      1      1\n15 Louis C.K.          8      0      0      0      0      0      0      0      1\n# ℹ 9 more variables: `2007` &lt;int&gt;, `2008` &lt;int&gt;, `2009` &lt;int&gt;, `2010` &lt;int&gt;,\n#   `2011` &lt;int&gt;, `2012` &lt;int&gt;, `2013` &lt;int&gt;, `2014` &lt;int&gt;, `2015` &lt;int&gt;\n\n\n\ndaily |&gt; \n  count(group)\n\n# A tibble: 18 × 2\n   group              n\n   &lt;chr&gt;          &lt;int&gt;\n 1 Academic         103\n 2 Acting           930\n 3 Advocacy          24\n 4 Athletics         52\n 5 Business          25\n 6 Clergy             8\n 7 Comedy           150\n 8 Consultant        18\n 9 Government        40\n10 Media            751\n11 Military          16\n12 Misc              45\n13 Musician         123\n14 Political Aide    36\n15 Politician       308\n16 Science           28\n17 media              5\n18 &lt;NA&gt;              31\n\n\n\nplot_data &lt;- daily |&gt; \n  mutate(broad_group = case_when(\n    group %in% c(\"Acting\", \"Athletics\", \"Comedy\", \"Musician\") ~ \"Acting, Comedy & Music\",\n    group %in% c(\"Media\", \"media\", \"Science\", \"Academic\", \"Consultant\", \"Clergy\") ~ \"Media\",\n    group %in% c(\"Politician\", \"Political Aide\", \"Government\", \"Military\", \"Business\", \"Advocacy\") ~ \"Government and Politics\",\n    .default = NA\n  )) |&gt; \n  filter(!is.na(broad_group))\n\n\nplot_data |&gt;\n  group_by(year, broad_group) |&gt;\n  summarise(n = n()) |&gt;\n  mutate(freq = n / sum(n)) |&gt; \n  ggplot(aes(y = freq, x = year, color = broad_group)) + \n    geom_line()\n\n`summarise()` has grouped output by 'year'. You can override using the\n`.groups` argument.",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>ica-reshaping</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-factors.html",
+    "href": "ica/ica-factors.html",
+    "title": "\n11  ica-factors\n",
+    "section": "",
+    "text": "11.1 Exercise 1\ngrade_distribution |&gt; \n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\ngrade_distribution |&gt;\n  mutate(grade = fct_relevel(grade, c(\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"NC\", \"S\", \"AU\"))) |&gt;\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\ngrade_distribution |&gt;\n  mutate(grade = fct_reorder(grade, n)) |&gt;\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()\ngrade_distribution |&gt;\n  mutate(grade = fct_reorder(grade, n, .desc = TRUE)) |&gt;\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>ica-factors</span>"
+    ]
+  },
+  {
+    "objectID": "ica/ica-factors.html#exercise-2",
+    "href": "ica/ica-factors.html#exercise-2",
+    "title": "\n11  ica-factors\n",
+    "section": "\n11.2 Exercise 2",
+    "text": "11.2 Exercise 2\n\ngrade_distribution |&gt;\n  mutate(grade = fct_relevel(grade, c(\"A\", \"A-\", \"B+\", \"B\", \"B-\", \"C+\", \"C\", \"C-\", \"D+\", \"D\", \"D-\", \"NC\", \"S\", \"AU\"))) |&gt;\n  mutate(grade = fct_recode(grade, \"Satisfactory\" = \"S\", \"Audit\" = \"AU\")) |&gt;  # Multiple pieces go into the last 2 blanks\n  ggplot(aes(x = grade, y = n)) +\n    geom_col()",
+    "crumbs": [
+      "In Class Activities",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>ica-factors</span>"
+    ]
   }
 ]
