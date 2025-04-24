@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>14&nbsp; factors – COMP/STAT112 Notebook</title>
+<title>16&nbsp; Strings – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ica/ica-joining.html" rel="next">
-<link href="../ica/ica-reshaping.html" rel="prev">
+<link href="../ica/ica-dataimport.html" rel="next">
+<link href="../ica/ica-joining.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-factors.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-strings.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Strings</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -241,7 +241,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></span></a>
   </div>
 </li>
@@ -253,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link">
+  <a href="../ica/ica-strings.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Strings</span></span></a>
   </div>
 </li>
@@ -273,14 +273,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1"><span class="header-section-number">14.1</span> Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2"><span class="header-section-number">14.2</span> Exercise 2</a></li>
+<li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1"><span class="header-section-number">16.1</span> Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2"><span class="header-section-number">16.2</span> Exercise 2</a></li>
+  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4"><span class="header-section-number">16.3</span> Exercise 4</a></li>
+  <li><a href="#exercise-5" id="toc-exercise-5" class="nav-link" data-scroll-target="#exercise-5"><span class="header-section-number">16.4</span> Exercise 5</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-factors.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-strings.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Strings</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span>
+<span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Strings</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -312,99 +314,203 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Get rid of some duplicate rows!</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># Check it out</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">head</span>(grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>classes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="at">sem        =</span> <span class="fu">c</span>(<span class="st">"SP2023"</span>, <span class="st">"FA2023"</span>, <span class="st">"SP2024"</span>),</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="at">area       =</span> <span class="fu">c</span>(<span class="st">"History"</span>, <span class="st">"Math"</span>, <span class="st">"Anthro"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="at">enroll     =</span> <span class="fu">c</span>(<span class="st">"30 - people"</span>, <span class="st">"20 - people"</span>, <span class="st">"25 - people"</span>),</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="at">instructor =</span> <span class="fu">c</span>(<span class="st">"Ernesto Capello"</span>, <span class="st">"Lori Ziegelmeier"</span>, <span class="st">"Arjun Guneratne"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a>classes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>     sid grade   sessionID
-1 S31185    D+ session1784
-2 S31185    B+ session1785
-3 S31185    A- session1791
-4 S31185    B+ session1792
-5 S31185    B- session1794
-6 S31185    C+ session1795</code></pre>
+<pre><code>     sem    area      enroll       instructor
+1 SP2023 History 30 - people  Ernesto Capello
+2 FA2023    Math 20 - people Lori Ziegelmeier
+3 SP2024  Anthro 25 - people  Arjun Guneratne</code></pre>
 </div>
 </div>
+<section id="exercise-1" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="exercise-1">
+<span class="header-section-number">16.1</span> Exercise 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>grade_distribution <span class="ot">&lt;-</span> grades <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">count</span>(grade)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">head</span>(grade_distribution)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>courses <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/registrar.csv"</span>)</span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Check it out</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">head</span>(courses)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  grade    n
-1     A 1506
-2    A- 1381
-3    AU   27
-4     B  804
-5    B+ 1003
-6    B-  330</code></pre>
-</div>
-</div>
-<section id="exercise-1" class="level2" data-number="14.1"><h2 data-number="14.1" class="anchored" data-anchor-id="exercise-1">
-<span class="header-section-number">14.1</span> Exercise 1</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>grade_distribution <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<pre><code>       number   crn                                                name  days
+1 AMST 112-01 10318         Introduction to African American Literature M W F
+2 AMST 194-01 10073              Introduction to Asian American Studies M W F
+3 AMST 194-F1 10072 What’s After White Empire - And Is It Already Here?  T R 
+4 AMST 203-01 10646 Politics and Inequality: The American Welfare State M W F
+5 AMST 205-01 10842                         Trans Theories and Politics  T R 
+6 AMST 209-01 10474                   Civil Rights in the United States   W  
+             time      room             instructor avail_max
+1 9:40 - 10:40 am  MAIN 009       Daylanne English    3 / 20
+2  1:10 - 2:10 pm MUSIC 219          Jake Nagasawa   -4 / 16
+3  3:00 - 4:30 pm   HUM 214 Karin Aguilar-San Juan    0 / 14
+4 9:40 - 10:40 am  CARN 305          Lesley Lavery    3 / 25
+5  3:00 - 4:30 pm  MAIN 009              Myrl Beam   -2 / 20
+6 7:00 - 10:00 pm  MAIN 010         Walter Greason   -1 / 15</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Construct a table that indicates the number of classes offered in each day/time slot</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="co"># Print only the 6 most popular time slots</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>courses <span class="sc">|&gt;</span> </span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">count</span>(days, time) <span class="sc">|&gt;</span> </span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   days             time  n
+1 M W F 10:50 - 11:50 am 76
+2  T R   9:40 - 11:10 am 71
+3 M W F  9:40 - 10:40 am 68
+4 M W F   1:10 - 2:10 pm 66
+5  T R    3:00 - 4:30 pm 62
+6  T R    1:20 - 2:50 pm 59</code></pre>
 </div>
+</div>
+</section><section id="exercise-2" class="level2" data-number="16.2"><h2 data-number="16.2" class="anchored" data-anchor-id="exercise-2">
+<span class="header-section-number">16.2</span> Exercise 2</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>courses_clean <span class="ot">&lt;-</span> courses <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">separate</span>(avail_max, <span class="fu">c</span>(<span class="st">"avail"</span>, <span class="st">"max"</span>), <span class="at">sep =</span> <span class="st">" / "</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">mutate</span>(<span class="at">enroll =</span> <span class="fu">as.numeric</span>(max) <span class="sc">-</span> <span class="fu">as.numeric</span>(avail)) <span class="sc">|&gt;</span> </span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">separate</span>(number, <span class="fu">c</span>(<span class="st">"dept"</span>, <span class="st">"number"</span>, <span class="st">"section"</span>))</span>
+<span id="cb10-5"><a href="#cb10-5"></a>  </span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="fu">head</span>(courses_clean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept number section   crn                                                name
+1 AMST    112      01 10318         Introduction to African American Literature
+2 AMST    194      01 10073              Introduction to Asian American Studies
+3 AMST    194      F1 10072 What’s After White Empire - And Is It Already Here?
+4 AMST    203      01 10646 Politics and Inequality: The American Welfare State
+5 AMST    205      01 10842                         Trans Theories and Politics
+6 AMST    209      01 10474                   Civil Rights in the United States
+   days            time      room             instructor avail max enroll
+1 M W F 9:40 - 10:40 am  MAIN 009       Daylanne English     3  20     17
+2 M W F  1:10 - 2:10 pm MUSIC 219          Jake Nagasawa    -4  16     20
+3  T R   3:00 - 4:30 pm   HUM 214 Karin Aguilar-San Juan     0  14     14
+4 M W F 9:40 - 10:40 am  CARN 305          Lesley Lavery     3  25     22
+5  T R   3:00 - 4:30 pm  MAIN 009              Myrl Beam    -2  20     22
+6   W   7:00 - 10:00 pm  MAIN 010         Walter Greason    -1  15     16</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n)) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Identify the 6 departments that offered the most sections</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">count</span>(dept) <span class="sc">|&gt;</span> </span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept  n
+1 SPAN 45
+2 BIOL 44
+3 ENVI 38
+4 PSYC 37
+5 CHEM 33
+6 COMP 31</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="co"># Identify the 6 departments with the longest average course titles</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">mutate</span>(<span class="at">length =</span> <span class="fu">str_length</span>(name)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-4"><a href="#cb14-4"></a>  <span class="fu">group_by</span>(dept) <span class="sc">|&gt;</span> </span>
+<span id="cb14-5"><a href="#cb14-5"></a>  <span class="fu">summarize</span>(<span class="at">avg_length =</span> <span class="fu">mean</span>(length)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_length)) <span class="sc">|&gt;</span> </span>
+<span id="cb14-7"><a href="#cb14-7"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  dept  avg_length
+  &lt;chr&gt;      &lt;dbl&gt;
+1 WGSS        46.3
+2 INTL        41.4
+3 EDUC        39.4
+4 MCST        39.4
+5 POLI        37.4
+6 AMST        37.3</code></pre>
 </div>
 </div>
-</div>
-</section><section id="exercise-2" class="level2" data-number="14.2"><h2 data-number="14.2" class="anchored" data-anchor-id="exercise-2">
-<span class="header-section-number">14.2</span> Exercise 2</h2>
+</section><section id="exercise-4" class="level2" data-number="16.3"><h2 data-number="16.3" class="anchored" data-anchor-id="exercise-4">
+<span class="header-section-number">16.3</span> Exercise 4</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_recode</span>(grade, <span class="st">"Satisfactory"</span> <span class="ot">=</span> <span class="st">"S"</span>, <span class="st">"Audit"</span> <span class="ot">=</span> <span class="st">"AU"</span>)) <span class="sc">|&gt;</span>  <span class="co"># Multiple pieces go into the last 2 blanks</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(instructor, <span class="st">"Alicia Johnson"</span>)) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept number section   crn                         name  days            time
+1 STAT    253      01 10806 Statistical Machine Learning  T R  9:40 - 11:10 am
+2 STAT    253      02 10807 Statistical Machine Learning  T R   1:20 - 2:50 pm
+3 STAT    253      03 10808 Statistical Machine Learning  T R   3:00 - 4:30 pm
+        room     instructor avail max enroll
+1 THEATR 206 Alicia Johnson    -3  20     23
+2 THEATR 206 Alicia Johnson    -3  20     23
+3 THEATR 206 Alicia Johnson     2  20     18</code></pre>
 </div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>stat <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="st">"STAT"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Introduction to "</span>, <span class="st">""</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Statistical"</span>, <span class="st">"Stat"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb18-5"><a href="#cb18-5"></a>  <span class="fu">mutate</span>(<span class="at">start_time =</span> <span class="fu">str_sub</span>(time, <span class="dv">1</span>, <span class="dv">5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb18-6"><a href="#cb18-6"></a>  <span class="fu">select</span>(number, name, start_time, enroll)</span>
+<span id="cb18-7"><a href="#cb18-7"></a></span>
+<span id="cb18-8"><a href="#cb18-8"></a>stat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   number                      name start_time enroll
+1     112              Data Science      3:00      27
+2     112              Data Science      9:40      21
+3     112              Data Science      1:20      25
+4     125              Epidemiology      12:00     26
+5     155             Stat Modeling      1:10      32
+6     155             Stat Modeling      9:40      24
+7     155             Stat Modeling      10:50     26
+8     155             Stat Modeling      3:30      25
+9     155             Stat Modeling      1:20      30
+10    155             Stat Modeling      3:00      27
+11    212 Intermediate Data Science      9:40      11
+12    212 Intermediate Data Science      1:20      11
+13    253     Stat Machine Learning      9:40      23
+14    253     Stat Machine Learning      1:20      23
+15    253     Stat Machine Learning      3:00      18
+16    354               Probability      3:00      22
+17    452           Correlated Data      9:40       7
+18    452           Correlated Data      1:20       8
+19    456  Projects in Data Science      9:40      11</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">dim</span>(stat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 19  4</code></pre>
+</div>
+</div>
+</section><section id="exercise-5" class="level2" data-number="16.4"><h2 data-number="16.4" class="anchored" data-anchor-id="exercise-5">
+<span class="header-section-number">16.4</span> Exercise 5</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>enrollments <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">filter</span>(dept <span class="sc">!=</span> <span class="st">"PE"</span>, dept <span class="sc">!=</span> <span class="st">"INTD"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"MUSI"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"THDA"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb22-5"><a href="#cb22-5"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(section, <span class="st">"L"</span>))</span>
+<span id="cb22-6"><a href="#cb22-6"></a>  </span>
+<span id="cb22-7"><a href="#cb22-7"></a><span class="fu">head</span>(enrollments)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  dept number section   crn                                                name
+1 AMST    112      01 10318         Introduction to African American Literature
+2 AMST    194      01 10073              Introduction to Asian American Studies
+3 AMST    194      F1 10072 What’s After White Empire - And Is It Already Here?
+4 AMST    203      01 10646 Politics and Inequality: The American Welfare State
+5 AMST    205      01 10842                         Trans Theories and Politics
+6 AMST    209      01 10474                   Civil Rights in the United States
+   days            time      room             instructor avail max enroll
+1 M W F 9:40 - 10:40 am  MAIN 009       Daylanne English     3  20     17
+2 M W F  1:10 - 2:10 pm MUSIC 219          Jake Nagasawa    -4  16     20
+3  T R   3:00 - 4:30 pm   HUM 214 Karin Aguilar-San Juan     0  14     14
+4 M W F 9:40 - 10:40 am  CARN 305          Lesley Lavery     3  25     22
+5  T R   3:00 - 4:30 pm  MAIN 009              Myrl Beam    -2  20     22
+6   W   7:00 - 10:00 pm  MAIN 010         Walter Greason    -1  15     16</code></pre>
 </div>
 </div>
 
@@ -1031,74 +1137,108 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../ica/ica-reshaping.html" class="pagination-link" aria-label="Reshaping">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reshaping</span></span>
+      <a href="../ica/ica-joining.html" class="pagination-link" aria-label="Joining">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ica/ica-joining.html" class="pagination-link" aria-label="Joining">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ica/ica-dataimport.html" class="pagination-link" aria-label="Data Import">
+        <span class="nav-page-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Data Import</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> "factors"</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co">---</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="in">```{r}</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="co"># Get rid of some duplicate rows!</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb13-12"><a href="#cb13-12"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-13"><a href="#cb13-13"></a></span>
-<span id="cb13-14"><a href="#cb13-14"></a><span class="co"># Check it out</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a><span class="fu">head</span>(grades)</span>
-<span id="cb13-16"><a href="#cb13-16"></a><span class="in">```</span></span>
-<span id="cb13-17"><a href="#cb13-17"></a></span>
-<span id="cb13-20"><a href="#cb13-20"></a><span class="in">```{r}</span></span>
-<span id="cb13-21"><a href="#cb13-21"></a>grade_distribution <span class="ot">&lt;-</span> grades <span class="sc">|&gt;</span> </span>
-<span id="cb13-22"><a href="#cb13-22"></a>  <span class="fu">count</span>(grade)</span>
-<span id="cb13-23"><a href="#cb13-23"></a></span>
-<span id="cb13-24"><a href="#cb13-24"></a><span class="fu">head</span>(grade_distribution)</span>
-<span id="cb13-25"><a href="#cb13-25"></a><span class="in">```</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a></span>
-<span id="cb13-27"><a href="#cb13-27"></a><span class="fu">## Exercise 1</span></span>
-<span id="cb13-30"><a href="#cb13-30"></a><span class="in">```{r}</span></span>
-<span id="cb13-31"><a href="#cb13-31"></a>grade_distribution <span class="sc">|&gt;</span> </span>
-<span id="cb13-32"><a href="#cb13-32"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-33"><a href="#cb13-33"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-34"><a href="#cb13-34"></a><span class="in">```</span></span>
-<span id="cb13-35"><a href="#cb13-35"></a></span>
-<span id="cb13-38"><a href="#cb13-38"></a><span class="in">```{r}</span></span>
-<span id="cb13-39"><a href="#cb13-39"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-40"><a href="#cb13-40"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb13-41"><a href="#cb13-41"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-42"><a href="#cb13-42"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-43"><a href="#cb13-43"></a><span class="in">```</span></span>
-<span id="cb13-44"><a href="#cb13-44"></a></span>
-<span id="cb13-47"><a href="#cb13-47"></a><span class="in">```{r}</span></span>
-<span id="cb13-48"><a href="#cb13-48"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-49"><a href="#cb13-49"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n)) <span class="sc">|&gt;</span></span>
-<span id="cb13-50"><a href="#cb13-50"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-51"><a href="#cb13-51"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-52"><a href="#cb13-52"></a><span class="in">```</span></span>
-<span id="cb13-53"><a href="#cb13-53"></a></span>
-<span id="cb13-56"><a href="#cb13-56"></a><span class="in">```{r}</span></span>
-<span id="cb13-57"><a href="#cb13-57"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-58"><a href="#cb13-58"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb13-59"><a href="#cb13-59"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-60"><a href="#cb13-60"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-61"><a href="#cb13-61"></a><span class="in">```</span></span>
-<span id="cb13-62"><a href="#cb13-62"></a></span>
-<span id="cb13-63"><a href="#cb13-63"></a><span class="fu">## Exercise 2</span></span>
-<span id="cb13-66"><a href="#cb13-66"></a><span class="in">```{r}</span></span>
-<span id="cb13-67"><a href="#cb13-67"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-68"><a href="#cb13-68"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb13-69"><a href="#cb13-69"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_recode</span>(grade, <span class="st">"Satisfactory"</span> <span class="ot">=</span> <span class="st">"S"</span>, <span class="st">"Audit"</span> <span class="ot">=</span> <span class="st">"AU"</span>)) <span class="sc">|&gt;</span>  <span class="co"># Multiple pieces go into the last 2 blanks</span></span>
-<span id="cb13-70"><a href="#cb13-70"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-71"><a href="#cb13-71"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-72"><a href="#cb13-72"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb24" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb24-1"><a href="#cb24-1"></a><span class="co">---</span></span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="an">title:</span><span class="co"> "Strings"</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a><span class="co">---</span></span>
+<span id="cb24-5"><a href="#cb24-5"></a></span>
+<span id="cb24-8"><a href="#cb24-8"></a><span class="in">```{r}</span></span>
+<span id="cb24-9"><a href="#cb24-9"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb24-10"><a href="#cb24-10"></a></span>
+<span id="cb24-11"><a href="#cb24-11"></a>classes <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb24-12"><a href="#cb24-12"></a>  <span class="at">sem        =</span> <span class="fu">c</span>(<span class="st">"SP2023"</span>, <span class="st">"FA2023"</span>, <span class="st">"SP2024"</span>),</span>
+<span id="cb24-13"><a href="#cb24-13"></a>  <span class="at">area       =</span> <span class="fu">c</span>(<span class="st">"History"</span>, <span class="st">"Math"</span>, <span class="st">"Anthro"</span>),</span>
+<span id="cb24-14"><a href="#cb24-14"></a>  <span class="at">enroll     =</span> <span class="fu">c</span>(<span class="st">"30 - people"</span>, <span class="st">"20 - people"</span>, <span class="st">"25 - people"</span>),</span>
+<span id="cb24-15"><a href="#cb24-15"></a>  <span class="at">instructor =</span> <span class="fu">c</span>(<span class="st">"Ernesto Capello"</span>, <span class="st">"Lori Ziegelmeier"</span>, <span class="st">"Arjun Guneratne"</span>)</span>
+<span id="cb24-16"><a href="#cb24-16"></a>)</span>
+<span id="cb24-17"><a href="#cb24-17"></a></span>
+<span id="cb24-18"><a href="#cb24-18"></a>classes</span>
+<span id="cb24-19"><a href="#cb24-19"></a><span class="in">```</span></span>
+<span id="cb24-20"><a href="#cb24-20"></a></span>
+<span id="cb24-21"><a href="#cb24-21"></a><span class="fu">## Exercise 1</span></span>
+<span id="cb24-24"><a href="#cb24-24"></a><span class="in">```{r}</span></span>
+<span id="cb24-25"><a href="#cb24-25"></a>courses <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/registrar.csv"</span>)</span>
+<span id="cb24-26"><a href="#cb24-26"></a></span>
+<span id="cb24-27"><a href="#cb24-27"></a><span class="co"># Check it out</span></span>
+<span id="cb24-28"><a href="#cb24-28"></a><span class="fu">head</span>(courses)</span>
+<span id="cb24-29"><a href="#cb24-29"></a><span class="in">```</span></span>
+<span id="cb24-32"><a href="#cb24-32"></a><span class="in">```{r}</span></span>
+<span id="cb24-33"><a href="#cb24-33"></a><span class="co"># Construct a table that indicates the number of classes offered in each day/time slot</span></span>
+<span id="cb24-34"><a href="#cb24-34"></a><span class="co"># Print only the 6 most popular time slots</span></span>
+<span id="cb24-35"><a href="#cb24-35"></a>courses <span class="sc">|&gt;</span> </span>
+<span id="cb24-36"><a href="#cb24-36"></a>  <span class="fu">count</span>(days, time) <span class="sc">|&gt;</span> </span>
+<span id="cb24-37"><a href="#cb24-37"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-38"><a href="#cb24-38"></a>  <span class="fu">head</span>()</span>
+<span id="cb24-39"><a href="#cb24-39"></a><span class="in">```</span></span>
+<span id="cb24-40"><a href="#cb24-40"></a></span>
+<span id="cb24-41"><a href="#cb24-41"></a><span class="fu">## Exercise 2</span></span>
+<span id="cb24-44"><a href="#cb24-44"></a><span class="in">```{r}</span></span>
+<span id="cb24-45"><a href="#cb24-45"></a>courses_clean <span class="ot">&lt;-</span> courses <span class="sc">|&gt;</span> </span>
+<span id="cb24-46"><a href="#cb24-46"></a>  <span class="fu">separate</span>(avail_max, <span class="fu">c</span>(<span class="st">"avail"</span>, <span class="st">"max"</span>), <span class="at">sep =</span> <span class="st">" / "</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-47"><a href="#cb24-47"></a>  <span class="fu">mutate</span>(<span class="at">enroll =</span> <span class="fu">as.numeric</span>(max) <span class="sc">-</span> <span class="fu">as.numeric</span>(avail)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-48"><a href="#cb24-48"></a>  <span class="fu">separate</span>(number, <span class="fu">c</span>(<span class="st">"dept"</span>, <span class="st">"number"</span>, <span class="st">"section"</span>))</span>
+<span id="cb24-49"><a href="#cb24-49"></a>  </span>
+<span id="cb24-50"><a href="#cb24-50"></a><span class="fu">head</span>(courses_clean)</span>
+<span id="cb24-51"><a href="#cb24-51"></a><span class="in">```</span></span>
+<span id="cb24-52"><a href="#cb24-52"></a></span>
+<span id="cb24-55"><a href="#cb24-55"></a><span class="in">```{r}</span></span>
+<span id="cb24-56"><a href="#cb24-56"></a><span class="co"># Identify the 6 departments that offered the most sections</span></span>
+<span id="cb24-57"><a href="#cb24-57"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb24-58"><a href="#cb24-58"></a>  <span class="fu">count</span>(dept) <span class="sc">|&gt;</span> </span>
+<span id="cb24-59"><a href="#cb24-59"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-60"><a href="#cb24-60"></a>  <span class="fu">head</span>()</span>
+<span id="cb24-61"><a href="#cb24-61"></a><span class="in">```</span></span>
+<span id="cb24-64"><a href="#cb24-64"></a><span class="in">```{r}</span></span>
+<span id="cb24-65"><a href="#cb24-65"></a><span class="co"># Identify the 6 departments with the longest average course titles</span></span>
+<span id="cb24-66"><a href="#cb24-66"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb24-67"><a href="#cb24-67"></a>  <span class="fu">mutate</span>(<span class="at">length =</span> <span class="fu">str_length</span>(name)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-68"><a href="#cb24-68"></a>  <span class="fu">group_by</span>(dept) <span class="sc">|&gt;</span> </span>
+<span id="cb24-69"><a href="#cb24-69"></a>  <span class="fu">summarize</span>(<span class="at">avg_length =</span> <span class="fu">mean</span>(length)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-70"><a href="#cb24-70"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(avg_length)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-71"><a href="#cb24-71"></a>  <span class="fu">head</span>()</span>
+<span id="cb24-72"><a href="#cb24-72"></a><span class="in">```</span></span>
+<span id="cb24-73"><a href="#cb24-73"></a></span>
+<span id="cb24-74"><a href="#cb24-74"></a><span class="fu">## Exercise 4</span></span>
+<span id="cb24-77"><a href="#cb24-77"></a><span class="in">```{r}</span></span>
+<span id="cb24-78"><a href="#cb24-78"></a>courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb24-79"><a href="#cb24-79"></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(instructor, <span class="st">"Alicia Johnson"</span>)) </span>
+<span id="cb24-80"><a href="#cb24-80"></a><span class="in">```</span></span>
+<span id="cb24-81"><a href="#cb24-81"></a></span>
+<span id="cb24-84"><a href="#cb24-84"></a><span class="in">```{r}</span></span>
+<span id="cb24-85"><a href="#cb24-85"></a>stat <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb24-86"><a href="#cb24-86"></a>  <span class="fu">filter</span>(dept <span class="sc">==</span> <span class="st">"STAT"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-87"><a href="#cb24-87"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Introduction to "</span>, <span class="st">""</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb24-88"><a href="#cb24-88"></a>  <span class="fu">mutate</span>(<span class="at">name =</span> <span class="fu">str_replace</span>(name, <span class="st">"Statistical"</span>, <span class="st">"Stat"</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-89"><a href="#cb24-89"></a>  <span class="fu">mutate</span>(<span class="at">start_time =</span> <span class="fu">str_sub</span>(time, <span class="dv">1</span>, <span class="dv">5</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-90"><a href="#cb24-90"></a>  <span class="fu">select</span>(number, name, start_time, enroll)</span>
+<span id="cb24-91"><a href="#cb24-91"></a></span>
+<span id="cb24-92"><a href="#cb24-92"></a>stat</span>
+<span id="cb24-93"><a href="#cb24-93"></a><span class="in">```</span></span>
+<span id="cb24-94"><a href="#cb24-94"></a></span>
+<span id="cb24-97"><a href="#cb24-97"></a><span class="in">```{r}</span></span>
+<span id="cb24-98"><a href="#cb24-98"></a><span class="fu">dim</span>(stat)</span>
+<span id="cb24-99"><a href="#cb24-99"></a><span class="in">```</span></span>
+<span id="cb24-100"><a href="#cb24-100"></a></span>
+<span id="cb24-101"><a href="#cb24-101"></a><span class="fu">## Exercise 5</span></span>
+<span id="cb24-104"><a href="#cb24-104"></a><span class="in">```{r}</span></span>
+<span id="cb24-105"><a href="#cb24-105"></a>enrollments <span class="ot">&lt;-</span> courses_clean <span class="sc">|&gt;</span> </span>
+<span id="cb24-106"><a href="#cb24-106"></a>  <span class="fu">filter</span>(dept <span class="sc">!=</span> <span class="st">"PE"</span>, dept <span class="sc">!=</span> <span class="st">"INTD"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb24-107"><a href="#cb24-107"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"MUSI"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-108"><a href="#cb24-108"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(dept <span class="sc">==</span> <span class="st">"THDA"</span> <span class="sc">&amp;</span> <span class="fu">as.numeric</span>(number) <span class="sc">&lt;</span> <span class="dv">100</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-109"><a href="#cb24-109"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(section, <span class="st">"L"</span>))</span>
+<span id="cb24-110"><a href="#cb24-110"></a>  </span>
+<span id="cb24-111"><a href="#cb24-111"></a><span class="fu">head</span>(enrollments)</span>
+<span id="cb24-112"><a href="#cb24-112"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

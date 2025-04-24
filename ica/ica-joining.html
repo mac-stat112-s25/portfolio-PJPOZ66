@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>14&nbsp; factors – COMP/STAT112 Notebook</title>
+<title>15&nbsp; Joining – COMP/STAT112 Notebook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -59,8 +59,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../ica/ica-joining.html" rel="next">
-<link href="../ica/ica-reshaping.html" rel="prev">
+<link href="../ica/ica-strings.html" rel="next">
+<link href="../ica/ica-factors.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-factors.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-joining.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -241,13 +241,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link active">
+  <a href="../ica/ica-factors.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../ica/ica-joining.html" class="sidebar-item-text sidebar-link">
+  <a href="../ica/ica-joining.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span></span></a>
   </div>
 </li>
@@ -273,14 +273,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1"><span class="header-section-number">14.1</span> Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2"><span class="header-section-number">14.2</span> Exercise 2</a></li>
+<li><a href="#exercise-1" id="toc-exercise-1" class="nav-link active" data-scroll-target="#exercise-1"><span class="header-section-number">15.1</span> Exercise 1</a></li>
+  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2"><span class="header-section-number">15.2</span> Exercise 2</a></li>
+  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3"><span class="header-section-number">15.3</span> Exercise 3</a></li>
   </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-factors.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-bi.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-joining.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
-<span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span>
+<span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span>
 </h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
 </div>
 
@@ -312,12 +313,206 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Get rid of some duplicate rows!</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># Check it out</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a><span class="fu">head</span>(grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="exercise-1" class="level2" data-number="15.1"><h2 data-number="15.1" class="anchored" data-anchor-id="exercise-1">
+<span class="header-section-number">15.1</span> Exercise 1</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>students_2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="at">student =</span> <span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>),</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"COMP 101"</span>, <span class="st">"BIOL 101"</span>, <span class="st">"POLI 101"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co"># Check it out</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>students_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  student    class
+1       D COMP 101
+2       E BIOL 101
+3       F POLI 101</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>enrollments_2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="at">course =</span> <span class="fu">c</span>(<span class="st">"ART 101"</span>, <span class="st">"BIOL 101"</span>, <span class="st">"COMP 101"</span>),</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="at">enrollment =</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">20</span>, <span class="dv">19</span>)</span>
+<span id="cb6-4"><a href="#cb6-4"></a>)</span>
+<span id="cb6-5"><a href="#cb6-5"></a></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="co"># Check it out</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>enrollments_2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    course enrollment
+1  ART 101         18
+2 BIOL 101         20
+3 COMP 101         19</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>students_2 <span class="sc">|&gt;</span> </span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">left_join</span>(enrollments_2, <span class="fu">join_by</span>(class <span class="sc">==</span> course))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  student    class enrollment
+1       D COMP 101         19
+2       E BIOL 101         20
+3       F POLI 101         NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Add student grades in each course</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>students_3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="at">student =</span> <span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>, <span class="st">"Z"</span>),</span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"COMP 101"</span>, <span class="st">"BIOL 101"</span>, <span class="st">"POLI 101"</span>, <span class="st">"COMP 101"</span>),</span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="at">grade =</span> <span class="fu">c</span>(<span class="st">"B"</span>, <span class="st">"S"</span>, <span class="st">"C"</span>, <span class="st">"A"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>)</span>
+<span id="cb10-7"><a href="#cb10-7"></a></span>
+<span id="cb10-8"><a href="#cb10-8"></a><span class="co"># Check it out</span></span>
+<span id="cb10-9"><a href="#cb10-9"></a>students_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  student    class grade
+1       Y COMP 101     B
+2       Y BIOL 101     S
+3       Z POLI 101     C
+4       Z COMP 101     A</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Add average grades in each course</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>enrollments_3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"ART 101"</span>, <span class="st">"BIOL 101"</span>,<span class="st">"COMP 101"</span>),</span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="at">grade =</span> <span class="fu">c</span>(<span class="st">"B"</span>, <span class="st">"A"</span>, <span class="st">"A-"</span>),</span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="at">enrollment =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">18</span>, <span class="dv">19</span>)</span>
+<span id="cb12-6"><a href="#cb12-6"></a>)</span>
+<span id="cb12-7"><a href="#cb12-7"></a></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="co"># Check it out</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>enrollments_3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     class grade enrollment
+1  ART 101     B         20
+2 BIOL 101     A         18
+3 COMP 101    A-         19</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>students_3 <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">left_join</span>(enrollments_3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(class, grade)`</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  student    class grade enrollment
+1       Y COMP 101     B         NA
+2       Y BIOL 101     S         NA
+3       Z POLI 101     C         NA
+4       Z COMP 101     A         NA</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>students_3 <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">left_join</span>(enrollments_3, <span class="fu">join_by</span>(class <span class="sc">==</span> class))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  student    class grade.x grade.y enrollment
+1       Y COMP 101       B      A-         19
+2       Y BIOL 101       S       A         18
+3       Z POLI 101       C    &lt;NA&gt;         NA
+4       Z COMP 101       A      A-         19</code></pre>
+</div>
+</div>
+</section><section id="exercise-2" class="level2" data-number="15.2"><h2 data-number="15.2" class="anchored" data-anchor-id="exercise-2">
+<span class="header-section-number">15.2</span> Exercise 2</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="co"># People who have voted</span></span>
+<span id="cb19-2"><a href="#cb19-2"></a>voters <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb19-3"><a href="#cb19-3"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>, <span class="st">"G"</span>),</span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="at">times_voted =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">17</span>, <span class="dv">6</span>, <span class="dv">20</span>)</span>
+<span id="cb19-5"><a href="#cb19-5"></a>)</span>
+<span id="cb19-6"><a href="#cb19-6"></a></span>
+<span id="cb19-7"><a href="#cb19-7"></a>voters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  id times_voted
+1  A           2
+2  D           4
+3  E          17
+4  F           6
+5  G          20</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="co"># Contact info for voting age adults</span></span>
+<span id="cb21-2"><a href="#cb21-2"></a>contact <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb21-3"><a href="#cb21-3"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>),</span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="at">address =</span> <span class="fu">c</span>(<span class="st">"summit"</span>, <span class="st">"grand"</span>, <span class="st">"snelling"</span>, <span class="st">"fairview"</span>),</span>
+<span id="cb21-5"><a href="#cb21-5"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">89</span>, <span class="dv">43</span>, <span class="dv">38</span>)</span>
+<span id="cb21-6"><a href="#cb21-6"></a>)</span>
+<span id="cb21-7"><a href="#cb21-7"></a></span>
+<span id="cb21-8"><a href="#cb21-8"></a>contact</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  name  address age
+1    A   summit  24
+2    B    grand  89
+3    C snelling  43
+4    D fairview  38</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="co"># 1. We want contact info for people who HAVEN'T voted</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>contact <span class="sc">|&gt;</span> </span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">anti_join</span>(voters, <span class="fu">join_by</span>(name <span class="sc">==</span> id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  name  address age
+1    B    grand  89
+2    C snelling  43</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># 2. We want contact info for people who HAVE voted</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>contact <span class="sc">|&gt;</span> </span>
+<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">semi_join</span>(voters, <span class="fu">join_by</span>(name <span class="sc">==</span> id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  name  address age
+1    A   summit  24
+2    D fairview  38</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="co"># 3. We want any data available on each person</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>contact <span class="sc">|&gt;</span> </span>
+<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">full_join</span>(voters, <span class="fu">join_by</span>(name <span class="sc">==</span> id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  name  address age times_voted
+1    A   summit  24           2
+2    B    grand  89          NA
+3    C snelling  43          NA
+4    D fairview  38           4
+5    E     &lt;NA&gt;  NA          17
+6    F     &lt;NA&gt;  NA           6
+7    G     &lt;NA&gt;  NA          20</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a>voters <span class="sc">|&gt;</span> </span>
+<span id="cb29-2"><a href="#cb29-2"></a>  <span class="fu">full_join</span>(contact, <span class="fu">join_by</span>(id <span class="sc">==</span> name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  id times_voted  address age
+1  A           2   summit  24
+2  D           4 fairview  38
+3  E          17     &lt;NA&gt;  NA
+4  F           6     &lt;NA&gt;  NA
+5  G          20     &lt;NA&gt;  NA
+6  B          NA    grand  89
+7  C          NA snelling  43</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="co"># 4. We want to add contact info, when possible, to the voting roster</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>voters <span class="sc">|&gt;</span> </span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">left_join</span>(contact, <span class="fu">join_by</span>(id <span class="sc">==</span> name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  id times_voted  address age
+1  A           2   summit  24
+2  D           4 fairview  38
+3  E          17     &lt;NA&gt;  NA
+4  F           6     &lt;NA&gt;  NA
+5  G          20     &lt;NA&gt;  NA</code></pre>
+</div>
+</div>
+</section><section id="exercise-3" class="level2" data-number="15.3"><h2 data-number="15.3" class="anchored" data-anchor-id="exercise-3">
+<span class="header-section-number">15.3</span> Exercise 3</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="co"># Get rid of some duplicate rows!</span></span>
+<span id="cb33-2"><a href="#cb33-2"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb33-4"><a href="#cb33-4"></a><span class="fu">head</span>(grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     sid grade   sessionID
 1 S31185    D+ session1784
@@ -329,82 +524,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>grade_distribution <span class="ot">&lt;-</span> grades <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">count</span>(grade)</span>
-<span id="cb6-3"><a href="#cb6-3"></a></span>
-<span id="cb6-4"><a href="#cb6-4"></a><span class="fu">head</span>(grade_distribution)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="co"># How many observations (rows) and variables (columns) are there in the grades data?</span></span>
+<span id="cb35-2"><a href="#cb35-2"></a><span class="fu">dim</span>(grades)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>  grade    n
-1     A 1506
-2    A- 1381
-3    AU   27
-4     B  804
-5    B+ 1003
-6    B-  330</code></pre>
-</div>
-</div>
-<section id="exercise-1" class="level2" data-number="14.1"><h2 data-number="14.1" class="anchored" data-anchor-id="exercise-1">
-<span class="header-section-number">14.1</span> Exercise 1</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>grade_distribution <span class="sc">|&gt;</span> </span>
-<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-4-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n)) <span class="sc">|&gt;</span></span>
-<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb11-4"><a href="#cb11-4"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="exercise-2" class="level2" data-number="14.2"><h2 data-number="14.2" class="anchored" data-anchor-id="exercise-2">
-<span class="header-section-number">14.2</span> Exercise 2</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_recode</span>(grade, <span class="st">"Satisfactory"</span> <span class="ot">=</span> <span class="st">"S"</span>, <span class="st">"Audit"</span> <span class="ot">=</span> <span class="st">"AU"</span>)) <span class="sc">|&gt;</span>  <span class="co"># Multiple pieces go into the last 2 blanks</span></span>
-<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5"></a>    <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="ica-factors_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
+<pre><code>[1] 5844    3</code></pre>
 </div>
 </div>
 
@@ -1031,74 +1154,137 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="../ica/ica-reshaping.html" class="pagination-link" aria-label="Reshaping">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Reshaping</span></span>
+      <a href="../ica/ica-factors.html" class="pagination-link" aria-label="factors">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">factors</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../ica/ica-joining.html" class="pagination-link" aria-label="Joining">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Joining</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../ica/ica-strings.html" class="pagination-link" aria-label="Strings">
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Strings</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb13" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1"></a><span class="co">---</span></span>
-<span id="cb13-2"><a href="#cb13-2"></a><span class="an">title:</span><span class="co"> "factors"</span></span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb13-4"><a href="#cb13-4"></a><span class="co">---</span></span>
-<span id="cb13-5"><a href="#cb13-5"></a></span>
-<span id="cb13-8"><a href="#cb13-8"></a><span class="in">```{r}</span></span>
-<span id="cb13-9"><a href="#cb13-9"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb13-10"><a href="#cb13-10"></a><span class="co"># Get rid of some duplicate rows!</span></span>
-<span id="cb13-11"><a href="#cb13-11"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb13-12"><a href="#cb13-12"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb13-13"><a href="#cb13-13"></a></span>
-<span id="cb13-14"><a href="#cb13-14"></a><span class="co"># Check it out</span></span>
-<span id="cb13-15"><a href="#cb13-15"></a><span class="fu">head</span>(grades)</span>
-<span id="cb13-16"><a href="#cb13-16"></a><span class="in">```</span></span>
-<span id="cb13-17"><a href="#cb13-17"></a></span>
-<span id="cb13-20"><a href="#cb13-20"></a><span class="in">```{r}</span></span>
-<span id="cb13-21"><a href="#cb13-21"></a>grade_distribution <span class="ot">&lt;-</span> grades <span class="sc">|&gt;</span> </span>
-<span id="cb13-22"><a href="#cb13-22"></a>  <span class="fu">count</span>(grade)</span>
-<span id="cb13-23"><a href="#cb13-23"></a></span>
-<span id="cb13-24"><a href="#cb13-24"></a><span class="fu">head</span>(grade_distribution)</span>
-<span id="cb13-25"><a href="#cb13-25"></a><span class="in">```</span></span>
-<span id="cb13-26"><a href="#cb13-26"></a></span>
-<span id="cb13-27"><a href="#cb13-27"></a><span class="fu">## Exercise 1</span></span>
-<span id="cb13-30"><a href="#cb13-30"></a><span class="in">```{r}</span></span>
-<span id="cb13-31"><a href="#cb13-31"></a>grade_distribution <span class="sc">|&gt;</span> </span>
-<span id="cb13-32"><a href="#cb13-32"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-33"><a href="#cb13-33"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-34"><a href="#cb13-34"></a><span class="in">```</span></span>
-<span id="cb13-35"><a href="#cb13-35"></a></span>
-<span id="cb13-38"><a href="#cb13-38"></a><span class="in">```{r}</span></span>
-<span id="cb13-39"><a href="#cb13-39"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-40"><a href="#cb13-40"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb13-41"><a href="#cb13-41"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-42"><a href="#cb13-42"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-43"><a href="#cb13-43"></a><span class="in">```</span></span>
-<span id="cb13-44"><a href="#cb13-44"></a></span>
-<span id="cb13-47"><a href="#cb13-47"></a><span class="in">```{r}</span></span>
-<span id="cb13-48"><a href="#cb13-48"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-49"><a href="#cb13-49"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n)) <span class="sc">|&gt;</span></span>
-<span id="cb13-50"><a href="#cb13-50"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-51"><a href="#cb13-51"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-52"><a href="#cb13-52"></a><span class="in">```</span></span>
-<span id="cb13-53"><a href="#cb13-53"></a></span>
-<span id="cb13-56"><a href="#cb13-56"></a><span class="in">```{r}</span></span>
-<span id="cb13-57"><a href="#cb13-57"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-58"><a href="#cb13-58"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_reorder</span>(grade, n, <span class="at">.desc =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb13-59"><a href="#cb13-59"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-60"><a href="#cb13-60"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-61"><a href="#cb13-61"></a><span class="in">```</span></span>
-<span id="cb13-62"><a href="#cb13-62"></a></span>
-<span id="cb13-63"><a href="#cb13-63"></a><span class="fu">## Exercise 2</span></span>
-<span id="cb13-66"><a href="#cb13-66"></a><span class="in">```{r}</span></span>
-<span id="cb13-67"><a href="#cb13-67"></a>grade_distribution <span class="sc">|&gt;</span></span>
-<span id="cb13-68"><a href="#cb13-68"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_relevel</span>(grade, <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A-"</span>, <span class="st">"B+"</span>, <span class="st">"B"</span>, <span class="st">"B-"</span>, <span class="st">"C+"</span>, <span class="st">"C"</span>, <span class="st">"C-"</span>, <span class="st">"D+"</span>, <span class="st">"D"</span>, <span class="st">"D-"</span>, <span class="st">"NC"</span>, <span class="st">"S"</span>, <span class="st">"AU"</span>))) <span class="sc">|&gt;</span></span>
-<span id="cb13-69"><a href="#cb13-69"></a>  <span class="fu">mutate</span>(<span class="at">grade =</span> <span class="fu">fct_recode</span>(grade, <span class="st">"Satisfactory"</span> <span class="ot">=</span> <span class="st">"S"</span>, <span class="st">"Audit"</span> <span class="ot">=</span> <span class="st">"AU"</span>)) <span class="sc">|&gt;</span>  <span class="co"># Multiple pieces go into the last 2 blanks</span></span>
-<span id="cb13-70"><a href="#cb13-70"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> grade, <span class="at">y =</span> n)) <span class="sc">+</span></span>
-<span id="cb13-71"><a href="#cb13-71"></a>    <span class="fu">geom_col</span>()</span>
-<span id="cb13-72"><a href="#cb13-72"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb37" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb37-1"><a href="#cb37-1"></a><span class="co">---</span></span>
+<span id="cb37-2"><a href="#cb37-2"></a><span class="an">title:</span><span class="co"> "Joining"</span></span>
+<span id="cb37-3"><a href="#cb37-3"></a><span class="an">format:</span><span class="co"> html</span></span>
+<span id="cb37-4"><a href="#cb37-4"></a><span class="co">---</span></span>
+<span id="cb37-7"><a href="#cb37-7"></a><span class="in">```{r}</span></span>
+<span id="cb37-8"><a href="#cb37-8"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb37-9"><a href="#cb37-9"></a><span class="in">```</span></span>
+<span id="cb37-10"><a href="#cb37-10"></a></span>
+<span id="cb37-11"><a href="#cb37-11"></a><span class="fu">## Exercise 1</span></span>
+<span id="cb37-14"><a href="#cb37-14"></a><span class="in">```{r}</span></span>
+<span id="cb37-15"><a href="#cb37-15"></a>students_2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb37-16"><a href="#cb37-16"></a>  <span class="at">student =</span> <span class="fu">c</span>(<span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>),</span>
+<span id="cb37-17"><a href="#cb37-17"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"COMP 101"</span>, <span class="st">"BIOL 101"</span>, <span class="st">"POLI 101"</span>)</span>
+<span id="cb37-18"><a href="#cb37-18"></a>)</span>
+<span id="cb37-19"><a href="#cb37-19"></a></span>
+<span id="cb37-20"><a href="#cb37-20"></a><span class="co"># Check it out</span></span>
+<span id="cb37-21"><a href="#cb37-21"></a>students_2</span>
+<span id="cb37-22"><a href="#cb37-22"></a><span class="in">```</span></span>
+<span id="cb37-23"><a href="#cb37-23"></a></span>
+<span id="cb37-26"><a href="#cb37-26"></a><span class="in">```{r}</span></span>
+<span id="cb37-27"><a href="#cb37-27"></a>enrollments_2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb37-28"><a href="#cb37-28"></a>  <span class="at">course =</span> <span class="fu">c</span>(<span class="st">"ART 101"</span>, <span class="st">"BIOL 101"</span>, <span class="st">"COMP 101"</span>),</span>
+<span id="cb37-29"><a href="#cb37-29"></a>  <span class="at">enrollment =</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">20</span>, <span class="dv">19</span>)</span>
+<span id="cb37-30"><a href="#cb37-30"></a>)</span>
+<span id="cb37-31"><a href="#cb37-31"></a></span>
+<span id="cb37-32"><a href="#cb37-32"></a><span class="co"># Check it out</span></span>
+<span id="cb37-33"><a href="#cb37-33"></a>enrollments_2</span>
+<span id="cb37-34"><a href="#cb37-34"></a><span class="in">```</span></span>
+<span id="cb37-35"><a href="#cb37-35"></a></span>
+<span id="cb37-38"><a href="#cb37-38"></a><span class="in">```{r}</span></span>
+<span id="cb37-39"><a href="#cb37-39"></a>students_2 <span class="sc">|&gt;</span> </span>
+<span id="cb37-40"><a href="#cb37-40"></a>  <span class="fu">left_join</span>(enrollments_2, <span class="fu">join_by</span>(class <span class="sc">==</span> course))</span>
+<span id="cb37-41"><a href="#cb37-41"></a><span class="in">```</span></span>
+<span id="cb37-42"><a href="#cb37-42"></a></span>
+<span id="cb37-45"><a href="#cb37-45"></a><span class="in">```{r}</span></span>
+<span id="cb37-46"><a href="#cb37-46"></a><span class="co"># Add student grades in each course</span></span>
+<span id="cb37-47"><a href="#cb37-47"></a>students_3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb37-48"><a href="#cb37-48"></a>  <span class="at">student =</span> <span class="fu">c</span>(<span class="st">"Y"</span>, <span class="st">"Y"</span>, <span class="st">"Z"</span>, <span class="st">"Z"</span>),</span>
+<span id="cb37-49"><a href="#cb37-49"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"COMP 101"</span>, <span class="st">"BIOL 101"</span>, <span class="st">"POLI 101"</span>, <span class="st">"COMP 101"</span>),</span>
+<span id="cb37-50"><a href="#cb37-50"></a>  <span class="at">grade =</span> <span class="fu">c</span>(<span class="st">"B"</span>, <span class="st">"S"</span>, <span class="st">"C"</span>, <span class="st">"A"</span>)</span>
+<span id="cb37-51"><a href="#cb37-51"></a>)</span>
+<span id="cb37-52"><a href="#cb37-52"></a></span>
+<span id="cb37-53"><a href="#cb37-53"></a><span class="co"># Check it out</span></span>
+<span id="cb37-54"><a href="#cb37-54"></a>students_3</span>
+<span id="cb37-55"><a href="#cb37-55"></a><span class="in">```</span></span>
+<span id="cb37-56"><a href="#cb37-56"></a></span>
+<span id="cb37-59"><a href="#cb37-59"></a><span class="in">```{r}</span></span>
+<span id="cb37-60"><a href="#cb37-60"></a><span class="co"># Add average grades in each course</span></span>
+<span id="cb37-61"><a href="#cb37-61"></a>enrollments_3 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb37-62"><a href="#cb37-62"></a>  <span class="at">class =</span> <span class="fu">c</span>(<span class="st">"ART 101"</span>, <span class="st">"BIOL 101"</span>,<span class="st">"COMP 101"</span>),</span>
+<span id="cb37-63"><a href="#cb37-63"></a>  <span class="at">grade =</span> <span class="fu">c</span>(<span class="st">"B"</span>, <span class="st">"A"</span>, <span class="st">"A-"</span>),</span>
+<span id="cb37-64"><a href="#cb37-64"></a>  <span class="at">enrollment =</span> <span class="fu">c</span>(<span class="dv">20</span>, <span class="dv">18</span>, <span class="dv">19</span>)</span>
+<span id="cb37-65"><a href="#cb37-65"></a>)</span>
+<span id="cb37-66"><a href="#cb37-66"></a></span>
+<span id="cb37-67"><a href="#cb37-67"></a><span class="co"># Check it out</span></span>
+<span id="cb37-68"><a href="#cb37-68"></a>enrollments_3</span>
+<span id="cb37-69"><a href="#cb37-69"></a><span class="in">```</span></span>
+<span id="cb37-70"><a href="#cb37-70"></a></span>
+<span id="cb37-73"><a href="#cb37-73"></a><span class="in">```{r}</span></span>
+<span id="cb37-74"><a href="#cb37-74"></a>students_3 <span class="sc">|&gt;</span> </span>
+<span id="cb37-75"><a href="#cb37-75"></a>  <span class="fu">left_join</span>(enrollments_3)</span>
+<span id="cb37-76"><a href="#cb37-76"></a><span class="in">```</span></span>
+<span id="cb37-77"><a href="#cb37-77"></a></span>
+<span id="cb37-80"><a href="#cb37-80"></a><span class="in">```{r}</span></span>
+<span id="cb37-81"><a href="#cb37-81"></a>students_3 <span class="sc">|&gt;</span> </span>
+<span id="cb37-82"><a href="#cb37-82"></a>  <span class="fu">left_join</span>(enrollments_3, <span class="fu">join_by</span>(class <span class="sc">==</span> class))</span>
+<span id="cb37-83"><a href="#cb37-83"></a><span class="in">```</span></span>
+<span id="cb37-84"><a href="#cb37-84"></a></span>
+<span id="cb37-85"><a href="#cb37-85"></a><span class="fu">## Exercise 2</span></span>
+<span id="cb37-88"><a href="#cb37-88"></a><span class="in">```{r}</span></span>
+<span id="cb37-89"><a href="#cb37-89"></a><span class="co"># People who have voted</span></span>
+<span id="cb37-90"><a href="#cb37-90"></a>voters <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb37-91"><a href="#cb37-91"></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"D"</span>, <span class="st">"E"</span>, <span class="st">"F"</span>, <span class="st">"G"</span>),</span>
+<span id="cb37-92"><a href="#cb37-92"></a>  <span class="at">times_voted =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">17</span>, <span class="dv">6</span>, <span class="dv">20</span>)</span>
+<span id="cb37-93"><a href="#cb37-93"></a>)</span>
+<span id="cb37-94"><a href="#cb37-94"></a></span>
+<span id="cb37-95"><a href="#cb37-95"></a>voters</span>
+<span id="cb37-96"><a href="#cb37-96"></a><span class="in">```</span></span>
+<span id="cb37-97"><a href="#cb37-97"></a></span>
+<span id="cb37-100"><a href="#cb37-100"></a><span class="in">```{r}</span></span>
+<span id="cb37-101"><a href="#cb37-101"></a><span class="co"># Contact info for voting age adults</span></span>
+<span id="cb37-102"><a href="#cb37-102"></a>contact <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb37-103"><a href="#cb37-103"></a>  <span class="at">name =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"C"</span>, <span class="st">"D"</span>),</span>
+<span id="cb37-104"><a href="#cb37-104"></a>  <span class="at">address =</span> <span class="fu">c</span>(<span class="st">"summit"</span>, <span class="st">"grand"</span>, <span class="st">"snelling"</span>, <span class="st">"fairview"</span>),</span>
+<span id="cb37-105"><a href="#cb37-105"></a>  <span class="at">age =</span> <span class="fu">c</span>(<span class="dv">24</span>, <span class="dv">89</span>, <span class="dv">43</span>, <span class="dv">38</span>)</span>
+<span id="cb37-106"><a href="#cb37-106"></a>)</span>
+<span id="cb37-107"><a href="#cb37-107"></a></span>
+<span id="cb37-108"><a href="#cb37-108"></a>contact</span>
+<span id="cb37-109"><a href="#cb37-109"></a><span class="in">```</span></span>
+<span id="cb37-110"><a href="#cb37-110"></a></span>
+<span id="cb37-113"><a href="#cb37-113"></a><span class="in">```{r}</span></span>
+<span id="cb37-114"><a href="#cb37-114"></a><span class="co"># 1. We want contact info for people who HAVEN'T voted</span></span>
+<span id="cb37-115"><a href="#cb37-115"></a>contact <span class="sc">|&gt;</span> </span>
+<span id="cb37-116"><a href="#cb37-116"></a>  <span class="fu">anti_join</span>(voters, <span class="fu">join_by</span>(name <span class="sc">==</span> id))</span>
+<span id="cb37-117"><a href="#cb37-117"></a><span class="co"># 2. We want contact info for people who HAVE voted</span></span>
+<span id="cb37-118"><a href="#cb37-118"></a>contact <span class="sc">|&gt;</span> </span>
+<span id="cb37-119"><a href="#cb37-119"></a>  <span class="fu">semi_join</span>(voters, <span class="fu">join_by</span>(name <span class="sc">==</span> id))</span>
+<span id="cb37-120"><a href="#cb37-120"></a><span class="co"># 3. We want any data available on each person</span></span>
+<span id="cb37-121"><a href="#cb37-121"></a>contact <span class="sc">|&gt;</span> </span>
+<span id="cb37-122"><a href="#cb37-122"></a>  <span class="fu">full_join</span>(voters, <span class="fu">join_by</span>(name <span class="sc">==</span> id))</span>
+<span id="cb37-123"><a href="#cb37-123"></a>voters <span class="sc">|&gt;</span> </span>
+<span id="cb37-124"><a href="#cb37-124"></a>  <span class="fu">full_join</span>(contact, <span class="fu">join_by</span>(id <span class="sc">==</span> name))</span>
+<span id="cb37-125"><a href="#cb37-125"></a><span class="co"># 4. We want to add contact info, when possible, to the voting roster</span></span>
+<span id="cb37-126"><a href="#cb37-126"></a>voters <span class="sc">|&gt;</span> </span>
+<span id="cb37-127"><a href="#cb37-127"></a>  <span class="fu">left_join</span>(contact, <span class="fu">join_by</span>(id <span class="sc">==</span> name))</span>
+<span id="cb37-128"><a href="#cb37-128"></a><span class="in">```</span></span>
+<span id="cb37-129"><a href="#cb37-129"></a></span>
+<span id="cb37-130"><a href="#cb37-130"></a><span class="fu">## Exercise 3</span></span>
+<span id="cb37-133"><a href="#cb37-133"></a><span class="in">```{r}</span></span>
+<span id="cb37-134"><a href="#cb37-134"></a><span class="co"># Get rid of some duplicate rows!</span></span>
+<span id="cb37-135"><a href="#cb37-135"></a>grades <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/grades.csv"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb37-136"><a href="#cb37-136"></a>  <span class="fu">distinct</span>(sid, sessionID, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb37-137"><a href="#cb37-137"></a><span class="fu">head</span>(grades)</span>
+<span id="cb37-138"><a href="#cb37-138"></a><span class="in">```</span></span>
+<span id="cb37-139"><a href="#cb37-139"></a></span>
+<span id="cb37-140"><a href="#cb37-140"></a></span>
+<span id="cb37-143"><a href="#cb37-143"></a><span class="in">```{r}</span></span>
+<span id="cb37-144"><a href="#cb37-144"></a><span class="co"># How many observations (rows) and variables (columns) are there in the grades data?</span></span>
+<span id="cb37-145"><a href="#cb37-145"></a><span class="fu">dim</span>(grades)</span>
+<span id="cb37-146"><a href="#cb37-146"></a><span class="in">```</span></span>
+<span id="cb37-147"><a href="#cb37-147"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
