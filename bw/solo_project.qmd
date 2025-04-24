@@ -1,0 +1,57 @@
+---
+title: "Solo Project"
+format: html
+---
+
+https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/pennsylvania.xls?utm_source=chatgpt.com
+
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(sf)
+library(tmap)
+library(tigris)
+library(tidycensus)
+```
+
+```{r}
+data <- read_excel("C:\\Users\\thepj\\Downloads\\PA Data.xlsx")
+
+```
+
+```{r}
+pa_map <- counties(state = "PA", class = "sf")
+```
+```{r}
+df <- data %>%
+  rename(NAME = County, violent_crime = `Violent\\ncrime`)
+map_data <- left_join(pa_map, df, by = "NAME")
+
+```
+
+```{r}
+tm_shape(map_data) +
+  tm_fill("violent_crime", palette = "RdYlBu", 
+          breaks = seq(0, max(map_data$violent_crime, na.rm = TRUE), by = 1000)) +
+  tm_borders() +
+  tm_title("Choropleth Map of Pennsylvania")
+
+
+
+
+
+```
+
+In Pennsylvania, higher crime rates are concentrated around the two largest cities, Philadelphia and Pittsburgh. Philadelphia, with a population of over 1.5 million, faces significant challenges with violent crime, particularly in poorer neighborhoods, where socioeconomic disparities and population density contribute to higher rates of homicides, assaults, and robberies. Pittsburgh, the second-largest city, also experiences elevated crime rates, especially in areas like the East End and North Side, where poverty and economic inequality persist. Both cities have made efforts to address crime through community policing and revitalization programs, but the concentration of crime in these urban centers remains a notable issue due to the combination of urbanization, economic hardship, and social challenges.
+
+
+
+
+
+
+
+
+
+
+

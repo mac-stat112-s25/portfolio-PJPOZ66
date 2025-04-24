@@ -3,3 +3,115 @@ title: "Bivariate Viz"
 ---
 
 Use this file for practice with the **bivariate viz** in-class activity.  Refer to the class website for details.
+
+
+```{r}
+library(tidyverse)
+# Load data
+elections <- read.csv("https://mac-stat.github.io/data/election_2020_county.csv")
+# Check it out
+head(elections)
+```
+
+Exercise 0
+part A
+
+about 2000
+```{r}
+ggplot(elections,aes(x = winner_20)) + 
+  geom_bar()
+```
+part B
+```{r}
+ggplot(elections, aes(x = repub_pct_20)) + 
+  geom_histogram(color = "white")
+```
+
+```{r}
+ggplot(elections, aes(x = repub_pct_20)) + 
+  geom_density()
+```
+
+##Exercise 1
+```{r}
+ggplot(elections, aes(x = repub_pct_16, y = repub_pct_20)) +
+  geom_point(color = "red", alpha = 0.6) +  # Points with transparency for clarity
+  geom_smooth(method = "lm", color = "blue", se = FALSE) +  # Linear trend line
+  labs(title = "Republican Support: 2016 vs. 2020",
+       x = "Republican Support (2016)",
+       y = "Republican Support (2020)") +
+  theme_minimal()
+```
+## Exercise 2
+```{r}
+# Set up the plotting frame
+# A histogram only maps one variable on the x-axis while a scatterplot shows two quantitative variables
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16))
+```
+```{r}
+# Add a layer of points for each county
+# Take note of the geom: geom_point
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point()
+```
+```{r}
+# Change the shape of the points
+# The shape of the points change
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point(shape = 4)
+```
+```{r}
+# YOU TRY: Modify the code to make the points "orange"
+# NOTE: Try to anticipate if "color" or "fill" will be useful here. Then try both.
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point(color = "orange")
+```
+
+```{r}
+# Add a layer that represents each county by the state it's in
+# Take note of the geom and the info it needs to run!
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_text(aes(label = state_abbr))
+```
+
+## Exercise 3
+There is a strong positive correlation between Republican support in 2016 and 2020—counties with higher Republican support in 2016 tended to have higher support in 2020. Notably, some counties in Texas and Utah saw a disproportionately larger increase in Republican support in 2020 compared to 2016.
+
+## Exercise 4
+```{r}
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point() +
+  geom_smooth()
+```
+Part A
+```{r}
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_smooth()
+```
+Part B
+```{r}
+ggplot(elections, aes(y = repub_pct_20, x = repub_pct_16)) +
+  geom_point() +
+  geom_smooth(method = "lm")
+```
+## Exercise 5
+There is a moderate positive relationship between Republican support and median age—counties with older populations generally show higher Republican support. In contrast, there is a stronger negative relationship between Republican support and median rent, with higher rent (an indicator of cost of living) correlating with lower Republican support.
+
+```{r}
+# Scatterplot of repub_pct_20 vs median_rent
+ggplot(elections, aes(y = repub_pct_20, x = median_rent)) +
+  geom_point() 
+```
+```{r}
+# Scatterplot of repub_pct_20 vs median_age
+ggplot(elections, aes(y = repub_pct_20, x = median_age)) +
+  geom_point() 
+```
+## Exercise 6
+```{r}
+ggplot(elections, aes(y = repub_pct_20, x = historical)) +
+  geom_point()
+```
+A scatterplot is not ideal for visualizing the relationship between a county’s 2020 Republican support and historical political trends because it compares two quantitative variables, while historical trends are categorical. This makes it difficult to see clear differences between historically Republican, Democratic, or swing states. A boxplot or violin plot would better illustrate how Republican support varies across these categories.
+
+## Exercise 7

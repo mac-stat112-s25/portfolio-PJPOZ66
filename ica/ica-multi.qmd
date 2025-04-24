@@ -3,3 +3,86 @@ title: "Mulivariate Viz"
 ---
 
 Use this file for practice with the **mulivariate viz** in-class activity.  Refer to the class website for details.
+
+```{r}
+# Import and check out data
+education <- read.csv("https://mac-stat.github.io/data/sat.csv")
+head(education)
+```
+## Exercise 1
+Part A
+```{r}
+library(tidyverse)
+
+ggplot(education, aes(x = sat)) +
+  geom_histogram(binwidth = 20, fill = "blue", color = "black", alpha = 0.7) +
+  labs(title = "Distribution of SAT Scores by State",
+       x = "SAT Score",
+       y = "Frequency") +
+  theme_minimal()
+```
+Part B
+The SAT score distribution is not normal; it appears bimodal or right-skewed, with scores ranging roughly from 850 to 1200. Most states cluster between 900 and 1100, but some have notably lower averages. This pattern is likely due to differences in SAT participation rates—states with low participation often have higher average scores since only strong students take the test. Additionally, state testing policies and education funding may contribute to these variations.
+
+## Exercise 2
+```{r}
+ggplot(education, aes(x = expend, y = sat)) +
+  geom_point(color = "blue", alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "SAT Scores vs Per Pupil Spending",
+       x = "Per Pupil Spending ($1000s)",
+       y = "SAT Score") +
+  theme_minimal()
+```
+```{r}
+ggplot(education, aes(x = salary, y = sat)) +
+  geom_point(color = "green", alpha = 0.7) +
+  geom_smooth(method = "lm", color = "red", se = FALSE) +
+  labs(title = "SAT Scores vs Teacher Salary",
+       x = "Teacher Salary ($1000s)",
+       y = "SAT Score") +
+  theme_minimal()
+```
+Part B
+The plots show little to no positive correlation between SAT scores and both spending and teacher salary, which is surprising. This is likely due to SAT participation rates—states with higher spending often have more students taking the test, including lower-performing ones, which lowers the average score.
+
+## Exercise 3
+```{r}
+ggplot(education, aes(y = sat, x = salary, color = expend)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+## Exercise 4
+```{r}
+ggplot(education, aes(y = sat, x = salary, color = cut(expend, 3))) + 
+  geom_point() + 
+  geom_smooth(se = FALSE, method = "lm")
+
+```
+If you change the 2 to a 3 it divides per pupil spending into three levels instead of just 2.
+
+The plot shows that SAT scores are more strongly influenced by per pupil spending than teacher salaries. States with lower spending tend to have higher SAT scores, likely due to fewer test-takers, while higher spending states often have lower SAT scores because more students take the test. Teacher salary seems to have less impact on SAT scores in comparison.
+
+## Exercise 5
+Part A
+```{r}
+ggplot(education, aes(x = fracCat)) + 
+  geom_bar()
+```
+
+Part B
+the more students in a state that take the SAT, the lower the average scores tend to be. This is probaly related to self-selction
+```{r}
+ggplot(education, aes(x = sat, fill = fracCat)) + 
+  geom_density(alpha = 0.5)
+```
+Part C
+When we control for the fraction of students that take the SAT, SAT scores increase with expenditure.
+```{r}
+ggplot(education, aes(y = sat, x = expend, color = fracCat)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+Part D
+Student participation tends to be lower among states with lower expenditures (which are likely also the states with higher ed institutions that haven’t historically required the SAT). Those same states tend to have higher SAT scores because of the self-selection of who participates.
