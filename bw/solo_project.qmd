@@ -31,12 +31,26 @@ map_data <- left_join(pa_map, df, by = "NAME")
 ```
 
 ```{r}
-tm_shape(map_data) +
+
+library(tmap)
+library(gridExtra)
+library(grid)
+
+# Make the map
+map_plot <- tm_shape(map_data) +
   tm_fill("violent_crime", palette = "RdYlBu", 
           breaks = seq(0, max(map_data$violent_crime, na.rm = TRUE), by = 1000)) +
   tm_borders() +
-  tm_title("Choropleth Map of Pennsylvania")
+  tm_title("# of Violent crimes in Pennsylvania counties")
 
+# Convert the tmap object to a grob
+map_grob <- tmap_grob(map_plot)
+
+# Make the caption as a text grob
+caption <- textGrob("PJ Pozniak, Source: FBI.Gov/Pennsylvania", gp = gpar(fontsize = 10))
+
+# Arrange the map and caption
+grid.arrange(map_grob, caption, heights = c(0.9, 0.1))
 
 
 

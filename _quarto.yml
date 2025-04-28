@@ -33,9 +33,15 @@ book:
       - bw/solo_project.qmd
       - bw/Exam_1.qmd
       - bw/Exam_2.qmd
+    
+    - part: "Summary Sheets"
+      chapters: 
+        - summary sheets/Test1_SS.qmd
+        - summary sheets/Test2_SS.qmd
 
     - part: "In Class Activities"
       chapters:
+      - ica/ica-uni.qmd
       - ica/ica-bi.qmd
       - ica/ica-multi.qmd
       - ica/ica-data.qmd
@@ -45,6 +51,8 @@ book:
       - ica/ica-joining.qmd
       - ica/ica-strings.qmd
       - ica/ica-dataimport.qmd
+      - ica/ica-spatial.qmd
+      - ica/ica-effective.qmd
 
 format:
   html:

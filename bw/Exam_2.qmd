@@ -3,3 +3,190 @@ title: "Exam_2"
 format: html
 ---
 
+## 2 Background
+
+
+```{r}
+library(tidytuesdayR)
+library(tidyverse)
+library(rnaturalearth)
+library(sf)
+```
+
+```{r}
+tuesdata <- tt_load('2020-02-18')
+fc <- tuesdata$food_consumption
+```
+```{r}
+str(fc)
+head(fc, 22)
+```
+```{r}
+fc %>%
+  count(food_category)
+```
+What is the problem with these values?
+The length of the names
+
+List the necessary wrangling function to shortne the food category names shown in the table above. The resulting dataframe should be stored to a variable called fcc
+1. fct_recode()
+2. summarize()
+3. str_replace_all()
+4. str_replace()
+```{r}
+fc_cleaned <- fc %>%
+  mutate(food_category = case_when(
+    food_category == "Lamb & Goat" ~ "Lamb",
+    food_category == "Milk - inc. cheese" ~ "Dairy",
+    food_category == "Wheat and Wheat Products" ~ "Wheat",
+    food_category == "Nuts inc. Peanut Butter" ~ "Nuts",
+    TRUE ~ food_category   # keep everything else the same
+  ))
+```
+
+```{r}
+fc_cleaned %>%
+  count(food_category)
+
+```
+
+## 3
+Research question 1:Which 5 countries consume the most food are?
+
+List the neccessary steo to produce the needed dataframe:
+1. select(country,consumption)
+2. group_by(country)
+3. summarize(consumption=sum(consumption))
+4. arrange
+5.head
+
+which graph types can be used to visualize the produced dataframe?
+1. boxplots
+2. bar graphs
+3 bar chart
+4. geom column
+
+```{r}
+library(dplyr)
+
+top5_countries <- fc %>%
+  group_by(country) %>%
+  summarise(total_consumption = sum(consumption, na.rm = TRUE)) %>%
+  arrange(desc(total_consumption)) %>%
+  slice_head(n = 5)
+print(top5_countries)
+
+
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(top5_countries, aes(x = reorder(country, total_consumption), y = total_consumption)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  labs(title = "Top 5 Countries by Total Food Consumption",
+       x = "Country",
+       y = "Total Consumption (kg per person per year)") +
+  theme_minimal()
+
+```
+
+## 4
+Research Question 2: Which top 5 countries consume each food are?
+
+List the neccessary step to compute the required dataframe
+1. select
+2. group_by
+3. slice_max
+
+which graphs can be used to visualize this data frame?
+1. facet
+2. columns
+
+```{r}
+# Step 1: Get top 5 countries by food category
+top5_by_food <- fc_cleaned %>%
+  group_by(food_category) %>%
+  arrange(desc(consumption)) %>%    # sort within each food
+  slice_head(n = 5) %>%              # take top 5 per food
+  ungroup()
+
+# Step 2: View the 3-column table
+top5_by_food %>%
+  select(food_category, country, consumption)
+```
+```{r}
+# Plot: top 5 countries for each food
+ggplot(top5_by_food, aes(x = reorder(country, consumption), y = consumption, fill = food_category)) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  facet_wrap(~ food_category, scales = "free_y") +  # one small plot per food
+  labs(
+    title = "Top 5 Countries by Food Consumption for Each Food Category",
+    x = "Country",
+    y = "Consumption (kg per person per year)"
+  ) +
+  theme_minimal()
+
+```
+## 5
+Research question 3: What does the consumption of each food look like?
+
+
+
+```{r}
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  left_join(fc_cleaned |> select(-co2_emmission), join_by(name == country)) |>
+  ggplot() + geom_sf(aes(fill = consumption)) + facet_wrap(~food_category) + theme(legend.position = "bottom")
+
+```
+The plot above sufferes from a bad color scheme, no units, no boundaries, no title
+
+```{r}
+library(ggplot2)
+library(dplyr)
+library(sf)
+
+ne_countries(returnclass = "sf") |>
+  select(name, geometry) |>
+  left_join(fc_cleaned |> select(-co2_emmission), by = c("name" = "country")) |>
+  ggplot() + 
+  geom_sf(aes(fill = consumption), color = "white") +  # Color borders for countries
+  facet_wrap(~food_category) + 
+  scale_fill_viridis_c(option = "plasma", name = "Consumption (kg per person per year)") + # Better color scheme
+  labs(
+    title = "Global Food Consumption by Category",
+    subtitle = "Top 5 Countries by Food Consumption for Each Category",
+    caption = "by PJ Pozniak"
+  ) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",
+    strip.text = element_text(size = 12, face = "bold"),
+    plot.title = element_text(size = 16, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 12, hjust = 0.5),
+    plot.caption = element_text(size = 10, hjust = 1)
+  )
+
+```
+This one has a better color scheme, a title, and better labels
+
+```{r}
+library(dplyr)
+
+# Calculate the min, max, and range for each food category
+food_summary <- fc_cleaned |>
+  group_by(food_category) |>
+  summarise(
+    min_consumption = min(consumption, na.rm = TRUE),
+    max_consumption = max(consumption, na.rm = TRUE),
+    range_consumption = max(consumption, na.rm = TRUE) - min(consumption, na.rm = TRUE)
+  )
+
+# Print the summary
+print(food_summary)
+
+```
+

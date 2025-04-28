@@ -1,0 +1,38 @@
+---
+title: "Test2_SS"
+format: html
+---
+
+```{r}
+library(magick)
+
+# Specify the path to your new JPEG image (escaping backslashes)
+img_path <- "C:\\Users\\thepj\\Downloads\\CamScanner_04-28-2025_00.29\\CamScanner 04-28-2025 00.29_03.jpg"
+
+# Read the image
+img <- image_read(img_path)
+
+# Resize the image (e.g., increasing the width while keeping the aspect ratio)
+img_resized <- image_scale(img, "1200x800")  # Increase resolution (adjust as needed)
+
+# Display the resized image
+print(img_resized)
+
+```
+```{r}
+library(magick)
+
+# Specify the path to your new JPEG image (escaping backslashes)
+img_path <- "C:\\Users\\thepj\\Downloads\\CamScanner_04-28-2025_00.29\\CamScanner 04-28-2025 00.29_04.jpg"
+
+# Read the image
+img <- image_read(img_path)
+
+# Resize the image (e.g., increasing the width while keeping the aspect ratio)
+img_resized <- image_scale(img, "1200x800")  # Increase resolution (adjust as needed)
+
+# Display the resized image
+print(img_resized)
+
+```
+

@@ -13,8 +13,7 @@ head(fave_places)
 ## Exercise 1
 
 ```{r}
-# Load the leaflet package
-install.packages("leaflet")
+
 library(leaflet)
 
 # Just a plotting frame
@@ -74,9 +73,11 @@ leaflet(data = fave_places) |>
 ```{r}
 # Import starbucks location data
 starbucks <- read.csv("https://mac-stat.github.io/data/starbucks.csv")
+
 ```
 
 ```{r}
+library(dplyr)
 # Don't worry about the syntax
 starbucks_mn <- starbucks |>   
   filter(Country == "US", State.Province == "MN")
@@ -97,7 +98,6 @@ ggplot(starbucks, aes(y = Latitude, x = Longitude)) +
 
 ```{r}
 # Load the package
-install.packages("rnaturalearth")
 library(rnaturalearth)
 
 # Get info about country boundaries across the world

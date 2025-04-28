@@ -9,18 +9,34 @@ education <- read.csv("https://mac-stat.github.io/data/sat.csv")
 library(tidyverse)
 ```
 
+
 ```{r}
+
+# Load necessary libraries
 library(ggplot2)
 
-ggplot(education, aes(x = salary, y = verbal, color = cut(expend, 3), size = ratio)) + 
+# Create the plot
+p <- ggplot(education, aes(x = salary, y = verbal, color = cut(expend, 3), size = ratio)) + 
   geom_point(alpha = 0.7) + 
   geom_smooth(se = FALSE, method = "lm") +
   labs(title = "SAT Verbal Scores vs Teacher Salary",
        x = "Teacher Salary ($1000s)",
        y = "SAT Verbal Score",
        color = "Expenditure Level",
-       size = "Student-Teacher Ratio") +
+       size = "Student-Teacher Ratio",
+       caption = "PJ Pozniak") +
   theme_minimal()
+
+# Show the plot
+p
+
+# Save the plot as an image for web or further use
+ggsave("sat_verbal_vs_salary.png", plot = p, height = 6, width = 8)
+
+# Display alt text for accessibility
+cat('
+<img src="sat_verbal_vs_salary.png" alt="Scatter plot showing the relationship between teacher salary and SAT verbal scores. The color of the points represents different expenditure levels, and the size of the points indicates the student-teacher ratio. A linear regression line is also shown. The plot demonstrates how higher teacher salaries tend to correlate with higher SAT verbal scores, with variations based on expenditure levels and the student-teacher ratio." />
+')
 
 ```
 
