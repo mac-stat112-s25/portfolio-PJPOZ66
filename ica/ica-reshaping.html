@@ -325,7 +325,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../ica/ica-uni.html">In Class Activities</a></li><li class="breadcrumb-item"><a href="../ica/ica-reshaping.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Reshaping</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
 <span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Reshaping</span>
-</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -340,41 +340,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyverse' was built under R version 4.4.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 344 Columns: 8
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (3): species, island, sex
-dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <section id="exercise-1" class="level2" data-number="16.1"><h2 data-number="16.1" class="anchored" data-anchor-id="exercise-1">
 <span class="header-section-number">16.1</span> Exercise 1</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>sleep_wide <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/sleep_wide.csv"</span>)</span>
-<span id="cb6-2"><a href="#cb6-2"></a></span>
-<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">head</span>(sleep_wide)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>sleep_wide <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/sleep_wide.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="fu">head</span>(sleep_wide)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>  Subject  day_0  day_1  day_2  day_3  day_4  day_5  day_6  day_7  day_8  day_9
 1     308 249.56 258.70 250.80 321.44 356.85 414.69 382.20 290.15 430.59 466.35
 2     309 222.73 205.27 202.98 204.71 207.72 215.96 213.63 217.73 224.30 237.31
@@ -388,10 +364,10 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 <p>Pivot_longer</p>
 <p>##Exercise 2</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># For cols, try 2 appproaches: using - and starts_with</span></span>
-<span id="cb8-2"><a href="#cb8-2"></a>sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject, <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># For cols, try 2 appproaches: using - and starts_with</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject, <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 180 × 3
    Subject day   reaction_time
      &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
@@ -409,9 +385,9 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"day"</span>), <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"day"</span>), <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 180 × 3
    Subject day   reaction_time
      &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;
@@ -429,16 +405,17 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
-<span id="cb12-3"><a href="#cb12-3"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
-<span id="cb12-4"><a href="#cb12-4"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
-<span id="cb12-5"><a href="#cb12-5"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
+<span id="cb8-3"><a href="#cb8-3"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
+<span id="cb8-5"><a href="#cb8-5"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-reshaping_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -448,19 +425,20 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </section><section id="exercise-3" class="level2" data-number="16.2"><h2 data-number="16.2" class="anchored" data-anchor-id="exercise-3">
 <span class="header-section-number">16.2</span> Exercise 3</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
-<span id="cb14-3"><a href="#cb14-3"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
-<span id="cb14-5"><a href="#cb14-5"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb14-6"><a href="#cb14-6"></a>  <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">as.factor</span>(Subject), <span class="at">day =</span> <span class="fu">as.numeric</span>(day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
+<span id="cb10-3"><a href="#cb10-3"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
+<span id="cb10-4"><a href="#cb10-4"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
+<span id="cb10-5"><a href="#cb10-5"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">as.factor</span>(Subject), <span class="at">day =</span> <span class="fu">as.numeric</span>(day))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
-<span id="cb15-2"><a href="#cb15-2"></a><span class="co"># Put these all on the same frame</span></span>
-<span id="cb15-3"><a href="#cb15-3"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
-<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="co"># Put these all on the same frame</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-reshaping_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -468,12 +446,12 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
-<span id="cb16-2"><a href="#cb16-2"></a><span class="co"># Put these all on separate frames (one per subject)</span></span>
-<span id="cb16-3"><a href="#cb16-3"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
-<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb16-5"><a href="#cb16-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="co"># Put these all on separate frames (one per subject)</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-reshaping_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -484,10 +462,10 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </section><section id="exercise-4" class="level2" data-number="16.3"><h2 data-number="16.3" class="anchored" data-anchor-id="exercise-4">
 <span class="header-section-number">16.3</span> Exercise 4</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>sleep_long <span class="sc">|&gt;</span></span>
-<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time) <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>sleep_long <span class="sc">|&gt;</span></span>
+<span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time) <span class="sc">|&gt;</span></span>
+<span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 11
   Subject   `0`   `1`   `2`   `3`   `4`   `5`   `6`   `7`   `8`   `9`
   &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -500,10 +478,10 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>sleep_long <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time, <span class="at">names_prefix =</span> <span class="st">"day_"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>sleep_long <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time, <span class="at">names_prefix =</span> <span class="st">"day_"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 11
   Subject day_0 day_1 day_2 day_3 day_4 day_5 day_6 day_7 day_8 day_9
   &lt;fct&gt;   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -518,14 +496,10 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </section><section id="exercise-5" class="level2" data-number="16.4"><h2 data-number="16.4" class="anchored" data-anchor-id="exercise-5">
 <span class="header-section-number">16.4</span> Exercise 5</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(billboard, <span class="fu">aes</span>(<span class="at">y =</span> wk2, <span class="at">x =</span> wk1)) <span class="sc">+</span> </span>
-<span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 5 rows containing missing values or values outside the scale range
-(`geom_point()`).</code></pre>
-</div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(billboard, <span class="fu">aes</span>(<span class="at">y =</span> wk2, <span class="at">x =</span> wk1)) <span class="sc">+</span> </span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-reshaping_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -533,9 +507,9 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>billboard <span class="sc">|&gt;</span> </span>
-<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">filter</span>(wk2 <span class="sc">&gt;</span> wk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>billboard <span class="sc">|&gt;</span> </span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">filter</span>(wk2 <span class="sc">&gt;</span> wk1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 7 × 79
   artist      track date.entered   wk1   wk2   wk3   wk4   wk5   wk6   wk7   wk8
   &lt;chr&gt;       &lt;chr&gt; &lt;date&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
@@ -556,34 +530,30 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="co"># Define nov_1999</span></span>
-<span id="cb25-2"><a href="#cb25-2"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
-<span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb25-4"><a href="#cb25-4"></a>  <span class="fu">select</span>(<span class="sc">-</span>track, <span class="sc">-</span>date.entered)</span>
-<span id="cb25-5"><a href="#cb25-5"></a></span>
-<span id="cb25-6"><a href="#cb25-6"></a><span class="co"># Or</span></span>
-<span id="cb25-7"><a href="#cb25-7"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
-<span id="cb25-8"><a href="#cb25-8"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb25-9"><a href="#cb25-9"></a>  <span class="fu">select</span>(artist, <span class="fu">starts_with</span>(<span class="st">"wk"</span>))</span>
-<span id="cb25-10"><a href="#cb25-10"></a></span>
-<span id="cb25-11"><a href="#cb25-11"></a></span>
-<span id="cb25-12"><a href="#cb25-12"></a><span class="co"># Confirm that nov_1999 has 2 rows (songs) and 77 columns</span></span>
-<span id="cb25-13"><a href="#cb25-13"></a><span class="fu">dim</span>(nov_1999)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="co"># Define nov_1999</span></span>
+<span id="cb20-2"><a href="#cb20-2"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
+<span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">select</span>(<span class="sc">-</span>track, <span class="sc">-</span>date.entered)</span>
+<span id="cb20-5"><a href="#cb20-5"></a></span>
+<span id="cb20-6"><a href="#cb20-6"></a><span class="co"># Or</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
+<span id="cb20-8"><a href="#cb20-8"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb20-9"><a href="#cb20-9"></a>  <span class="fu">select</span>(artist, <span class="fu">starts_with</span>(<span class="st">"wk"</span>))</span>
+<span id="cb20-10"><a href="#cb20-10"></a></span>
+<span id="cb20-11"><a href="#cb20-11"></a></span>
+<span id="cb20-12"><a href="#cb20-12"></a><span class="co"># Confirm that nov_1999 has 2 rows (songs) and 77 columns</span></span>
+<span id="cb20-13"><a href="#cb20-13"></a><span class="fu">dim</span>(nov_1999)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>[1]  2 77</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>nov_1999 <span class="sc">|&gt;</span> </span>
-<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>artist, <span class="at">names_to =</span> <span class="st">"week"</span>, <span class="at">names_prefix =</span> <span class="st">"wk"</span>, <span class="at">values_to =</span> <span class="st">"ranking"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">mutate</span>(<span class="at">week =</span> <span class="fu">as.numeric</span>(week)) <span class="sc">|&gt;</span> </span>
-<span id="cb27-4"><a href="#cb27-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> ranking, <span class="at">x =</span> week, <span class="at">color =</span> artist)) <span class="sc">+</span> </span>
-<span id="cb27-5"><a href="#cb27-5"></a>    <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 79 rows containing missing values or values outside the scale range
-(`geom_line()`).</code></pre>
-</div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>nov_1999 <span class="sc">|&gt;</span> </span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>artist, <span class="at">names_to =</span> <span class="st">"week"</span>, <span class="at">names_prefix =</span> <span class="st">"wk"</span>, <span class="at">values_to =</span> <span class="st">"ranking"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">mutate</span>(<span class="at">week =</span> <span class="fu">as.numeric</span>(week)) <span class="sc">|&gt;</span> </span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> ranking, <span class="at">x =</span> week, <span class="at">color =</span> artist)) <span class="sc">+</span> </span>
+<span id="cb22-5"><a href="#cb22-5"></a>    <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-reshaping_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -593,23 +563,17 @@ dbl (5): bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, year
 </section><section id="exercise-6" class="level2" data-number="16.5"><h2 data-number="16.5" class="anchored" data-anchor-id="exercise-6">
 <span class="header-section-number">16.5</span> Exercise 6</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">library</span>(fivethirtyeight)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Some larger datasets need to be installed separately, like senators and
-house_district_forecast. To install these, we recommend you install the
-fivethirtyeightdata package by running:
-install.packages('fivethirtyeightdata', repos =
-'https://fivethirtyeightdata.github.io/drat/', type = 'source')</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">data</span>(<span class="st">"daily_show_guests"</span>)</span>
-<span id="cb31-2"><a href="#cb31-2"></a>daily <span class="ot">&lt;-</span> daily_show_guests</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">library</span>(fivethirtyeight)</span>
+<span id="cb23-2"><a href="#cb23-2"></a><span class="fu">data</span>(<span class="st">"daily_show_guests"</span>)</span>
+<span id="cb23-3"><a href="#cb23-3"></a>daily <span class="ot">&lt;-</span> daily_show_guests</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a>daily <span class="sc">|&gt;</span> </span>
-<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">count</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
-<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
-<span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a>daily <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">count</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 2
    raw_guest_list        n
    &lt;chr&gt;             &lt;int&gt;
@@ -631,16 +595,16 @@ install.packages('fivethirtyeightdata', repos =
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>daily <span class="sc">|&gt;</span> </span>
-<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">count</span>(year, raw_guest_list) <span class="sc">|&gt;</span> </span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">group_by</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
-<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">mutate</span>(<span class="at">total =</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
-<span id="cb34-5"><a href="#cb34-5"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> year, </span>
-<span id="cb34-6"><a href="#cb34-6"></a>              <span class="at">values_from =</span> n,</span>
-<span id="cb34-7"><a href="#cb34-7"></a>              <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb34-8"><a href="#cb34-8"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">|&gt;</span> </span>
-<span id="cb34-9"><a href="#cb34-9"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a>daily <span class="sc">|&gt;</span> </span>
+<span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">count</span>(year, raw_guest_list) <span class="sc">|&gt;</span> </span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">group_by</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
+<span id="cb26-4"><a href="#cb26-4"></a>  <span class="fu">mutate</span>(<span class="at">total =</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
+<span id="cb26-5"><a href="#cb26-5"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> year, </span>
+<span id="cb26-6"><a href="#cb26-6"></a>              <span class="at">values_from =</span> n,</span>
+<span id="cb26-7"><a href="#cb26-7"></a>              <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb26-8"><a href="#cb26-8"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">|&gt;</span> </span>
+<span id="cb26-9"><a href="#cb26-9"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 15 × 19
 # Groups:   raw_guest_list [15]
    raw_guest_list  total `1999` `2000` `2001` `2002` `2003` `2004` `2005` `2006`
@@ -665,9 +629,9 @@ install.packages('fivethirtyeightdata', repos =
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>daily <span class="sc">|&gt;</span> </span>
-<span id="cb36-2"><a href="#cb36-2"></a>  <span class="fu">count</span>(group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a>daily <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">count</span>(group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 18 × 2
    group              n
    &lt;chr&gt;          &lt;int&gt;
@@ -692,27 +656,24 @@ install.packages('fivethirtyeightdata', repos =
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>plot_data <span class="ot">&lt;-</span> daily <span class="sc">|&gt;</span> </span>
-<span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">mutate</span>(<span class="at">broad_group =</span> <span class="fu">case_when</span>(</span>
-<span id="cb38-3"><a href="#cb38-3"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Acting"</span>, <span class="st">"Athletics"</span>, <span class="st">"Comedy"</span>, <span class="st">"Musician"</span>) <span class="sc">~</span> <span class="st">"Acting, Comedy &amp; Music"</span>,</span>
-<span id="cb38-4"><a href="#cb38-4"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Media"</span>, <span class="st">"media"</span>, <span class="st">"Science"</span>, <span class="st">"Academic"</span>, <span class="st">"Consultant"</span>, <span class="st">"Clergy"</span>) <span class="sc">~</span> <span class="st">"Media"</span>,</span>
-<span id="cb38-5"><a href="#cb38-5"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Politician"</span>, <span class="st">"Political Aide"</span>, <span class="st">"Government"</span>, <span class="st">"Military"</span>, <span class="st">"Business"</span>, <span class="st">"Advocacy"</span>) <span class="sc">~</span> <span class="st">"Government and Politics"</span>,</span>
-<span id="cb38-6"><a href="#cb38-6"></a>    <span class="at">.default =</span> <span class="cn">NA</span></span>
-<span id="cb38-7"><a href="#cb38-7"></a>  )) <span class="sc">|&gt;</span> </span>
-<span id="cb38-8"><a href="#cb38-8"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(broad_group))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a>plot_data <span class="ot">&lt;-</span> daily <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">mutate</span>(<span class="at">broad_group =</span> <span class="fu">case_when</span>(</span>
+<span id="cb30-3"><a href="#cb30-3"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Acting"</span>, <span class="st">"Athletics"</span>, <span class="st">"Comedy"</span>, <span class="st">"Musician"</span>) <span class="sc">~</span> <span class="st">"Acting, Comedy &amp; Music"</span>,</span>
+<span id="cb30-4"><a href="#cb30-4"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Media"</span>, <span class="st">"media"</span>, <span class="st">"Science"</span>, <span class="st">"Academic"</span>, <span class="st">"Consultant"</span>, <span class="st">"Clergy"</span>) <span class="sc">~</span> <span class="st">"Media"</span>,</span>
+<span id="cb30-5"><a href="#cb30-5"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Politician"</span>, <span class="st">"Political Aide"</span>, <span class="st">"Government"</span>, <span class="st">"Military"</span>, <span class="st">"Business"</span>, <span class="st">"Advocacy"</span>) <span class="sc">~</span> <span class="st">"Government and Politics"</span>,</span>
+<span id="cb30-6"><a href="#cb30-6"></a>    <span class="at">.default =</span> <span class="cn">NA</span></span>
+<span id="cb30-7"><a href="#cb30-7"></a>  )) <span class="sc">|&gt;</span> </span>
+<span id="cb30-8"><a href="#cb30-8"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(broad_group))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a>plot_data <span class="sc">|&gt;</span></span>
-<span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">group_by</span>(year, broad_group) <span class="sc">|&gt;</span></span>
-<span id="cb39-3"><a href="#cb39-3"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb39-4"><a href="#cb39-4"></a>  <span class="fu">mutate</span>(<span class="at">freq =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span> </span>
-<span id="cb39-5"><a href="#cb39-5"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> freq, <span class="at">x =</span> year, <span class="at">color =</span> broad_group)) <span class="sc">+</span> </span>
-<span id="cb39-6"><a href="#cb39-6"></a>    <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'year'. You can override using the
-`.groups` argument.</code></pre>
-</div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a>plot_data <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">group_by</span>(year, broad_group) <span class="sc">|&gt;</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">mutate</span>(<span class="at">freq =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb31-5"><a href="#cb31-5"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> freq, <span class="at">x =</span> year, <span class="at">color =</span> broad_group)) <span class="sc">+</span> </span>
+<span id="cb31-6"><a href="#cb31-6"></a>    <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="ica-reshaping_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -1353,177 +1314,186 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb41" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb41-1"><a href="#cb41-1"></a><span class="co">---</span></span>
-<span id="cb41-2"><a href="#cb41-2"></a><span class="an">title:</span><span class="co"> "Reshaping"</span></span>
-<span id="cb41-3"><a href="#cb41-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb41-4"><a href="#cb41-4"></a><span class="co">---</span></span>
-<span id="cb41-5"><a href="#cb41-5"></a></span>
-<span id="cb41-8"><a href="#cb41-8"></a><span class="in">```{r}</span></span>
-<span id="cb41-9"><a href="#cb41-9"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb41-10"><a href="#cb41-10"></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'</span>)</span>
-<span id="cb41-11"><a href="#cb41-11"></a><span class="in">```</span></span>
-<span id="cb41-12"><a href="#cb41-12"></a></span>
-<span id="cb41-13"><a href="#cb41-13"></a><span class="fu">## Exercise 1</span></span>
-<span id="cb41-16"><a href="#cb41-16"></a><span class="in">```{r}</span></span>
-<span id="cb41-17"><a href="#cb41-17"></a>sleep_wide <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/sleep_wide.csv"</span>)</span>
-<span id="cb41-18"><a href="#cb41-18"></a></span>
-<span id="cb41-19"><a href="#cb41-19"></a><span class="fu">head</span>(sleep_wide)</span>
-<span id="cb41-20"><a href="#cb41-20"></a><span class="in">```</span></span>
-<span id="cb41-21"><a href="#cb41-21"></a>subjects/people</span>
-<span id="cb41-22"><a href="#cb41-22"></a></span>
-<span id="cb41-23"><a href="#cb41-23"></a>Pivot_longer</span>
-<span id="cb41-24"><a href="#cb41-24"></a></span>
-<span id="cb41-25"><a href="#cb41-25"></a>##Exercise 2</span>
-<span id="cb41-28"><a href="#cb41-28"></a><span class="in">```{r}</span></span>
-<span id="cb41-29"><a href="#cb41-29"></a><span class="co"># For cols, try 2 appproaches: using - and starts_with</span></span>
-<span id="cb41-30"><a href="#cb41-30"></a>sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb41-31"><a href="#cb41-31"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject, <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span>
-<span id="cb41-32"><a href="#cb41-32"></a><span class="in">```</span></span>
-<span id="cb41-35"><a href="#cb41-35"></a><span class="in">```{r}</span></span>
-<span id="cb41-36"><a href="#cb41-36"></a>sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb41-37"><a href="#cb41-37"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"day"</span>), <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span>
-<span id="cb41-38"><a href="#cb41-38"></a><span class="in">```</span></span>
-<span id="cb41-39"><a href="#cb41-39"></a></span>
-<span id="cb41-42"><a href="#cb41-42"></a><span class="in">```{r}</span></span>
-<span id="cb41-43"><a href="#cb41-43"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb41-44"><a href="#cb41-44"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
-<span id="cb41-45"><a href="#cb41-45"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
-<span id="cb41-46"><a href="#cb41-46"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
-<span id="cb41-47"><a href="#cb41-47"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) </span>
-<span id="cb41-48"><a href="#cb41-48"></a><span class="in">```</span></span>
-<span id="cb41-49"><a href="#cb41-49"></a></span>
-<span id="cb41-52"><a href="#cb41-52"></a><span class="in">```{r}</span></span>
-<span id="cb41-53"><a href="#cb41-53"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
-<span id="cb41-54"><a href="#cb41-54"></a>  <span class="fu">geom_line</span>()</span>
-<span id="cb41-55"><a href="#cb41-55"></a><span class="in">```</span></span>
-<span id="cb41-56"><a href="#cb41-56"></a></span>
-<span id="cb41-57"><a href="#cb41-57"></a><span class="fu">## Exercise 3</span></span>
-<span id="cb41-60"><a href="#cb41-60"></a><span class="in">```{r}</span></span>
-<span id="cb41-61"><a href="#cb41-61"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
-<span id="cb41-62"><a href="#cb41-62"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
-<span id="cb41-63"><a href="#cb41-63"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
-<span id="cb41-64"><a href="#cb41-64"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
-<span id="cb41-65"><a href="#cb41-65"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb41-66"><a href="#cb41-66"></a>  <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">as.factor</span>(Subject), <span class="at">day =</span> <span class="fu">as.numeric</span>(day))</span>
-<span id="cb41-67"><a href="#cb41-67"></a><span class="in">```</span></span>
-<span id="cb41-68"><a href="#cb41-68"></a></span>
-<span id="cb41-69"><a href="#cb41-69"></a></span>
-<span id="cb41-72"><a href="#cb41-72"></a><span class="in">```{r}</span></span>
-<span id="cb41-73"><a href="#cb41-73"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
-<span id="cb41-74"><a href="#cb41-74"></a><span class="co"># Put these all on the same frame</span></span>
-<span id="cb41-75"><a href="#cb41-75"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
-<span id="cb41-76"><a href="#cb41-76"></a>  <span class="fu">geom_line</span>()</span>
-<span id="cb41-77"><a href="#cb41-77"></a><span class="in">```</span></span>
-<span id="cb41-78"><a href="#cb41-78"></a></span>
-<span id="cb41-81"><a href="#cb41-81"></a><span class="in">```{r}</span></span>
-<span id="cb41-82"><a href="#cb41-82"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
-<span id="cb41-83"><a href="#cb41-83"></a><span class="co"># Put these all on separate frames (one per subject)</span></span>
-<span id="cb41-84"><a href="#cb41-84"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
-<span id="cb41-85"><a href="#cb41-85"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
-<span id="cb41-86"><a href="#cb41-86"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject)</span>
-<span id="cb41-87"><a href="#cb41-87"></a><span class="in">```</span></span>
-<span id="cb41-88"><a href="#cb41-88"></a>Reaction time worsens with a lack of sleep. Some subjects seem to be more impacted than others by lack of sleep, and some tend to have faster/slower reaction times in general</span>
-<span id="cb41-89"><a href="#cb41-89"></a></span>
-<span id="cb41-90"><a href="#cb41-90"></a><span class="fu">## Exercise 4</span></span>
-<span id="cb41-93"><a href="#cb41-93"></a><span class="in">```{r}</span></span>
-<span id="cb41-94"><a href="#cb41-94"></a>sleep_long <span class="sc">|&gt;</span></span>
-<span id="cb41-95"><a href="#cb41-95"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time) <span class="sc">|&gt;</span></span>
-<span id="cb41-96"><a href="#cb41-96"></a>  <span class="fu">head</span>()</span>
-<span id="cb41-97"><a href="#cb41-97"></a><span class="in">```</span></span>
-<span id="cb41-100"><a href="#cb41-100"></a><span class="in">```{r}</span></span>
-<span id="cb41-101"><a href="#cb41-101"></a>sleep_long <span class="sc">|&gt;</span></span>
-<span id="cb41-102"><a href="#cb41-102"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time, <span class="at">names_prefix =</span> <span class="st">"day_"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb41-103"><a href="#cb41-103"></a>  <span class="fu">head</span>()</span>
-<span id="cb41-104"><a href="#cb41-104"></a><span class="in">```</span></span>
-<span id="cb41-105"><a href="#cb41-105"></a></span>
-<span id="cb41-106"><a href="#cb41-106"></a><span class="fu">## Exercise 5</span></span>
-<span id="cb41-109"><a href="#cb41-109"></a><span class="in">```{r}</span></span>
-<span id="cb41-110"><a href="#cb41-110"></a><span class="fu">ggplot</span>(billboard, <span class="fu">aes</span>(<span class="at">y =</span> wk2, <span class="at">x =</span> wk1)) <span class="sc">+</span> </span>
-<span id="cb41-111"><a href="#cb41-111"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb41-112"><a href="#cb41-112"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>)</span>
-<span id="cb41-113"><a href="#cb41-113"></a><span class="in">```</span></span>
-<span id="cb41-116"><a href="#cb41-116"></a><span class="in">```{r}</span></span>
-<span id="cb41-117"><a href="#cb41-117"></a>billboard <span class="sc">|&gt;</span> </span>
-<span id="cb41-118"><a href="#cb41-118"></a>  <span class="fu">filter</span>(wk2 <span class="sc">&gt;</span> wk1)</span>
-<span id="cb41-119"><a href="#cb41-119"></a><span class="in">```</span></span>
-<span id="cb41-120"><a href="#cb41-120"></a></span>
-<span id="cb41-123"><a href="#cb41-123"></a><span class="in">```{r}</span></span>
-<span id="cb41-124"><a href="#cb41-124"></a><span class="co"># Define nov_1999</span></span>
-<span id="cb41-125"><a href="#cb41-125"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
-<span id="cb41-126"><a href="#cb41-126"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb41-127"><a href="#cb41-127"></a>  <span class="fu">select</span>(<span class="sc">-</span>track, <span class="sc">-</span>date.entered)</span>
-<span id="cb41-128"><a href="#cb41-128"></a></span>
-<span id="cb41-129"><a href="#cb41-129"></a><span class="co"># Or</span></span>
-<span id="cb41-130"><a href="#cb41-130"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
-<span id="cb41-131"><a href="#cb41-131"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb41-132"><a href="#cb41-132"></a>  <span class="fu">select</span>(artist, <span class="fu">starts_with</span>(<span class="st">"wk"</span>))</span>
-<span id="cb41-133"><a href="#cb41-133"></a></span>
-<span id="cb41-134"><a href="#cb41-134"></a></span>
-<span id="cb41-135"><a href="#cb41-135"></a><span class="co"># Confirm that nov_1999 has 2 rows (songs) and 77 columns</span></span>
-<span id="cb41-136"><a href="#cb41-136"></a><span class="fu">dim</span>(nov_1999)</span>
-<span id="cb41-137"><a href="#cb41-137"></a><span class="in">```</span></span>
-<span id="cb41-138"><a href="#cb41-138"></a></span>
-<span id="cb41-141"><a href="#cb41-141"></a><span class="in">```{r}</span></span>
-<span id="cb41-142"><a href="#cb41-142"></a>nov_1999 <span class="sc">|&gt;</span> </span>
-<span id="cb41-143"><a href="#cb41-143"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>artist, <span class="at">names_to =</span> <span class="st">"week"</span>, <span class="at">names_prefix =</span> <span class="st">"wk"</span>, <span class="at">values_to =</span> <span class="st">"ranking"</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb41-144"><a href="#cb41-144"></a>  <span class="fu">mutate</span>(<span class="at">week =</span> <span class="fu">as.numeric</span>(week)) <span class="sc">|&gt;</span> </span>
-<span id="cb41-145"><a href="#cb41-145"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> ranking, <span class="at">x =</span> week, <span class="at">color =</span> artist)) <span class="sc">+</span> </span>
-<span id="cb41-146"><a href="#cb41-146"></a>    <span class="fu">geom_line</span>()</span>
-<span id="cb41-147"><a href="#cb41-147"></a><span class="in">```</span></span>
-<span id="cb41-148"><a href="#cb41-148"></a><span class="fu">## Exercise 6</span></span>
-<span id="cb41-151"><a href="#cb41-151"></a><span class="in">```{r}</span></span>
-<span id="cb41-152"><a href="#cb41-152"></a><span class="fu">library</span>(fivethirtyeight)</span>
-<span id="cb41-153"><a href="#cb41-153"></a><span class="fu">data</span>(<span class="st">"daily_show_guests"</span>)</span>
-<span id="cb41-154"><a href="#cb41-154"></a>daily <span class="ot">&lt;-</span> daily_show_guests</span>
-<span id="cb41-155"><a href="#cb41-155"></a><span class="in">```</span></span>
-<span id="cb41-156"><a href="#cb41-156"></a></span>
-<span id="cb41-157"><a href="#cb41-157"></a></span>
-<span id="cb41-158"><a href="#cb41-158"></a></span>
-<span id="cb41-161"><a href="#cb41-161"></a><span class="in">```{r}</span></span>
-<span id="cb41-162"><a href="#cb41-162"></a>daily <span class="sc">|&gt;</span> </span>
-<span id="cb41-163"><a href="#cb41-163"></a>  <span class="fu">count</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
-<span id="cb41-164"><a href="#cb41-164"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
-<span id="cb41-165"><a href="#cb41-165"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span>
-<span id="cb41-166"><a href="#cb41-166"></a><span class="in">```</span></span>
-<span id="cb41-169"><a href="#cb41-169"></a><span class="in">```{r}</span></span>
-<span id="cb41-170"><a href="#cb41-170"></a>daily <span class="sc">|&gt;</span> </span>
-<span id="cb41-171"><a href="#cb41-171"></a>  <span class="fu">count</span>(year, raw_guest_list) <span class="sc">|&gt;</span> </span>
-<span id="cb41-172"><a href="#cb41-172"></a>  <span class="fu">group_by</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
-<span id="cb41-173"><a href="#cb41-173"></a>  <span class="fu">mutate</span>(<span class="at">total =</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
-<span id="cb41-174"><a href="#cb41-174"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> year, </span>
-<span id="cb41-175"><a href="#cb41-175"></a>              <span class="at">values_from =</span> n,</span>
-<span id="cb41-176"><a href="#cb41-176"></a>              <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
-<span id="cb41-177"><a href="#cb41-177"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">|&gt;</span> </span>
-<span id="cb41-178"><a href="#cb41-178"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span>
-<span id="cb41-179"><a href="#cb41-179"></a><span class="in">```</span></span>
-<span id="cb41-180"><a href="#cb41-180"></a></span>
-<span id="cb41-181"><a href="#cb41-181"></a></span>
-<span id="cb41-184"><a href="#cb41-184"></a><span class="in">```{r}</span></span>
-<span id="cb41-185"><a href="#cb41-185"></a>daily <span class="sc">|&gt;</span> </span>
-<span id="cb41-186"><a href="#cb41-186"></a>  <span class="fu">count</span>(group)</span>
-<span id="cb41-187"><a href="#cb41-187"></a><span class="in">```</span></span>
-<span id="cb41-190"><a href="#cb41-190"></a><span class="in">```{r}</span></span>
-<span id="cb41-191"><a href="#cb41-191"></a>plot_data <span class="ot">&lt;-</span> daily <span class="sc">|&gt;</span> </span>
-<span id="cb41-192"><a href="#cb41-192"></a>  <span class="fu">mutate</span>(<span class="at">broad_group =</span> <span class="fu">case_when</span>(</span>
-<span id="cb41-193"><a href="#cb41-193"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Acting"</span>, <span class="st">"Athletics"</span>, <span class="st">"Comedy"</span>, <span class="st">"Musician"</span>) <span class="sc">~</span> <span class="st">"Acting, Comedy &amp; Music"</span>,</span>
-<span id="cb41-194"><a href="#cb41-194"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Media"</span>, <span class="st">"media"</span>, <span class="st">"Science"</span>, <span class="st">"Academic"</span>, <span class="st">"Consultant"</span>, <span class="st">"Clergy"</span>) <span class="sc">~</span> <span class="st">"Media"</span>,</span>
-<span id="cb41-195"><a href="#cb41-195"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Politician"</span>, <span class="st">"Political Aide"</span>, <span class="st">"Government"</span>, <span class="st">"Military"</span>, <span class="st">"Business"</span>, <span class="st">"Advocacy"</span>) <span class="sc">~</span> <span class="st">"Government and Politics"</span>,</span>
-<span id="cb41-196"><a href="#cb41-196"></a>    <span class="at">.default =</span> <span class="cn">NA</span></span>
-<span id="cb41-197"><a href="#cb41-197"></a>  )) <span class="sc">|&gt;</span> </span>
-<span id="cb41-198"><a href="#cb41-198"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(broad_group))</span>
-<span id="cb41-199"><a href="#cb41-199"></a><span class="in">```</span></span>
-<span id="cb41-200"><a href="#cb41-200"></a></span>
-<span id="cb41-201"><a href="#cb41-201"></a></span>
-<span id="cb41-202"><a href="#cb41-202"></a></span>
-<span id="cb41-203"><a href="#cb41-203"></a></span>
-<span id="cb41-206"><a href="#cb41-206"></a><span class="in">```{r}</span></span>
-<span id="cb41-207"><a href="#cb41-207"></a>plot_data <span class="sc">|&gt;</span></span>
-<span id="cb41-208"><a href="#cb41-208"></a>  <span class="fu">group_by</span>(year, broad_group) <span class="sc">|&gt;</span></span>
-<span id="cb41-209"><a href="#cb41-209"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
-<span id="cb41-210"><a href="#cb41-210"></a>  <span class="fu">mutate</span>(<span class="at">freq =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span> </span>
-<span id="cb41-211"><a href="#cb41-211"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> freq, <span class="at">x =</span> year, <span class="at">color =</span> broad_group)) <span class="sc">+</span> </span>
-<span id="cb41-212"><a href="#cb41-212"></a>    <span class="fu">geom_line</span>()</span>
-<span id="cb41-213"><a href="#cb41-213"></a><span class="in">```</span></span>
+<div class="sourceCode" id="cb32" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb32-1"><a href="#cb32-1"></a><span class="co">---</span></span>
+<span id="cb32-2"><a href="#cb32-2"></a><span class="an">title:</span><span class="co"> "Reshaping"</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a></span>
+<span id="cb32-4"><a href="#cb32-4"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb32-5"><a href="#cb32-5"></a><span class="co">  echo: true</span></span>
+<span id="cb32-6"><a href="#cb32-6"></a><span class="co">  warning: false</span></span>
+<span id="cb32-7"><a href="#cb32-7"></a><span class="co">  error: false</span></span>
+<span id="cb32-8"><a href="#cb32-8"></a><span class="co">  </span></span>
+<span id="cb32-9"><a href="#cb32-9"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb32-10"><a href="#cb32-10"></a><span class="co">  html:</span></span>
+<span id="cb32-11"><a href="#cb32-11"></a><span class="co">    code-fold: true</span></span>
+<span id="cb32-12"><a href="#cb32-12"></a></span>
+<span id="cb32-13"><a href="#cb32-13"></a><span class="co">---</span></span>
+<span id="cb32-14"><a href="#cb32-14"></a></span>
+<span id="cb32-17"><a href="#cb32-17"></a><span class="in">```{r}</span></span>
+<span id="cb32-18"><a href="#cb32-18"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb32-19"><a href="#cb32-19"></a>penguins <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">'https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-07-28/penguins.csv'</span>)</span>
+<span id="cb32-20"><a href="#cb32-20"></a><span class="in">```</span></span>
+<span id="cb32-21"><a href="#cb32-21"></a></span>
+<span id="cb32-22"><a href="#cb32-22"></a><span class="fu">## Exercise 1</span></span>
+<span id="cb32-25"><a href="#cb32-25"></a><span class="in">```{r}</span></span>
+<span id="cb32-26"><a href="#cb32-26"></a>sleep_wide <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"https://mac-stat.github.io/data/sleep_wide.csv"</span>)</span>
+<span id="cb32-27"><a href="#cb32-27"></a></span>
+<span id="cb32-28"><a href="#cb32-28"></a><span class="fu">head</span>(sleep_wide)</span>
+<span id="cb32-29"><a href="#cb32-29"></a><span class="in">```</span></span>
+<span id="cb32-30"><a href="#cb32-30"></a>subjects/people</span>
+<span id="cb32-31"><a href="#cb32-31"></a></span>
+<span id="cb32-32"><a href="#cb32-32"></a>Pivot_longer</span>
+<span id="cb32-33"><a href="#cb32-33"></a></span>
+<span id="cb32-34"><a href="#cb32-34"></a>##Exercise 2</span>
+<span id="cb32-37"><a href="#cb32-37"></a><span class="in">```{r}</span></span>
+<span id="cb32-38"><a href="#cb32-38"></a><span class="co"># For cols, try 2 appproaches: using - and starts_with</span></span>
+<span id="cb32-39"><a href="#cb32-39"></a>sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb32-40"><a href="#cb32-40"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject, <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span>
+<span id="cb32-41"><a href="#cb32-41"></a><span class="in">```</span></span>
+<span id="cb32-44"><a href="#cb32-44"></a><span class="in">```{r}</span></span>
+<span id="cb32-45"><a href="#cb32-45"></a>sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb32-46"><a href="#cb32-46"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">starts_with</span>(<span class="st">"day"</span>), <span class="at">names_to =</span> <span class="st">"day"</span>, <span class="at">values_to =</span> <span class="st">"reaction_time"</span>)</span>
+<span id="cb32-47"><a href="#cb32-47"></a><span class="in">```</span></span>
+<span id="cb32-48"><a href="#cb32-48"></a></span>
+<span id="cb32-51"><a href="#cb32-51"></a><span class="in">```{r}</span></span>
+<span id="cb32-52"><a href="#cb32-52"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb32-53"><a href="#cb32-53"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
+<span id="cb32-54"><a href="#cb32-54"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
+<span id="cb32-55"><a href="#cb32-55"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
+<span id="cb32-56"><a href="#cb32-56"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) </span>
+<span id="cb32-57"><a href="#cb32-57"></a><span class="in">```</span></span>
+<span id="cb32-58"><a href="#cb32-58"></a></span>
+<span id="cb32-61"><a href="#cb32-61"></a><span class="in">```{r}</span></span>
+<span id="cb32-62"><a href="#cb32-62"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
+<span id="cb32-63"><a href="#cb32-63"></a>  <span class="fu">geom_line</span>()</span>
+<span id="cb32-64"><a href="#cb32-64"></a><span class="in">```</span></span>
+<span id="cb32-65"><a href="#cb32-65"></a></span>
+<span id="cb32-66"><a href="#cb32-66"></a><span class="fu">## Exercise 3</span></span>
+<span id="cb32-69"><a href="#cb32-69"></a><span class="in">```{r}</span></span>
+<span id="cb32-70"><a href="#cb32-70"></a>sleep_long <span class="ot">&lt;-</span> sleep_wide <span class="sc">|&gt;</span></span>
+<span id="cb32-71"><a href="#cb32-71"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>Subject,</span>
+<span id="cb32-72"><a href="#cb32-72"></a>               <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
+<span id="cb32-73"><a href="#cb32-73"></a>               <span class="at">names_prefix =</span> <span class="st">"day_"</span>,</span>
+<span id="cb32-74"><a href="#cb32-74"></a>               <span class="at">values_to =</span> <span class="st">"reaction_time"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-75"><a href="#cb32-75"></a>  <span class="fu">mutate</span>(<span class="at">Subject =</span> <span class="fu">as.factor</span>(Subject), <span class="at">day =</span> <span class="fu">as.numeric</span>(day))</span>
+<span id="cb32-76"><a href="#cb32-76"></a><span class="in">```</span></span>
+<span id="cb32-77"><a href="#cb32-77"></a></span>
+<span id="cb32-78"><a href="#cb32-78"></a></span>
+<span id="cb32-81"><a href="#cb32-81"></a><span class="in">```{r}</span></span>
+<span id="cb32-82"><a href="#cb32-82"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
+<span id="cb32-83"><a href="#cb32-83"></a><span class="co"># Put these all on the same frame</span></span>
+<span id="cb32-84"><a href="#cb32-84"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
+<span id="cb32-85"><a href="#cb32-85"></a>  <span class="fu">geom_line</span>()</span>
+<span id="cb32-86"><a href="#cb32-86"></a><span class="in">```</span></span>
+<span id="cb32-87"><a href="#cb32-87"></a></span>
+<span id="cb32-90"><a href="#cb32-90"></a><span class="in">```{r}</span></span>
+<span id="cb32-91"><a href="#cb32-91"></a><span class="co"># Make a line plot of reaction time by day for each subject</span></span>
+<span id="cb32-92"><a href="#cb32-92"></a><span class="co"># Put these all on separate frames (one per subject)</span></span>
+<span id="cb32-93"><a href="#cb32-93"></a><span class="fu">ggplot</span>(sleep_long, <span class="fu">aes</span>(<span class="at">y =</span> reaction_time, <span class="at">x =</span> day, <span class="at">color =</span> Subject)) <span class="sc">+</span> </span>
+<span id="cb32-94"><a href="#cb32-94"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb32-95"><a href="#cb32-95"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Subject)</span>
+<span id="cb32-96"><a href="#cb32-96"></a><span class="in">```</span></span>
+<span id="cb32-97"><a href="#cb32-97"></a>Reaction time worsens with a lack of sleep. Some subjects seem to be more impacted than others by lack of sleep, and some tend to have faster/slower reaction times in general</span>
+<span id="cb32-98"><a href="#cb32-98"></a></span>
+<span id="cb32-99"><a href="#cb32-99"></a><span class="fu">## Exercise 4</span></span>
+<span id="cb32-102"><a href="#cb32-102"></a><span class="in">```{r}</span></span>
+<span id="cb32-103"><a href="#cb32-103"></a>sleep_long <span class="sc">|&gt;</span></span>
+<span id="cb32-104"><a href="#cb32-104"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time) <span class="sc">|&gt;</span></span>
+<span id="cb32-105"><a href="#cb32-105"></a>  <span class="fu">head</span>()</span>
+<span id="cb32-106"><a href="#cb32-106"></a><span class="in">```</span></span>
+<span id="cb32-109"><a href="#cb32-109"></a><span class="in">```{r}</span></span>
+<span id="cb32-110"><a href="#cb32-110"></a>sleep_long <span class="sc">|&gt;</span></span>
+<span id="cb32-111"><a href="#cb32-111"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> day, <span class="at">values_from =</span> reaction_time, <span class="at">names_prefix =</span> <span class="st">"day_"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-112"><a href="#cb32-112"></a>  <span class="fu">head</span>()</span>
+<span id="cb32-113"><a href="#cb32-113"></a><span class="in">```</span></span>
+<span id="cb32-114"><a href="#cb32-114"></a></span>
+<span id="cb32-115"><a href="#cb32-115"></a><span class="fu">## Exercise 5</span></span>
+<span id="cb32-118"><a href="#cb32-118"></a><span class="in">```{r}</span></span>
+<span id="cb32-119"><a href="#cb32-119"></a><span class="fu">ggplot</span>(billboard, <span class="fu">aes</span>(<span class="at">y =</span> wk2, <span class="at">x =</span> wk1)) <span class="sc">+</span> </span>
+<span id="cb32-120"><a href="#cb32-120"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb32-121"><a href="#cb32-121"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="dv">0</span>, <span class="at">slope =</span> <span class="dv">1</span>)</span>
+<span id="cb32-122"><a href="#cb32-122"></a><span class="in">```</span></span>
+<span id="cb32-125"><a href="#cb32-125"></a><span class="in">```{r}</span></span>
+<span id="cb32-126"><a href="#cb32-126"></a>billboard <span class="sc">|&gt;</span> </span>
+<span id="cb32-127"><a href="#cb32-127"></a>  <span class="fu">filter</span>(wk2 <span class="sc">&gt;</span> wk1)</span>
+<span id="cb32-128"><a href="#cb32-128"></a><span class="in">```</span></span>
+<span id="cb32-129"><a href="#cb32-129"></a></span>
+<span id="cb32-132"><a href="#cb32-132"></a><span class="in">```{r}</span></span>
+<span id="cb32-133"><a href="#cb32-133"></a><span class="co"># Define nov_1999</span></span>
+<span id="cb32-134"><a href="#cb32-134"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
+<span id="cb32-135"><a href="#cb32-135"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-136"><a href="#cb32-136"></a>  <span class="fu">select</span>(<span class="sc">-</span>track, <span class="sc">-</span>date.entered)</span>
+<span id="cb32-137"><a href="#cb32-137"></a></span>
+<span id="cb32-138"><a href="#cb32-138"></a><span class="co"># Or</span></span>
+<span id="cb32-139"><a href="#cb32-139"></a>nov_1999 <span class="ot">&lt;-</span> billboard <span class="sc">|&gt;</span> </span>
+<span id="cb32-140"><a href="#cb32-140"></a>  <span class="fu">filter</span>(date.entered <span class="sc">==</span> <span class="st">"1999-11-06"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-141"><a href="#cb32-141"></a>  <span class="fu">select</span>(artist, <span class="fu">starts_with</span>(<span class="st">"wk"</span>))</span>
+<span id="cb32-142"><a href="#cb32-142"></a></span>
+<span id="cb32-143"><a href="#cb32-143"></a></span>
+<span id="cb32-144"><a href="#cb32-144"></a><span class="co"># Confirm that nov_1999 has 2 rows (songs) and 77 columns</span></span>
+<span id="cb32-145"><a href="#cb32-145"></a><span class="fu">dim</span>(nov_1999)</span>
+<span id="cb32-146"><a href="#cb32-146"></a><span class="in">```</span></span>
+<span id="cb32-147"><a href="#cb32-147"></a></span>
+<span id="cb32-150"><a href="#cb32-150"></a><span class="in">```{r}</span></span>
+<span id="cb32-151"><a href="#cb32-151"></a>nov_1999 <span class="sc">|&gt;</span> </span>
+<span id="cb32-152"><a href="#cb32-152"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="sc">-</span>artist, <span class="at">names_to =</span> <span class="st">"week"</span>, <span class="at">names_prefix =</span> <span class="st">"wk"</span>, <span class="at">values_to =</span> <span class="st">"ranking"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-153"><a href="#cb32-153"></a>  <span class="fu">mutate</span>(<span class="at">week =</span> <span class="fu">as.numeric</span>(week)) <span class="sc">|&gt;</span> </span>
+<span id="cb32-154"><a href="#cb32-154"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> ranking, <span class="at">x =</span> week, <span class="at">color =</span> artist)) <span class="sc">+</span> </span>
+<span id="cb32-155"><a href="#cb32-155"></a>    <span class="fu">geom_line</span>()</span>
+<span id="cb32-156"><a href="#cb32-156"></a><span class="in">```</span></span>
+<span id="cb32-157"><a href="#cb32-157"></a><span class="fu">## Exercise 6</span></span>
+<span id="cb32-160"><a href="#cb32-160"></a><span class="in">```{r}</span></span>
+<span id="cb32-161"><a href="#cb32-161"></a><span class="fu">library</span>(fivethirtyeight)</span>
+<span id="cb32-162"><a href="#cb32-162"></a><span class="fu">data</span>(<span class="st">"daily_show_guests"</span>)</span>
+<span id="cb32-163"><a href="#cb32-163"></a>daily <span class="ot">&lt;-</span> daily_show_guests</span>
+<span id="cb32-164"><a href="#cb32-164"></a><span class="in">```</span></span>
+<span id="cb32-165"><a href="#cb32-165"></a></span>
+<span id="cb32-166"><a href="#cb32-166"></a></span>
+<span id="cb32-167"><a href="#cb32-167"></a></span>
+<span id="cb32-170"><a href="#cb32-170"></a><span class="in">```{r}</span></span>
+<span id="cb32-171"><a href="#cb32-171"></a>daily <span class="sc">|&gt;</span> </span>
+<span id="cb32-172"><a href="#cb32-172"></a>  <span class="fu">count</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
+<span id="cb32-173"><a href="#cb32-173"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb32-174"><a href="#cb32-174"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span>
+<span id="cb32-175"><a href="#cb32-175"></a><span class="in">```</span></span>
+<span id="cb32-178"><a href="#cb32-178"></a><span class="in">```{r}</span></span>
+<span id="cb32-179"><a href="#cb32-179"></a>daily <span class="sc">|&gt;</span> </span>
+<span id="cb32-180"><a href="#cb32-180"></a>  <span class="fu">count</span>(year, raw_guest_list) <span class="sc">|&gt;</span> </span>
+<span id="cb32-181"><a href="#cb32-181"></a>  <span class="fu">group_by</span>(raw_guest_list) <span class="sc">|&gt;</span> </span>
+<span id="cb32-182"><a href="#cb32-182"></a>  <span class="fu">mutate</span>(<span class="at">total =</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span></span>
+<span id="cb32-183"><a href="#cb32-183"></a>  <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> year, </span>
+<span id="cb32-184"><a href="#cb32-184"></a>              <span class="at">values_from =</span> n,</span>
+<span id="cb32-185"><a href="#cb32-185"></a>              <span class="at">values_fill =</span> <span class="dv">0</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb32-186"><a href="#cb32-186"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(total)) <span class="sc">|&gt;</span> </span>
+<span id="cb32-187"><a href="#cb32-187"></a>  <span class="fu">head</span>(<span class="dv">15</span>)</span>
+<span id="cb32-188"><a href="#cb32-188"></a><span class="in">```</span></span>
+<span id="cb32-189"><a href="#cb32-189"></a></span>
+<span id="cb32-190"><a href="#cb32-190"></a></span>
+<span id="cb32-193"><a href="#cb32-193"></a><span class="in">```{r}</span></span>
+<span id="cb32-194"><a href="#cb32-194"></a>daily <span class="sc">|&gt;</span> </span>
+<span id="cb32-195"><a href="#cb32-195"></a>  <span class="fu">count</span>(group)</span>
+<span id="cb32-196"><a href="#cb32-196"></a><span class="in">```</span></span>
+<span id="cb32-199"><a href="#cb32-199"></a><span class="in">```{r}</span></span>
+<span id="cb32-200"><a href="#cb32-200"></a>plot_data <span class="ot">&lt;-</span> daily <span class="sc">|&gt;</span> </span>
+<span id="cb32-201"><a href="#cb32-201"></a>  <span class="fu">mutate</span>(<span class="at">broad_group =</span> <span class="fu">case_when</span>(</span>
+<span id="cb32-202"><a href="#cb32-202"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Acting"</span>, <span class="st">"Athletics"</span>, <span class="st">"Comedy"</span>, <span class="st">"Musician"</span>) <span class="sc">~</span> <span class="st">"Acting, Comedy &amp; Music"</span>,</span>
+<span id="cb32-203"><a href="#cb32-203"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Media"</span>, <span class="st">"media"</span>, <span class="st">"Science"</span>, <span class="st">"Academic"</span>, <span class="st">"Consultant"</span>, <span class="st">"Clergy"</span>) <span class="sc">~</span> <span class="st">"Media"</span>,</span>
+<span id="cb32-204"><a href="#cb32-204"></a>    group <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Politician"</span>, <span class="st">"Political Aide"</span>, <span class="st">"Government"</span>, <span class="st">"Military"</span>, <span class="st">"Business"</span>, <span class="st">"Advocacy"</span>) <span class="sc">~</span> <span class="st">"Government and Politics"</span>,</span>
+<span id="cb32-205"><a href="#cb32-205"></a>    <span class="at">.default =</span> <span class="cn">NA</span></span>
+<span id="cb32-206"><a href="#cb32-206"></a>  )) <span class="sc">|&gt;</span> </span>
+<span id="cb32-207"><a href="#cb32-207"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(broad_group))</span>
+<span id="cb32-208"><a href="#cb32-208"></a><span class="in">```</span></span>
+<span id="cb32-209"><a href="#cb32-209"></a></span>
+<span id="cb32-210"><a href="#cb32-210"></a></span>
+<span id="cb32-211"><a href="#cb32-211"></a></span>
+<span id="cb32-212"><a href="#cb32-212"></a></span>
+<span id="cb32-215"><a href="#cb32-215"></a><span class="in">```{r}</span></span>
+<span id="cb32-216"><a href="#cb32-216"></a>plot_data <span class="sc">|&gt;</span></span>
+<span id="cb32-217"><a href="#cb32-217"></a>  <span class="fu">group_by</span>(year, broad_group) <span class="sc">|&gt;</span></span>
+<span id="cb32-218"><a href="#cb32-218"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n</span>()) <span class="sc">|&gt;</span></span>
+<span id="cb32-219"><a href="#cb32-219"></a>  <span class="fu">mutate</span>(<span class="at">freq =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n)) <span class="sc">|&gt;</span> </span>
+<span id="cb32-220"><a href="#cb32-220"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> freq, <span class="at">x =</span> year, <span class="at">color =</span> broad_group)) <span class="sc">+</span> </span>
+<span id="cb32-221"><a href="#cb32-221"></a>    <span class="fu">geom_line</span>()</span>
+<span id="cb32-222"><a href="#cb32-222"></a><span class="in">```</span></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

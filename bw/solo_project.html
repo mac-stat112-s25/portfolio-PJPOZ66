@@ -317,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../bw/bw-uni.html">Best Work</a></li><li class="breadcrumb-item"><a href="../bw/solo_project.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Solo Project</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
 <span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Solo Project</span>
-</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -333,59 +333,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header><p>https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/pennsylvania.xls?utm_source=chatgpt.com</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readxl)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readxl' was built under R version 4.4.2</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyverse' was built under R version 4.4.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'sf' was built under R version 4.4.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Linking to GEOS 3.13.0, GDAL 3.10.1, PROJ 9.5.1; sf_use_s2() is TRUE</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(tmap)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tmap' was built under R version 4.4.3</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">library</span>(tigris)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tigris' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>To enable caching of data, set `options(tigris_use_cache = TRUE)`
-in your R script or .Rprofile.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">library</span>(tidycensus)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidycensus' was built under R version 4.4.3</code></pre>
-</div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(sf)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="fu">library</span>(tigris)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">library</span>(tidycensus)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">thepj</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">PA Data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">thepj</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">PA Data.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a>pa_map <span class="ot">&lt;-</span> <span class="fu">counties</span>(<span class="at">state =</span> <span class="st">"PA"</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Retrieving data for the year 2022</code></pre>
-</div>
-<div class="cell-output cell-output-stdout">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>pa_map <span class="ot">&lt;-</span> <span class="fu">counties</span>(<span class="at">state =</span> <span class="st">"PA"</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stdout">
 <pre><code>
   |                                                                            
   |                                                                      |   0%
@@ -444,6 +406,8 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |===========                                                           |  16%
   |                                                                            
+  |============                                                          |  16%
+  |                                                                            
   |============                                                          |  17%
   |                                                                            
   |============                                                          |  18%
@@ -476,8 +440,6 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |==================                                                    |  26%
   |                                                                            
-  |===================                                                   |  26%
-  |                                                                            
   |===================                                                   |  27%
   |                                                                            
   |===================                                                   |  28%
@@ -499,8 +461,6 @@ in your R script or .Rprofile.</code></pre>
   |=======================                                               |  32%
   |                                                                            
   |=======================                                               |  33%
-  |                                                                            
-  |=======================                                               |  34%
   |                                                                            
   |========================                                              |  34%
   |                                                                            
@@ -564,8 +524,6 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |=====================================                                 |  53%
   |                                                                            
-  |=====================================                                 |  54%
-  |                                                                            
   |======================================                                |  54%
   |                                                                            
   |======================================                                |  55%
@@ -573,8 +531,6 @@ in your R script or .Rprofile.</code></pre>
   |=======================================                               |  55%
   |                                                                            
   |=======================================                               |  56%
-  |                                                                            
-  |========================================                              |  56%
   |                                                                            
   |========================================                              |  57%
   |                                                                            
@@ -638,6 +594,8 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |=====================================================                 |  76%
   |                                                                            
+  |======================================================                |  76%
+  |                                                                            
   |======================================================                |  77%
   |                                                                            
   |======================================================                |  78%
@@ -700,6 +658,8 @@ in your R script or .Rprofile.</code></pre>
   |                                                                            
   |===================================================================   |  96%
   |                                                                            
+  |====================================================================  |  96%
+  |                                                                            
   |====================================================================  |  97%
   |                                                                            
   |====================================================================  |  98%
@@ -714,62 +674,32 @@ in your R script or .Rprofile.</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>df <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">rename</span>(<span class="at">NAME =</span> County, <span class="at">violent_crime =</span> <span class="st">`</span><span class="at">Violent</span><span class="sc">\\</span><span class="at">ncrime</span><span class="st">`</span>)</span>
-<span id="cb20-3"><a href="#cb20-3"></a>map_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pa_map, df, <span class="at">by =</span> <span class="st">"NAME"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>df <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="fu">rename</span>(<span class="at">NAME =</span> County, <span class="at">violent_crime =</span> <span class="st">`</span><span class="at">Violent</span><span class="sc">\\</span><span class="at">ncrime</span><span class="st">`</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>map_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pa_map, df, <span class="at">by =</span> <span class="st">"NAME"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">library</span>(tmap)</span>
-<span id="cb21-2"><a href="#cb21-2"></a><span class="fu">library</span>(gridExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'gridExtra' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'gridExtra'</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:dplyr':
-
-    combine</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">library</span>(grid)</span>
-<span id="cb25-2"><a href="#cb25-2"></a></span>
-<span id="cb25-3"><a href="#cb25-3"></a><span class="co"># Make the map</span></span>
-<span id="cb25-4"><a href="#cb25-4"></a>map_plot <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(map_data) <span class="sc">+</span></span>
-<span id="cb25-5"><a href="#cb25-5"></a>  <span class="fu">tm_fill</span>(<span class="st">"violent_crime"</span>, <span class="at">palette =</span> <span class="st">"RdYlBu"</span>, </span>
-<span id="cb25-6"><a href="#cb25-6"></a>          <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(map_data<span class="sc">$</span>violent_crime, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
-<span id="cb25-7"><a href="#cb25-7"></a>  <span class="fu">tm_borders</span>() <span class="sc">+</span></span>
-<span id="cb25-8"><a href="#cb25-8"></a>  <span class="fu">tm_title</span>(<span class="st">"# of Violent crimes in Pennsylvania counties"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code></code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── tmap v3 code detected ───────────────────────────────────────────────────────</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>[v3-&gt;v4] `tm_tm_fill()`: migrate the argument(s) related to the scale of the
-visual variable `fill` namely 'breaks', 'palette' (rename to 'values') to
-fill.scale = tm_scale(&lt;HERE&gt;).</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="co"># Convert the tmap object to a grob</span></span>
-<span id="cb29-2"><a href="#cb29-2"></a>map_grob <span class="ot">&lt;-</span> <span class="fu">tmap_grob</span>(map_plot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>[cols4all] color palettes: use palettes from the R package cols4all. Run
-`cols4all::c4a_gui()` to explore them. The old palette name "RdYlBu" is named
-"brewer.rd_yl_bu"
-Multiple palettes called "rd_yl_bu" found: "brewer.rd_yl_bu", "matplotlib.rd_yl_bu". The first one, "brewer.rd_yl_bu", is returned.</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Values have found that are higher than the highest break. They are
-assigned to the highest interval</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="co"># Make the caption as a text grob</span></span>
-<span id="cb32-2"><a href="#cb32-2"></a>caption <span class="ot">&lt;-</span> <span class="fu">textGrob</span>(<span class="st">"PJ Pozniak, Source: FBI.Gov/Pennsylvania"</span>, <span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">fontsize =</span> <span class="dv">10</span>))</span>
-<span id="cb32-3"><a href="#cb32-3"></a></span>
-<span id="cb32-4"><a href="#cb32-4"></a><span class="co"># Arrange the map and caption</span></span>
-<span id="cb32-5"><a href="#cb32-5"></a><span class="fu">grid.arrange</span>(map_grob, caption, <span class="at">heights =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="fu">library</span>(grid)</span>
+<span id="cb6-4"><a href="#cb6-4"></a></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co"># Make the map</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a>map_plot <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(map_data) <span class="sc">+</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a>  <span class="fu">tm_fill</span>(<span class="st">"violent_crime"</span>, <span class="at">palette =</span> <span class="st">"RdYlBu"</span>, </span>
+<span id="cb6-8"><a href="#cb6-8"></a>          <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(map_data<span class="sc">$</span>violent_crime, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9"></a>  <span class="fu">tm_borders</span>() <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10"></a>  <span class="fu">tm_title</span>(<span class="st">"# of Violent crimes in Pennsylvania counties"</span>)</span>
+<span id="cb6-11"><a href="#cb6-11"></a></span>
+<span id="cb6-12"><a href="#cb6-12"></a><span class="co"># Convert the tmap object to a grob</span></span>
+<span id="cb6-13"><a href="#cb6-13"></a>map_grob <span class="ot">&lt;-</span> <span class="fu">tmap_grob</span>(map_plot)</span>
+<span id="cb6-14"><a href="#cb6-14"></a></span>
+<span id="cb6-15"><a href="#cb6-15"></a><span class="co"># Make the caption as a text grob</span></span>
+<span id="cb6-16"><a href="#cb6-16"></a>caption <span class="ot">&lt;-</span> <span class="fu">textGrob</span>(<span class="st">"PJ Pozniak, Source: FBI.Gov/Pennsylvania"</span>, <span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">fontsize =</span> <span class="dv">10</span>))</span>
+<span id="cb6-17"><a href="#cb6-17"></a></span>
+<span id="cb6-18"><a href="#cb6-18"></a><span class="co"># Arrange the map and caption</span></span>
+<span id="cb6-19"><a href="#cb6-19"></a><span class="fu">grid.arrange</span>(map_grob, caption, <span class="at">heights =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="solo_project_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
@@ -1412,75 +1342,83 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>
   </div>
 </nav><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
-<div class="sourceCode" id="cb33" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb33-1"><a href="#cb33-1"></a><span class="co">---</span></span>
-<span id="cb33-2"><a href="#cb33-2"></a><span class="an">title:</span><span class="co"> "Solo Project"</span></span>
-<span id="cb33-3"><a href="#cb33-3"></a><span class="an">format:</span><span class="co"> html</span></span>
-<span id="cb33-4"><a href="#cb33-4"></a><span class="co">---</span></span>
-<span id="cb33-5"><a href="#cb33-5"></a></span>
-<span id="cb33-6"><a href="#cb33-6"></a>https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/pennsylvania.xls?utm_source=chatgpt.com</span>
-<span id="cb33-7"><a href="#cb33-7"></a></span>
-<span id="cb33-8"><a href="#cb33-8"></a></span>
-<span id="cb33-11"><a href="#cb33-11"></a><span class="in">```{r}</span></span>
-<span id="cb33-12"><a href="#cb33-12"></a><span class="fu">library</span>(readxl)</span>
-<span id="cb33-13"><a href="#cb33-13"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb33-14"><a href="#cb33-14"></a><span class="fu">library</span>(sf)</span>
-<span id="cb33-15"><a href="#cb33-15"></a><span class="fu">library</span>(tmap)</span>
-<span id="cb33-16"><a href="#cb33-16"></a><span class="fu">library</span>(tigris)</span>
-<span id="cb33-17"><a href="#cb33-17"></a><span class="fu">library</span>(tidycensus)</span>
-<span id="cb33-18"><a href="#cb33-18"></a><span class="in">```</span></span>
-<span id="cb33-19"><a href="#cb33-19"></a></span>
-<span id="cb33-22"><a href="#cb33-22"></a><span class="in">```{r}</span></span>
-<span id="cb33-23"><a href="#cb33-23"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">thepj</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">PA Data.xlsx"</span>)</span>
-<span id="cb33-24"><a href="#cb33-24"></a></span>
-<span id="cb33-25"><a href="#cb33-25"></a><span class="in">```</span></span>
-<span id="cb33-26"><a href="#cb33-26"></a></span>
-<span id="cb33-29"><a href="#cb33-29"></a><span class="in">```{r}</span></span>
-<span id="cb33-30"><a href="#cb33-30"></a>pa_map <span class="ot">&lt;-</span> <span class="fu">counties</span>(<span class="at">state =</span> <span class="st">"PA"</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span>
-<span id="cb33-31"><a href="#cb33-31"></a><span class="in">```</span></span>
-<span id="cb33-34"><a href="#cb33-34"></a><span class="in">```{r}</span></span>
-<span id="cb33-35"><a href="#cb33-35"></a>df <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
-<span id="cb33-36"><a href="#cb33-36"></a>  <span class="fu">rename</span>(<span class="at">NAME =</span> County, <span class="at">violent_crime =</span> <span class="st">`</span><span class="at">Violent</span><span class="sc">\\</span><span class="at">ncrime</span><span class="st">`</span>)</span>
-<span id="cb33-37"><a href="#cb33-37"></a>map_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pa_map, df, <span class="at">by =</span> <span class="st">"NAME"</span>)</span>
-<span id="cb33-38"><a href="#cb33-38"></a></span>
-<span id="cb33-39"><a href="#cb33-39"></a><span class="in">```</span></span>
-<span id="cb33-40"><a href="#cb33-40"></a></span>
-<span id="cb33-43"><a href="#cb33-43"></a><span class="in">```{r}</span></span>
-<span id="cb33-44"><a href="#cb33-44"></a><span class="fu">library</span>(tmap)</span>
-<span id="cb33-45"><a href="#cb33-45"></a><span class="fu">library</span>(gridExtra)</span>
-<span id="cb33-46"><a href="#cb33-46"></a><span class="fu">library</span>(grid)</span>
-<span id="cb33-47"><a href="#cb33-47"></a></span>
-<span id="cb33-48"><a href="#cb33-48"></a><span class="co"># Make the map</span></span>
-<span id="cb33-49"><a href="#cb33-49"></a>map_plot <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(map_data) <span class="sc">+</span></span>
-<span id="cb33-50"><a href="#cb33-50"></a>  <span class="fu">tm_fill</span>(<span class="st">"violent_crime"</span>, <span class="at">palette =</span> <span class="st">"RdYlBu"</span>, </span>
-<span id="cb33-51"><a href="#cb33-51"></a>          <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(map_data<span class="sc">$</span>violent_crime, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
-<span id="cb33-52"><a href="#cb33-52"></a>  <span class="fu">tm_borders</span>() <span class="sc">+</span></span>
-<span id="cb33-53"><a href="#cb33-53"></a>  <span class="fu">tm_title</span>(<span class="st">"# of Violent crimes in Pennsylvania counties"</span>)</span>
-<span id="cb33-54"><a href="#cb33-54"></a></span>
-<span id="cb33-55"><a href="#cb33-55"></a><span class="co"># Convert the tmap object to a grob</span></span>
-<span id="cb33-56"><a href="#cb33-56"></a>map_grob <span class="ot">&lt;-</span> <span class="fu">tmap_grob</span>(map_plot)</span>
-<span id="cb33-57"><a href="#cb33-57"></a></span>
-<span id="cb33-58"><a href="#cb33-58"></a><span class="co"># Make the caption as a text grob</span></span>
-<span id="cb33-59"><a href="#cb33-59"></a>caption <span class="ot">&lt;-</span> <span class="fu">textGrob</span>(<span class="st">"PJ Pozniak, Source: FBI.Gov/Pennsylvania"</span>, <span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">fontsize =</span> <span class="dv">10</span>))</span>
-<span id="cb33-60"><a href="#cb33-60"></a></span>
-<span id="cb33-61"><a href="#cb33-61"></a><span class="co"># Arrange the map and caption</span></span>
-<span id="cb33-62"><a href="#cb33-62"></a><span class="fu">grid.arrange</span>(map_grob, caption, <span class="at">heights =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.1</span>))</span>
-<span id="cb33-63"><a href="#cb33-63"></a></span>
-<span id="cb33-64"><a href="#cb33-64"></a></span>
-<span id="cb33-65"><a href="#cb33-65"></a></span>
-<span id="cb33-66"><a href="#cb33-66"></a></span>
-<span id="cb33-67"><a href="#cb33-67"></a><span class="in">```</span></span>
-<span id="cb33-68"><a href="#cb33-68"></a></span>
-<span id="cb33-69"><a href="#cb33-69"></a>In Pennsylvania, higher crime rates are concentrated around the two largest cities, Philadelphia and Pittsburgh. Philadelphia, with a population of over 1.5 million, faces significant challenges with violent crime, particularly in poorer neighborhoods, where socioeconomic disparities and population density contribute to higher rates of homicides, assaults, and robberies. Pittsburgh, the second-largest city, also experiences elevated crime rates, especially in areas like the East End and North Side, where poverty and economic inequality persist. Both cities have made efforts to address crime through community policing and revitalization programs, but the concentration of crime in these urban centers remains a notable issue due to the combination of urbanization, economic hardship, and social challenges.</span>
-<span id="cb33-70"><a href="#cb33-70"></a></span>
-<span id="cb33-71"><a href="#cb33-71"></a></span>
-<span id="cb33-72"><a href="#cb33-72"></a></span>
-<span id="cb33-73"><a href="#cb33-73"></a></span>
-<span id="cb33-74"><a href="#cb33-74"></a></span>
-<span id="cb33-75"><a href="#cb33-75"></a></span>
-<span id="cb33-76"><a href="#cb33-76"></a></span>
-<span id="cb33-77"><a href="#cb33-77"></a></span>
-<span id="cb33-78"><a href="#cb33-78"></a></span>
-<span id="cb33-79"><a href="#cb33-79"></a></span>
+<div class="sourceCode" id="cb7" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1"></a><span class="co">---</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="an">title:</span><span class="co"> "Solo Project"</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a></span>
+<span id="cb7-4"><a href="#cb7-4"></a><span class="an">execute:</span><span class="co"> </span></span>
+<span id="cb7-5"><a href="#cb7-5"></a><span class="co">  echo: true</span></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="co">  warning: false</span></span>
+<span id="cb7-7"><a href="#cb7-7"></a><span class="co">  error: false</span></span>
+<span id="cb7-8"><a href="#cb7-8"></a><span class="co">  </span></span>
+<span id="cb7-9"><a href="#cb7-9"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb7-10"><a href="#cb7-10"></a><span class="co">  html:</span></span>
+<span id="cb7-11"><a href="#cb7-11"></a><span class="co">    code-fold: true</span></span>
+<span id="cb7-12"><a href="#cb7-12"></a><span class="co">---</span></span>
+<span id="cb7-13"><a href="#cb7-13"></a></span>
+<span id="cb7-14"><a href="#cb7-14"></a>https://ucr.fbi.gov/crime-in-the-u.s/2019/crime-in-the-u.s.-2019/tables/table-8/table-8-state-cuts/pennsylvania.xls?utm_source=chatgpt.com</span>
+<span id="cb7-15"><a href="#cb7-15"></a></span>
+<span id="cb7-16"><a href="#cb7-16"></a></span>
+<span id="cb7-19"><a href="#cb7-19"></a><span class="in">```{r}</span></span>
+<span id="cb7-20"><a href="#cb7-20"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb7-21"><a href="#cb7-21"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb7-22"><a href="#cb7-22"></a><span class="fu">library</span>(sf)</span>
+<span id="cb7-23"><a href="#cb7-23"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb7-24"><a href="#cb7-24"></a><span class="fu">library</span>(tigris)</span>
+<span id="cb7-25"><a href="#cb7-25"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb7-26"><a href="#cb7-26"></a><span class="in">```</span></span>
+<span id="cb7-27"><a href="#cb7-27"></a></span>
+<span id="cb7-30"><a href="#cb7-30"></a><span class="in">```{r}</span></span>
+<span id="cb7-31"><a href="#cb7-31"></a>data <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">thepj</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">PA Data.xlsx"</span>)</span>
+<span id="cb7-32"><a href="#cb7-32"></a></span>
+<span id="cb7-33"><a href="#cb7-33"></a><span class="in">```</span></span>
+<span id="cb7-34"><a href="#cb7-34"></a></span>
+<span id="cb7-37"><a href="#cb7-37"></a><span class="in">```{r}</span></span>
+<span id="cb7-38"><a href="#cb7-38"></a>pa_map <span class="ot">&lt;-</span> <span class="fu">counties</span>(<span class="at">state =</span> <span class="st">"PA"</span>, <span class="at">class =</span> <span class="st">"sf"</span>)</span>
+<span id="cb7-39"><a href="#cb7-39"></a><span class="in">```</span></span>
+<span id="cb7-42"><a href="#cb7-42"></a><span class="in">```{r}</span></span>
+<span id="cb7-43"><a href="#cb7-43"></a>df <span class="ot">&lt;-</span> data <span class="sc">%&gt;%</span></span>
+<span id="cb7-44"><a href="#cb7-44"></a>  <span class="fu">rename</span>(<span class="at">NAME =</span> County, <span class="at">violent_crime =</span> <span class="st">`</span><span class="at">Violent</span><span class="sc">\\</span><span class="at">ncrime</span><span class="st">`</span>)</span>
+<span id="cb7-45"><a href="#cb7-45"></a>map_data <span class="ot">&lt;-</span> <span class="fu">left_join</span>(pa_map, df, <span class="at">by =</span> <span class="st">"NAME"</span>)</span>
+<span id="cb7-46"><a href="#cb7-46"></a></span>
+<span id="cb7-47"><a href="#cb7-47"></a><span class="in">```</span></span>
+<span id="cb7-48"><a href="#cb7-48"></a></span>
+<span id="cb7-51"><a href="#cb7-51"></a><span class="in">```{r}</span></span>
+<span id="cb7-52"><a href="#cb7-52"></a><span class="fu">library</span>(tmap)</span>
+<span id="cb7-53"><a href="#cb7-53"></a><span class="fu">library</span>(gridExtra)</span>
+<span id="cb7-54"><a href="#cb7-54"></a><span class="fu">library</span>(grid)</span>
+<span id="cb7-55"><a href="#cb7-55"></a></span>
+<span id="cb7-56"><a href="#cb7-56"></a><span class="co"># Make the map</span></span>
+<span id="cb7-57"><a href="#cb7-57"></a>map_plot <span class="ot">&lt;-</span> <span class="fu">tm_shape</span>(map_data) <span class="sc">+</span></span>
+<span id="cb7-58"><a href="#cb7-58"></a>  <span class="fu">tm_fill</span>(<span class="st">"violent_crime"</span>, <span class="at">palette =</span> <span class="st">"RdYlBu"</span>, </span>
+<span id="cb7-59"><a href="#cb7-59"></a>          <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="fu">max</span>(map_data<span class="sc">$</span>violent_crime, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
+<span id="cb7-60"><a href="#cb7-60"></a>  <span class="fu">tm_borders</span>() <span class="sc">+</span></span>
+<span id="cb7-61"><a href="#cb7-61"></a>  <span class="fu">tm_title</span>(<span class="st">"# of Violent crimes in Pennsylvania counties"</span>)</span>
+<span id="cb7-62"><a href="#cb7-62"></a></span>
+<span id="cb7-63"><a href="#cb7-63"></a><span class="co"># Convert the tmap object to a grob</span></span>
+<span id="cb7-64"><a href="#cb7-64"></a>map_grob <span class="ot">&lt;-</span> <span class="fu">tmap_grob</span>(map_plot)</span>
+<span id="cb7-65"><a href="#cb7-65"></a></span>
+<span id="cb7-66"><a href="#cb7-66"></a><span class="co"># Make the caption as a text grob</span></span>
+<span id="cb7-67"><a href="#cb7-67"></a>caption <span class="ot">&lt;-</span> <span class="fu">textGrob</span>(<span class="st">"PJ Pozniak, Source: FBI.Gov/Pennsylvania"</span>, <span class="at">gp =</span> <span class="fu">gpar</span>(<span class="at">fontsize =</span> <span class="dv">10</span>))</span>
+<span id="cb7-68"><a href="#cb7-68"></a></span>
+<span id="cb7-69"><a href="#cb7-69"></a><span class="co"># Arrange the map and caption</span></span>
+<span id="cb7-70"><a href="#cb7-70"></a><span class="fu">grid.arrange</span>(map_grob, caption, <span class="at">heights =</span> <span class="fu">c</span>(<span class="fl">0.9</span>, <span class="fl">0.1</span>))</span>
+<span id="cb7-71"><a href="#cb7-71"></a></span>
+<span id="cb7-72"><a href="#cb7-72"></a></span>
+<span id="cb7-73"><a href="#cb7-73"></a></span>
+<span id="cb7-74"><a href="#cb7-74"></a></span>
+<span id="cb7-75"><a href="#cb7-75"></a><span class="in">```</span></span>
+<span id="cb7-76"><a href="#cb7-76"></a></span>
+<span id="cb7-77"><a href="#cb7-77"></a>In Pennsylvania, higher crime rates are concentrated around the two largest cities, Philadelphia and Pittsburgh. Philadelphia, with a population of over 1.5 million, faces significant challenges with violent crime, particularly in poorer neighborhoods, where socioeconomic disparities and population density contribute to higher rates of homicides, assaults, and robberies. Pittsburgh, the second-largest city, also experiences elevated crime rates, especially in areas like the East End and North Side, where poverty and economic inequality persist. Both cities have made efforts to address crime through community policing and revitalization programs, but the concentration of crime in these urban centers remains a notable issue due to the combination of urbanization, economic hardship, and social challenges.</span>
+<span id="cb7-78"><a href="#cb7-78"></a></span>
+<span id="cb7-79"><a href="#cb7-79"></a></span>
+<span id="cb7-80"><a href="#cb7-80"></a></span>
+<span id="cb7-81"><a href="#cb7-81"></a></span>
+<span id="cb7-82"><a href="#cb7-82"></a></span>
+<span id="cb7-83"><a href="#cb7-83"></a></span>
+<span id="cb7-84"><a href="#cb7-84"></a></span>
+<span id="cb7-85"><a href="#cb7-85"></a></span>
+<span id="cb7-86"><a href="#cb7-86"></a></span>
+<span id="cb7-87"><a href="#cb7-87"></a></span>
 </code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->

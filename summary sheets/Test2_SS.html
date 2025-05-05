@@ -317,7 +317,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../summary sheets/Test1_SS.html">Summary Sheets</a></li><li class="breadcrumb-item"><a href="../summary sheets/Test2_SS.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test2_SS</span></a></li></ol></nav><div class="quarto-title">
 <div class="quarto-title-block"><div><h1 class="title">
 <span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Test2_SS</span>
-</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> Code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li><li><hr class="dropdown-divider"></li><li><a id="quarto-view-source" class="dropdown-item" href="javascript:void(0)" role="button">View Source</a></li></ul></div></div>
 </div>
 
 
@@ -332,8 +332,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 </header><div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(magick)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(magick)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details><div class="cell-output cell-output-stderr">
 <pre><code>Warning: package 'magick' was built under R version 4.4.3</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
@@ -341,7 +341,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Enabled features: cairo, freetype, fftw, ghostscript, heic, lcms, pango, raw, rsvg, webp
 Disabled features: fontconfig, x11</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Specify the path to your new JPEG image (escaping backslashes)</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># Specify the path to your new JPEG image (escaping backslashes)</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>img_path <span class="ot">&lt;-</span> <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">thepj</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">CamScanner_04-28-2025_00.29</span><span class="sc">\\</span><span class="st">CamScanner 04-28-2025 00.29_03.jpg"</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a></span>
 <span id="cb4-4"><a href="#cb4-4"></a><span class="co"># Read the image</span></span>
@@ -352,7 +352,7 @@ Disabled features: fontconfig, x11</code></pre>
 <span id="cb4-9"><a href="#cb4-9"></a></span>
 <span id="cb4-10"><a href="#cb4-10"></a><span class="co"># Display the resized image</span></span>
 <span id="cb4-11"><a href="#cb4-11"></a><span class="fu">print</span>(img_resized)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+</details><div class="cell-output cell-output-stdout">
 <pre><code>  format width height colorspace matte filesize density
 1   JPEG   580    800       sRGB FALSE        0   72x72</code></pre>
 </div>
@@ -364,7 +364,7 @@ Disabled features: fontconfig, x11</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(magick)</span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(magick)</span>
 <span id="cb6-2"><a href="#cb6-2"></a></span>
 <span id="cb6-3"><a href="#cb6-3"></a><span class="co"># Specify the path to your new JPEG image (escaping backslashes)</span></span>
 <span id="cb6-4"><a href="#cb6-4"></a>img_path <span class="ot">&lt;-</span> <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">thepj</span><span class="sc">\\</span><span class="st">Downloads</span><span class="sc">\\</span><span class="st">CamScanner_04-28-2025_00.29</span><span class="sc">\\</span><span class="st">CamScanner 04-28-2025 00.29_04.jpg"</span></span>
@@ -377,7 +377,7 @@ Disabled features: fontconfig, x11</code></pre>
 <span id="cb6-11"><a href="#cb6-11"></a></span>
 <span id="cb6-12"><a href="#cb6-12"></a><span class="co"># Display the resized image</span></span>
 <span id="cb6-13"><a href="#cb6-13"></a><span class="fu">print</span>(img_resized)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
+</details><div class="cell-output cell-output-stdout">
 <pre><code>  format width height colorspace matte filesize density
 1   JPEG   579    800       sRGB FALSE        0   72x72</code></pre>
 </div>
